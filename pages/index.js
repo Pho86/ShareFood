@@ -6,6 +6,7 @@ import {useRouter} from 'next/router'
 import Button from '../comps/Button'
 import ProgressBar from '../comps/Progress'
 import Text from '../comps/Text.js'
+import ImgCard from '../comps/ImgCard.js'
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
     <Text>Skip</Text>
     <Button></Button>
     <ProgressBar></ProgressBar>
+    <ImgCard/>
     </div>
   )
+
+
+
 }
