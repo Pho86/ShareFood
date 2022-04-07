@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
+const Skip= styled.div`
+text-align: center;
+`
+
 export default function Text(){
-    return <div>
-        <p>Skip</p>
-    </div>
+    return <Skip>
+        <button onClick={
+            () => alert("skip tutorial")
+        }>Skip</button>
+    </Skip>
 }
