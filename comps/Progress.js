@@ -3,7 +3,8 @@ import { useRouter } from 'next/router'
 
 const ProgressCont = styled.div`
 display:flex;
-gap:10px
+gap:10px;
+justify-content:center;
 `;
 
 const Progress = styled.div`
