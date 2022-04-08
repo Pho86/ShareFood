@@ -15,7 +15,7 @@ margin-right: auto;
 `
 
 export default function ImgCard({
-    img="/img1.png"
+    img="/peanutbutter.png"
     
 }){ 
     return <Cont>
