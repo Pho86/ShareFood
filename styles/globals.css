@@ -17,5 +17,7 @@ a {
 
 button {
   font-family: 'Rubik', sans-serif;
+}
 .choice {
   display:flex;
+}
