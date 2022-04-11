@@ -14,8 +14,8 @@ margin-left: auto;
 margin-right: auto;
 padding-top: 17px;
 
-
 `
+
 export default function ChoiceButton({
     img = "/button_choices/x_button.svg"
 }) {
