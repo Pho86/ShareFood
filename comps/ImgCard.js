@@ -21,9 +21,21 @@ export default function ImgCard({
 }) {
     const r = useRouter();
 
-    const { route } = r.query
-    if (route === 'tut2') {
+    const { tut } = r.query
+    if (tut === '0') {
+        img="/img1.png"
+    }
+    if (tut === '1') {
         img="/img2.png"
+    }
+    if (tut === '2') {
+        img="/img3.png"
+    }
+    if (tut === '3') {
+        img="/img4.png"
+    }
+    if (tut === '4') {
+        img="/img5.png"
     }
 
     return <Cont>
