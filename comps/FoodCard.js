@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-// <img src="/eggs.png"></img>
-// <img src="/peanutbutter.png"></img>
-// <img src="/ramen.png"></img>
-// <img src="/soysauce.png"></img>
+import {useRouter} from 'next/router'
+
 
 const Cont = styled.div`
 // style the cont here
@@ -14,11 +12,32 @@ margin-left: auto;
 margin-right: auto;
 `
 
-export default function ImgCard({
-    img="/peanutbutter.png"
-    
-}){ 
+
+export default function FoodCard({
+    img = "/peanutbutter.png"
+
+}) {
+    const r = useRouter();
+
+    const { image } = r.query
+
+    if (image === '0') {
+        img="/peanutbutter.png"
+    }
+    if (image === '1') {
+        img="/cereal.png"
+    } 
+    if (image === '2') {
+        img="/eggs.png"
+    } 
+    if (image === '3') {
+        img="/ramen.png"
+    } 
+    if (image === '4') {
+        img="/soysauce.png"
+    } 
+
     return <Cont>
-        <DispImg src={img}/>
+        <DispImg src={img} />
     </Cont>
 }
