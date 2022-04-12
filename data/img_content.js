@@ -13,23 +13,23 @@ export const image = {
 export const tutImg = [
     {
         img:"/img1.jpeg",
-        route:"tut1"
+        tut:"1"
     },
     {
         img:"/img2.jpeg",
-        route:"tut2"
+        tut:"2"
     },
     {
         img:"/img3.jpeg",
-        route:"tut3"
+        tut:"3"
     },
     {
         img:"/img4.jpeg",
-        route:"tut4"
+        tut:"4"
     },
     {
         img:"/img5.jpeg",
-        route:"tut5"
+        tut:"5"
     },
 ];
 
