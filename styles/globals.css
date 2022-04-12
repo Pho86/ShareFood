@@ -25,3 +25,12 @@ button {
 .choices {
   display:flex;
 }
+
+.skip {
+background-color: transparent;
+border: none;
+overflow: hidden;
+outline: none;
+display: flex;
+/* text-align: right; this isn't working */
+}

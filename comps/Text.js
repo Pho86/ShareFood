@@ -6,7 +6,7 @@ text-align: center;
 
 export default function Text(){
     return <Skip>
-        <button onClick={
+        <button class="skip" onClick={
             () => alert("skip tutorial")
         }>Skip</button>
     </Skip>
