@@ -21,3 +21,7 @@ button {
 .choice {
   display:flex;
 }
+
+.choices {
+  display:flex;
+}

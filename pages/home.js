@@ -7,14 +7,28 @@ import Button from '../comps/Button'
 import ProgressBar from '../comps/Progress'
 import Text from '../comps/Text.js'
 import ImgCard from '../comps/ImgCard.js'
-import ChoiceButton from '../comps/ChoiceButton.js'
+import ChoiceButtonX from '../comps/ChoiceButtonX.js'
+import ChoiceButtonU from '../comps/ChoiceButtonU.js'
+import ChoiceButtonY from '../comps/ChoiceButtonY.js'
 import FoodCard from '../comps/FoodCard.js'
 
+
 export default function Home() {
+
+    const r = useRouter();
+    const {route} = r.query
+    
     return (
         <div className={styles.container}>
-            <FoodCard src="/peanutbutter.png"/>
-            <ChoiceButton />
+            <FoodCard/>
+
+            <div class="choices">
+                <ChoiceButtonX />
+                <ChoiceButtonU />
+                <ChoiceButtonY />
+            </div>
+            
+            
 
         </div>
 
