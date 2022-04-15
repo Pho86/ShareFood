@@ -41,7 +41,7 @@ export const foodImg = [
     },
     {
         img:"/cereal.png",
-        route:"img2",
+        img:"img2",
     },
     {
         img:"/eggs.png",

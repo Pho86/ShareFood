@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
+import { foodImg } from '../data/img_content';
 
 
 const ChoiceCont = styled.div`
@@ -24,8 +25,8 @@ export default function ChoiceButtonX({
     const r = useRouter();
     const { image } = r.query;
     return <ChoiceCont onClick={
-        ()=>r.push({
-            query:{
+        () => r.push({
+            query: {
                 image: image === undefined ? image : Number(image) + 1
             }
         })
