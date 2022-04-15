@@ -12,7 +12,7 @@ font-weight: bold;
 const TextCont = styled.div`
 display: flex;
 line-height: 3em;
-gap: 2em;
+gap: 4em;
 margin-left: auto;
 margin-right: auto;
 `

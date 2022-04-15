@@ -1,3 +1,4 @@
+//idk if i need this
 export const categories = [
     {
         title: "Name of Food",
@@ -20,4 +21,4 @@ export const categories = [
         fill: "\"Brand New\""
     },
 ]
-// idk if i need this
+
