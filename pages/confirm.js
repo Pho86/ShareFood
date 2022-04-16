@@ -9,7 +9,9 @@ export default function Home() {
     const { route } = r.query
   
     return (
+      <div className={styles.container}>
       <ConfirmText/>
+      </div>
     )
   }
   
