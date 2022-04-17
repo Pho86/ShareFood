@@ -11,24 +11,31 @@ import ChoiceButtonX from '../comps/ChoiceButtonX.js'
 import ChoiceButtonU from '../comps/ChoiceButtonU.js'
 import ChoiceButtonY from '../comps/ChoiceButtonY.js'
 import FoodCard from '../comps/FoodCard.js'
+import { foodImg } from '../data/img_content'
+import Navbar from '../comps/NavBar'
 
 
 export default function Home() {
 
     const r = useRouter();
-    const {route} = r.query
-    
+    var { image } = r.query
+    console.log(image)
+    if (image === 5) {
+        image = 0;
+    }
+
+
     return (
         <div className={styles.container}>
-            <FoodCard/>
-
+            <FoodCard />
             <div class="choices">
                 <ChoiceButtonX />
                 <ChoiceButtonU />
                 <ChoiceButtonY />
             </div>
-            
-            
+            <Navbar></Navbar>
+
+
 
         </div>
 

@@ -23,15 +23,29 @@ export default function ChoiceButtonX({
     img = "/button_choices/x_button.svg"
 }) {
     const r = useRouter();
-    const { image } = r.query;
+    var { image } = r.query;
+    if (image === undefined) {
+        image = 0;
+    }
+
     return <ChoiceCont onClick={
-        () => r.push({
-            query: {
-                image: image === undefined ? image : Number(image) + 1
-            }
-        })
+        () => {
+            r.push({
+                query: {
+                    image: Number(image) + 1 > foodImg.length - 1 ? 0 : Number(image) + 1
+                }
+            })
+        }
     }>
         <Icon src={img}></Icon>
     </ChoiceCont>
+
+
+
+
+
+
+
+
 }
 

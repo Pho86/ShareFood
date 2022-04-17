@@ -26,7 +26,7 @@ export default function ChoiceButtonU({
     return <ChoiceCont onClick={
         ()=>r.push({
             query:{
-                image: image === undefined ? image : Math.max(1, Number(image) - 1)
+                image: image === undefined ? image : Math.max(0, Number(image) - 1)
             }
         })
     }>

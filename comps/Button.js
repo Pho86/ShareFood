@@ -23,20 +23,21 @@ export default function NButton({
 }) {
 
     const r = useRouter();
-    const { tut } = r.query;
+    var { tut } = r.query;
+    if (tut === undefined) {
+        tut = 0;
+    }
     if (Number(tut) === 4) {
         return <ButtonCont onClick={
-            () => r.replace({
-                query: {
-                    home: 0
-                }
+            () => r.push({
+                pathname:"/home"
             })
         }>
             Done {'>'}
         </ButtonCont>
     }
     return <ButtonCont onClick={
-        () => r.push({
+        () => r.replace({
             query: {
                 tut: tut === undefined ? tut : Math.min(4, Number(tut) + 1)
             }
