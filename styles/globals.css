@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html,
 body {
   padding: 0;
@@ -18,19 +19,57 @@ a {
 button {
   font-family: 'Rubik', sans-serif;
 }
+
 .choice {
-  display:flex;
+  display: flex;
 }
 
 .choices {
-  display:flex;
+  display: flex;
 }
 
 .skip {
-background-color: transparent;
-border: none;
-overflow: hidden;
-outline: none;
-display: flex;
-/* text-align: right; this isn't working */
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  display: flex;
+  /* text-align: right; this isn't working */
+}
+/* animation for confirm page  */
+li {
+  /* background-color:red; */
+}
+.list {
+  opacity: 0;
+  animation: revealText .5s forwards;
+}
+.one {
+  animation-delay: .1s;
+}
+.two {
+  animation-delay: .2s;
+}
+.three {
+  animation-delay: .3s;
+}
+.four {
+  animation-delay: .4s;
+}
+.five {
+  animation-delay: .5s;
+}
+.six {
+  animation-delay: .6s;
+}
+@keyframes revealText {
+  from {
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+
 }

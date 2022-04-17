@@ -61,20 +61,20 @@ export default function ConfirmText() {
             </ConfirmHeader>
             <TextCont>
                 <TList>
-                    <li>Name of Food:</li>
-                    <li>Weight:</li>
-                    <li>Date of Purchase:</li>
-                    <li>Best Before Date:</li>
-                    <li>Meeting Location:</li>
-                    <li>Additional Details:</li>
+                    <li class="list">Name of Food:</li>
+                    <li class="list two">Weight:</li>
+                    <li class="list three">Date of Purchase:</li>
+                    <li class="list four">Best Before Date:</li>
+                    <li class="list five">Meeting Location:</li>
+                    <li class="list six">Additional Details:</li>
                 </TList>
                 <IList>
-                    <li>Peanut Butter</li>
-                    <li>0.5 lbs</li>
-                    <li>Mar 26, 2022</li>
-                    <li>May 22, 2022</li>
-                    <li>1251 Main St.</li>
-                    <li>"Brand new"</li>
+                    <li class="list">Peanut Butter</li>
+                    <li class="list two">0.5 lbs</li>
+                    <li class="list three">Mar 26, 2022</li>
+                    <li class="list four">May 22, 2022</li>
+                    <li class="list five">1251 Main St.</li>
+                    <li class="list six">"Opened."</li>
                 </IList>
             </TextCont>
         </Text>
