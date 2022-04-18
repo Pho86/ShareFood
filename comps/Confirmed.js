@@ -39,8 +39,6 @@ display: inline-block;
 font-weight: 500;
 color: #F08A4B;
 `
-const ConfirmHeader = styled.div`
-`
 
 const H2 = styled.div`
 font-weight: 400;
@@ -48,7 +46,16 @@ font-size 20px;
 text-align: left;
 margin-right: auto;
 margin-left: auto;
-padding-bottom: 20px
+padding-bottom: 20px;
+`
+const H3 = styled.div`
+font-weight: 400;
+font-size 20px;
+text-align: center;
+margin-right: auto;
+margin-left: auto;
+padding-bottom: 20px;
+visibility: hidden;
 `
 const Saved = styled.div`
 font-weight: 400;
@@ -61,26 +68,25 @@ right: 8%;
 `
 const Text = styled.div`
 `
-
 export default function ConfirmText() {
     const r = useRouter();
     const { route } = r.query
 
     return (
         <Text>
-            <ConfirmHeader>
-                <SelectedItem>
-                    You have selected
-                    <Highlight>
-                        &nbsp;Peanut Butter&nbsp;
-                    </Highlight> from
-                    <Highlight>
-                        &nbsp;Jessica
-                    </Highlight>
-                </SelectedItem>
-            </ConfirmHeader>
+            <SelectedItem>
+                Thank you! Your order with
+                <Highlight>&nbsp;Jessica&nbsp;</Highlight>
+                has been confirmed.
+            </SelectedItem>
+
+
+
             <TextCont>
                 <TList>
+                    <H2>
+                        Order Details
+                    </H2>
                     <li class="list">Name of Food:</li>
                     <li class="list two">Weight:</li>
                     <li class="list three">Date of Purchase:</li>
@@ -89,6 +95,9 @@ export default function ConfirmText() {
                     <li class="list six">Additional Details:</li>
                 </TList>
                 <IList>
+                    <H3>
+                        hidden text
+                    </H3>
                     <li class="list">Peanut Butter</li>
                     <li class="list two">0.5 lbs</li>
                     <li class="list three">Mar 26, 2022</li>
@@ -97,6 +106,11 @@ export default function ConfirmText() {
                     <li class="list six">"Opened."</li>
                 </IList>
             </TextCont>
+
+            <Saved>You have saved
+                <Highlight>&nbsp;0.5 lbs&nbsp;</Highlight>
+                of food from going to waste.
+            </Saved>
         </Text>
     )
 }
