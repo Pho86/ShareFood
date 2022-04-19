@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-import {useRouter} from 'next/router'
-// <img src="/eggs.png"></img>
-// <img src="/peanutbutter.png"></img>
-// <img src="/ramen.png"></img>
-// <img src="/soysauce.png"></img>
+import {useRouter} from 'next/router';
 
 const Cont = styled.div`
 // style the cont here

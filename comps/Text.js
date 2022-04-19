@@ -1,13 +1,18 @@
 import styled from 'styled-components';
-
+import { useRouter } from 'next/router';
 const Skip= styled.div`
-text-align: center;
 `
 
-export default function Text(){
+export default function Text(
+    {
+        text = "Skip"
+    }
+){
+    const r = useRouter();
     return <Skip>
         <button class="skip" onClick={
-            () => alert("skip tutorial")
-        }>Skip</button>
+            () => r.push({ pathname:"/landing"
+        })
+        }>{text}</button>
     </Skip>
 }
