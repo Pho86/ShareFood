@@ -30,7 +30,7 @@ export default function NButton({
     if (Number(tut) === 4) {
         return <ButtonCont onClick={
             () => r.push({
-                pathname:"/home"
+                pathname:"/landing"
             })
         }>
             Done {'>'}
