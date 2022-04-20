@@ -16,6 +16,7 @@ justify-content:center;
 const Img = styled.img`
 padding: 30px 40px 30px 40px;
 background-color:#F1F1F1;
+
 `
 
 
@@ -29,7 +30,7 @@ export default function NavBar({
             () => r.push({
                 pathname: "/home",
                 // query: {
-                //   type: "test1"
+                //   type: "notcoded"
                 // }
               })
         } id="active"></Img>
@@ -37,7 +38,7 @@ export default function NavBar({
             () => r.push({
                 //pathname: "/history",
                 query: {
-                  type: "test2"
+                  type: "historynotcoded"
                 }
               })
         }></Img>
@@ -45,7 +46,7 @@ export default function NavBar({
             () => r.push({
                 //pathname: "/camera",
                 query: {
-                  type: "test3"
+                  type: "cameranotcoded"
                 }
               })
         }></Img>
@@ -53,7 +54,7 @@ export default function NavBar({
             () => r.push({
                 pathname: "/messaging",
                 // query: {
-                //   type: "test4"
+                //   type: "notcoded"
                 // }
               })
         }></Img>
