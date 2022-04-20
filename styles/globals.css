@@ -73,3 +73,12 @@ li {
   }
 
 }
+.skip {
+  margin-left:auto;
+  padding-bottom: 10px;
+}
+
+/* .message {
+  background-color:red;
+  position: absolute;
+} */

@@ -72,7 +72,7 @@ export default function ConfirmText() {
                 <SelectedItem>
                     You have selected
                     <Highlight>
-                        &nbsp;Peanut Butter&nbsp;
+                        &nbsp;Soy Sauce&nbsp;
                     </Highlight> from
                     <Highlight>
                         &nbsp;Jessica
@@ -89,8 +89,8 @@ export default function ConfirmText() {
                     <li class="list six">Additional Details:</li>
                 </TList>
                 <IList>
-                    <li class="list">Peanut Butter</li>
-                    <li class="list two">0.5 lbs</li>
+                    <li class="list">Soy Sauce</li>
+                    <li class="list two">0.6 lbs</li>
                     <li class="list three">Mar 26, 2022</li>
                     <li class="list four">May 22, 2022</li>
                     <li class="list five">1251 Main St.</li>

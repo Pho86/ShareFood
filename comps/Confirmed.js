@@ -98,8 +98,8 @@ export default function ConfirmText() {
                     <H3>
                         hidden text
                     </H3>
-                    <li class="list">Peanut Butter</li>
-                    <li class="list two">0.5 lbs</li>
+                    <li class="list">Soy Sauce</li>
+                    <li class="list two">0.6 lbs</li>
                     <li class="list three">Mar 26, 2022</li>
                     <li class="list four">May 22, 2022</li>
                     <li class="list five">1251 Main St.</li>
@@ -108,7 +108,7 @@ export default function ConfirmText() {
             </TextCont>
 
             <Saved>You have saved
-                <Highlight>&nbsp;0.5 lbs&nbsp;</Highlight>
+                <Highlight>&nbsp;0.6 lbs&nbsp;</Highlight>
                 of food from going to waste.
             </Saved>
         </Text>
