@@ -62,3 +62,10 @@ export function SendIcon(
         </Send>
     </SendCont>
 }
+
+export function TutorialPage(){
+    return <div>
+    <h1>What is Share Food?</h1>
+    </div>
+}
+    
