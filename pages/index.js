@@ -29,7 +29,6 @@ export default function Home() {
         <BButton text="< Back" route="tut"></BButton>
         <NButton text="Next >" route="tut"></NButton>
       </div>
-      <NavBar></NavBar>
       <p></p>
     </div>
   )

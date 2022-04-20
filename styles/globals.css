@@ -73,6 +73,7 @@ li {
   }
 
 }
+
 .skip {
   margin-left:auto;
   padding-bottom: 10px;
@@ -82,3 +83,26 @@ li {
   background-color:red;
   position: absolute;
 } */
+
+.chat {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:2rem;
+  width:35rem;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.message {
+  display:flex;
+  gap:1rem;
+  align-self:flex-start ;
+}
+.message1 {
+  display:flex;
+  gap:1rem;
+  align-self:flex-end;
+  
+}
