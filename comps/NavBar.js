@@ -27,31 +27,35 @@ export default function NavBar({
     return <BarCont>
         <Img src="/icons/home.svg" onClick={
             () => r.push({
-                //pathname: "/home",
-                query: {
-                  type: "test1"
-                }})
+                pathname: "/home",
+                // query: {
+                //   type: "test1"
+                // }
+              })
         } id="active"></Img>
         <Img src="/icons/history.svg" onClick={
             () => r.push({
                 //pathname: "/history",
                 query: {
                   type: "test2"
-                }})
+                }
+              })
         }></Img>
         <Img src="/icons/camera.svg" onClick={
             () => r.push({
                 //pathname: "/camera",
                 query: {
                   type: "test3"
-                }})
+                }
+              })
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
-                //pathname: "/messaging",
-                query: {
-                  type: "test4"
-                }})
+                pathname: "/messaging",
+                // query: {
+                //   type: "test4"
+                // }
+              })
         }></Img>
     </BarCont>
 }

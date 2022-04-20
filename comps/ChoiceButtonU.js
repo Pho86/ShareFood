@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {useRouter} from 'next/router'
+import { useRouter } from 'next/router'
 
 
 const ChoiceCont = styled.div`
@@ -23,13 +23,21 @@ export default function ChoiceButtonU({
 }) {
     const r = useRouter();
     const { image } = r.query;
-    return <ChoiceCont onClick={
-        ()=>r.push({
-            query:{
+
+
+    if (image === undefined || image === 0) {
+        return <ChoiceCont>
+            <Icon src={img}></Icon>
+        </ChoiceCont>
+    }
+
+    else {return <ChoiceCont onClick={
+        () => r.push({
+            query: {
                 image: image === undefined ? image : Math.max(0, Number(image) - 1)
             }
         })
     }>
         <Icon src={img}></Icon>
     </ChoiceCont>
-}
+} }
