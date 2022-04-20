@@ -75,3 +75,58 @@ export function BButton({
     // </BButtonCont>
 }
 
+export function Browse({
+    text="Start Browsing"
+}) {
+    const r = useRouter();
+    return <ButtonCont onClick={
+        () => r.push({
+            pathname:"/home"
+        })
+    }>
+        {text}
+    </ButtonCont>
+}
+
+export function Cancel({
+    text="Cancel"
+}) {
+    const r = useRouter();
+    return <BButtonCont onClick={
+        () => r.back()
+    }>
+        {text}
+    </BButtonCont>
+}
+
+
+
+
+export function Confirm({
+    text="Confirm"
+}) {
+    const r = useRouter();
+    return <ButtonCont onClick={
+        () => r.push({
+            pathname:"/confirmed"
+        })
+    }>
+        {text}
+    </ButtonCont>
+}
+
+
+export function Message({
+    name = "Jessica",
+    text ="Message " + name
+    
+}) {
+    const r = useRouter();
+    return <ButtonCont onClick={
+        () => r.push({
+            pathname:"/messaging"
+        })
+    }>
+        {text}
+    </ButtonCont>
+}
