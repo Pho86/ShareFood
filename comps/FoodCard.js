@@ -15,7 +15,7 @@ margin-right: auto;
 
 
 export default function FoodCard({
-    img = "/cereal.png"
+    img = "/cereal.svg"
     // img = [foodImg[1].img]
 
 }) {
