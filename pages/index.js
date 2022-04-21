@@ -8,7 +8,7 @@ import ProgressBar from '../comps/Progress'
 import Text from '../comps/Text.js'
 import ImgCard from '../comps/ImgCard.js'
 import NavBar from '../comps/NavBar'
-import TutorialTitle, { TutorialSubTitle, TutorialTitleInfo, TutorialTitleInfoBold } from '../comps/TutorialText'
+import TutorialTitle, { TutorialSubTitle, TutorialTitleInfo, TutorialTitleInfoBold, TutorialSecondLine } from '../comps/TutorialText'
 
 
 export default function Home() {
@@ -17,12 +17,13 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Text>Skip</Text>
       <TutorialTitle/> 
       <TutorialTitleInfoBold></TutorialTitleInfoBold>
       <TutorialTitleInfo></TutorialTitleInfo>
-      <Text>Skip</Text>
       <ImgCard />
-      <TutorialSubTitle>With Share Food, you can prevent food from being wasted away for free!</TutorialSubTitle>
+      <TutorialSubTitle></TutorialSubTitle>
+      <TutorialSecondLine></TutorialSecondLine>
       
       <ProgressBar></ProgressBar>
       <div className={styles.buttongrid}>
