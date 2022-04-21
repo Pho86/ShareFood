@@ -20,6 +20,7 @@ display: flex;
 line-height: 3em;
 gap: 4em;
 
+
 `
 const SelectedItem = styled.div`
 font-weight: 400;
@@ -65,6 +66,7 @@ text-align: center;
 position: block;
 left :8%;
 right: 8%;
+padding-bottom: 3em;
 `
 const Text = styled.div`
 `

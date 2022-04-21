@@ -11,7 +11,6 @@ font-weight: 300
 font-size 10px;
 text-align: center;
 padding-bottom: 2em;
-
 `
 
 const TutorialSubTitleBold2 = styled.div

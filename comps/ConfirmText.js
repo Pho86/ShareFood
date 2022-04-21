@@ -6,6 +6,7 @@ list-style: none;
 display: block;
 margin-left: auto;
 margin-right: auto;
+padding-bottom: 10em;
 `
 const TList = styled.div`
 list-style: none;
@@ -14,6 +15,7 @@ font-weight: bold;
 display: block;
 margin-left: auto;
 margin-right: auto;
+padding-bottom: 14em;
 `
 const TextCont = styled.div`
 display: flex;

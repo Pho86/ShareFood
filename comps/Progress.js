@@ -12,6 +12,7 @@ width:25px;
 height:25px;
 background-color:#F1F1F1;
 border-radius:50%;
+margin-bottom: 2em;
 `
 
 const ProgressFill = styled.div`
@@ -19,6 +20,7 @@ width:25px;
 height:25px;
 background-color:#D2D2D2;
 border-radius:50%
+
 `
 
 export default function ProgressBar() {

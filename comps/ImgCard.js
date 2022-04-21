@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {useRouter} from 'next/router';
 
 const Cont = styled.div`
-// style the cont here
+margin-bottom: 20px;
 `;
 
 const DispImg = styled.img`

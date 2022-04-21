@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 const Skip = styled.div`
+margin-top: 50px;
 `
 const MBox = styled.div`
 width: 340px;
@@ -48,7 +49,7 @@ export default function Text(
 
 export function Message(
     {
-        text = "Message"
+        text = "Message",
     }
 ) {
     const r = useRouter();
