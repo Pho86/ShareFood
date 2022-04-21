@@ -74,16 +74,13 @@ export default function ConfirmText() {
 
     return (
         <Text>
-            <SelectedItem>
-                Thank you! Your order with
-                <Highlight>&nbsp;Jessica&nbsp;</Highlight>
-                has been confirmed.
-            </SelectedItem>
-
-
-
             <TextCont>
                 <TList>
+                    <SelectedItem>
+                        Thank you! Your order with
+                        <Highlight>&nbsp;Jessica&nbsp;</Highlight>
+                        has been confirmed.
+                    </SelectedItem>
                     <H2>
                         Order Details
                     </H2>
@@ -110,6 +107,24 @@ export default function ConfirmText() {
             <Saved>You have saved
                 <Highlight>&nbsp;0.6 lbs&nbsp;</Highlight>
                 of food from going to waste.
+            </Saved>
+        </Text>
+    )
+}
+
+export function SavedDetails(
+    {
+        text = "You have saved 5.3 lbs of food from going to waste this month."
+    }
+) {
+    const r = useRouter();
+    const { route } = r.query
+
+    return (
+        <Text>
+            <Saved>You have saved
+                <Highlight>&nbsp;5.3 lbs&nbsp;</Highlight>
+                of food waste from going to waste this month.
             </Saved>
         </Text>
     )

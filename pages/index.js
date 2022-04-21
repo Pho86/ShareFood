@@ -17,10 +17,10 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+      <Text>Skip</Text>
       <TutorialTitle/> 
       <TutorialTitleInfoBold></TutorialTitleInfoBold>
       <TutorialTitleInfo></TutorialTitleInfo>
-      <Text>Skip</Text>
       <ImgCard />
       <TutorialSubTitle>With Share Food, you can prevent food from being wasted away for free!</TutorialSubTitle>
       
