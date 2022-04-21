@@ -126,9 +126,38 @@ export function TutorialSubTitle({
         text="When someone chooses your listing, you can message them to confirm details like when to meet in person."
     }
     if (tut === '4') {
-        text="With every food that’s given away, you prevent it from being wasted.With every food that’s given away, you prevent it from being wasted."
-        
+        text=`With every food that’s given away, you prevent it from being wasted. 
+        With every food that’s given away, you prevent it from being wasted.`
     }
+
+    const { route } = r.query
+    return(
+        <TutorialSubTitle2>{text}</TutorialSubTitle2>
+    )
+}
+
+export function TutorialSecondLine({
+    text=""
+}){
+    const r = useRouter();
+
+    const { tut } = r.query
+    if (tut === '0') {
+        text=""
+    }
+    if (tut === '1') {
+        text=""
+    }
+    if (tut === '2') {
+        text=""
+    }
+    if (tut === '3') {
+        text=""
+    }
+    if (tut === '4') {
+        text=`With every food that’s given away, you prevent it from being wasted.`
+    }
+    
     const { route } = r.query
     return(
         <TutorialSubTitle2>{text}</TutorialSubTitle2>

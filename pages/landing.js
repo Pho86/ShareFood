@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Logo from '../comps/Logo.js';
 import { Browse } from '../comps/Button';
 import Text, { TutButton } from '../comps/Text.js';
+import SlogonHeader from '../comps/slogon';
 
 
 export default function Home() {
@@ -12,7 +13,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <TutButton/>
-      <Logo />
+      <Logo/>
+      <SlogonHeader></SlogonHeader>
       <div className={styles.buttongrid}><Browse /></div>
     </div>
   )
