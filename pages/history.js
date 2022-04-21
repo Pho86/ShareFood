@@ -2,7 +2,7 @@ import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import { SavedDetails } from '../comps/Confirmed';
 import NavBar from '../comps/NavBar';
-import History from '../comps/History';
+import {History} from '../comps/History';
 import TutorialText from '../comps/TutorialText';
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
       <TutorialText text="History"/>
       <History/>
       <SavedDetails text="{text}"/>
+
       <NavBar/>  
       </div>
       

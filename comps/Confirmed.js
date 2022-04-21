@@ -72,46 +72,52 @@ const Text = styled.div`
 `
 export default function ConfirmText() {
     const r = useRouter();
-    const { route } = r.query
+    const { confirm } = r.query
+    if (confirm === undefined) {
+        return <div></div>
+    }
+    if (confirm === "1") {
+        return (
+            <Text>
+                <TextCont>
+                    <TList>
+                        <SelectedItem>
+                            Thank you! Your order with
+                            <Highlight>&nbsp;Jessica&nbsp;</Highlight>
+                            has been confirmed.
+                        </SelectedItem>
+                        <H2>
+                            Order Details
+                        </H2>
+                        <li class="list">Name of Food:</li>
+                        <li class="list two">Weight:</li>
+                        <li class="list three">Date of Purchase:</li>
+                        <li class="list four">Best Before Date:</li>
+                        <li class="list five">Meeting Location:</li>
+                        <li class="list six">Additional Details:</li>
+                    </TList>
+                    <IList>
+                        <H3>
+                            hidden text
+                        </H3>
+                        <li class="list">Soy Sauce</li>
+                        <li class="list two">0.6 lbs</li>
+                        <li class="list three">Mar 26, 2022</li>
+                        <li class="list four">May 22, 2022</li>
+                        <li class="list five">1251 Main St.</li>
+                        <li class="list six">"Opened."</li>
+                    </IList>
+                </TextCont>
+    
+                <Saved>You have saved
+                    <Highlight>&nbsp;0.6 lbs&nbsp;</Highlight>
+                    of food from going to waste.
+                </Saved>
+            </Text>
+        )
+    }
 
-    return (
-        <Text>
-            <TextCont>
-                <TList>
-                    <SelectedItem>
-                        Thank you! Your order with
-                        <Highlight>&nbsp;Jessica&nbsp;</Highlight>
-                        has been confirmed.
-                    </SelectedItem>
-                    <H2>
-                        Order Details
-                    </H2>
-                    <li class="list">Name of Food:</li>
-                    <li class="list two">Weight:</li>
-                    <li class="list three">Date of Purchase:</li>
-                    <li class="list four">Best Before Date:</li>
-                    <li class="list five">Meeting Location:</li>
-                    <li class="list six">Additional Details:</li>
-                </TList>
-                <IList>
-                    <H3>
-                        hidden text
-                    </H3>
-                    <li class="list">Soy Sauce</li>
-                    <li class="list two">0.6 lbs</li>
-                    <li class="list three">Mar 26, 2022</li>
-                    <li class="list four">May 22, 2022</li>
-                    <li class="list five">1251 Main St.</li>
-                    <li class="list six">"Opened."</li>
-                </IList>
-            </TextCont>
-
-            <Saved>You have saved
-                <Highlight>&nbsp;0.6 lbs&nbsp;</Highlight>
-                of food from going to waste.
-            </Saved>
-        </Text>
-    )
+    
 }
 
 export function SavedDetails(
@@ -121,7 +127,7 @@ export function SavedDetails(
 ) {
     const r = useRouter();
     const { route } = r.query
-
+    
     return (
         <Text>
             <Saved>You have saved
@@ -130,4 +136,5 @@ export function SavedDetails(
             </Saved>
         </Text>
     )
+    
 }

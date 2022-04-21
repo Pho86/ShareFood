@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import Text from '../comps/Text.js'
 import ConfirmText from '../comps/ConfirmText';
 import { Confirm, Cancel } from '../comps/Button';
+import Confirmed from '../comps/Confirmed';
+import { Message } from '../comps/Button';
 
 
 export default function Home() {
@@ -15,6 +17,10 @@ export default function Home() {
       <div className={styles.buttongrid}>
         <Cancel />
         <Confirm />
+      </div>
+      <Confirmed/>
+      <div className={styles.buttongrid}>
+      <Message/>
       </div>
     </div>
   )
