@@ -64,39 +64,41 @@ const Text = styled.div`
 
 export default function ConfirmText() {
     const r = useRouter();
-    const { route } = r.query
+    const { confirm } = r.query
+    if (confirm === undefined) {
 
-    return (
-        <Text>
-            <ConfirmHeader>
-                <SelectedItem>
-                    You have selected
-                    <Highlight>
-                        &nbsp;Soy Sauce&nbsp;
-                    </Highlight> from
-                    <Highlight>
-                        &nbsp;Jessica
-                    </Highlight>
-                </SelectedItem>
-            </ConfirmHeader>
-            <TextCont>
-                <TList>
-                    <li class="list">Name of Food:</li>
-                    <li class="list two">Weight:</li>
-                    <li class="list three">Date of Purchase:</li>
-                    <li class="list four">Best Before Date:</li>
-                    <li class="list five">Meeting Location:</li>
-                    <li class="list six">Additional Details:</li>
-                </TList>
-                <IList>
-                    <li class="list">Soy Sauce</li>
-                    <li class="list two">0.6 lbs</li>
-                    <li class="list three">Mar 26, 2022</li>
-                    <li class="list four">May 22, 2022</li>
-                    <li class="list five">1251 Main St.</li>
-                    <li class="list six">"Opened."</li>
-                </IList>
-            </TextCont>
-        </Text>
-    )
+        return (
+            <Text>
+                <ConfirmHeader>
+                    <SelectedItem>
+                        You have selected
+                        <Highlight>
+                            &nbsp;Soy Sauce&nbsp;
+                        </Highlight> from
+                        <Highlight>
+                            &nbsp;Jessica
+                        </Highlight>
+                    </SelectedItem>
+                </ConfirmHeader>
+                <TextCont>
+                    <TList>
+                        <li class="list">Name of Food:</li>
+                        <li class="list two">Weight:</li>
+                        <li class="list three">Date of Purchase:</li>
+                        <li class="list four">Best Before Date:</li>
+                        <li class="list five">Meeting Location:</li>
+                        <li class="list six">Additional Details:</li>
+                    </TList>
+                    <IList>
+                        <li class="list">Soy Sauce</li>
+                        <li class="list two">0.6 lbs</li>
+                        <li class="list three">Mar 26, 2022</li>
+                        <li class="list four">May 22, 2022</li>
+                        <li class="list five">1251 Main St.</li>
+                        <li class="list six">"Opened."</li>
+                    </IList>
+                </TextCont>
+            </Text>
+        )
+    }
 }

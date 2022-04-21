@@ -92,11 +92,18 @@ export function Cancel({
     text="Cancel"
 }) {
     const r = useRouter();
-    return <BButtonCont onClick={
-        () => r.back()
-    }>
-        {text}
-    </BButtonCont>
+    const { confirm } = r.query
+    if (confirm === undefined) {
+        return <BButtonCont onClick={
+            () => r.back()
+        }>
+            {text}
+        </BButtonCont>
+    }
+    if (confirm === "1") {
+    
+    }
+    
 }
 
 
@@ -106,13 +113,21 @@ export function Confirm({
     text="Confirm"
 }) {
     const r = useRouter();
-    return <ButtonCont onClick={
-        () => r.push({
-            pathname:"/confirmed"
-        })
-    }>
-        {text}
-    </ButtonCont>
+    const { confirm } = r.query
+    if (confirm === undefined) {
+        return <ButtonCont onClick={
+            () => r.push({
+                query: {
+                    confirm:"1"
+                }
+            })
+        }>
+            {text}
+        </ButtonCont>
+    }
+    if (confirm === "1") {
+    
+    }
 }
 
 
@@ -122,11 +137,17 @@ export function Message({
     
 }) {
     const r = useRouter();
-    return <ButtonCont onClick={
-        () => r.push({
-            pathname:"/messaging"
-        })
-    }>
-        {text}
-    </ButtonCont>
+    const { confirm } = r.query
+    if (confirm === undefined) {
+    }
+    if (confirm === "1") {
+        return <ButtonCont onClick={
+            () => r.push({
+                pathname:"/messaging"
+            })
+        }>
+            {text}
+        </ButtonCont>
+    }
+    
 }
