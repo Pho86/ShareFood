@@ -19,8 +19,15 @@ margin-left: auto;
 margin-right: auto;
 display: flex;
 position: relative;
+`
+
+const TutBtn = styled.img`
 margin-left: auto;
-margin-right: auto;
+`
+
+const TutBtnCont = styled.div`
+margin-top: 50px;
+display: flex;
 `
 const SendCont = styled.div`
 `
@@ -69,3 +76,18 @@ export function TutorialPage(){
     </div>
 }
     
+export function TutButton(
+    {
+    img = "/icons/tutorialbutton.svg"
+    }
+) {
+    const r = useRouter();
+    return <TutBtnCont>
+        <TutBtn src={img} onClick={
+            () => r.push({
+                pathname: "/"
+            })
+        }></TutBtn>
+    </TutBtnCont>
+}
+
