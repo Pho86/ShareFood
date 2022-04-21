@@ -26,7 +26,7 @@ text-align: center;
 
 
 export default function TutorialTitle({
-    text="What is sharefood?"
+    text="What is Share Food?"
 }) {
     const r = useRouter();
     

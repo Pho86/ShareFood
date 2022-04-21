@@ -11,7 +11,6 @@ export default function Home() {
 
     return (
         <div className={styles.container}>
-            <Text />
             <div class="chat">
                 <div class="message"><PersonBubble></PersonBubble><PersonChat text={chat[0].chat}/>
                 </div>

@@ -36,10 +36,10 @@ export default function NavBar({
         } id="active"></Img>
         <Img src="/icons/history.svg" onClick={
             () => r.push({
-                //pathname: "/history",
-                query: {
-                  type: "historynotcoded"
-                }
+                pathname: "/history",
+                // query: {
+                //   type: "historynotcoded"
+                // }
               })
         }></Img>
         <Img src="/icons/camera.svg" onClick={

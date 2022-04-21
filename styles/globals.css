@@ -34,7 +34,6 @@ button {
   overflow: hidden;
   outline: none;
   display: flex;
-  /* text-align: right; this isn't working */
 }
 /* animation for confirm page  */
 li {
