@@ -13,7 +13,7 @@ import ChoiceButtonY from '../comps/ChoiceButtonY.js'
 import FoodCard from '../comps/FoodCard.js'
 import { foodImg } from '../data/img_content'
 import Navbar from '../comps/NavBar'
-
+import BackButton from '../comps/PreviousButton'
 
 export default function Home() {
 
@@ -27,6 +27,7 @@ export default function Home() {
 
     return (
         <div className={styles.container}>
+            <BackButton></BackButton>
             <FoodCard />
             <div class="choices">
                 <ChoiceButtonX />
@@ -34,6 +35,7 @@ export default function Home() {
                 <ChoiceButtonY />
             </div>
             <Navbar></Navbar>
+            
 
 
 
