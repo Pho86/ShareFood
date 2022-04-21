@@ -55,7 +55,7 @@ font-size 20px;
 text-align: center;
 margin-right: auto;
 margin-left: auto;
-padding-bottom: 20px;
+padding-bottom: 167px;
 visibility: hidden;
 `
 const Saved = styled.div`
