@@ -14,6 +14,7 @@ import FoodCard from '../comps/FoodCard.js'
 import { foodImg } from '../data/img_content'
 import Navbar from '../comps/NavBar'
 import BackButton from '../comps/PreviousButton'
+import {ImageText, ImageTextInfo, ImageTextComment} from '../comps/hometext'
 
 export default function Home() {
 
@@ -28,7 +29,13 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <BackButton></BackButton>
-            <FoodCard />
+            <FoodCard></FoodCard>
+            <div className={styles.buttongrid}>
+                    <ImageText></ImageText>
+                    <ImageTextInfo></ImageTextInfo>
+                    <ImageTextComment></ImageTextComment>
+            </div>
+            
             <div class="choices">
                 <ChoiceButtonX />
                 <ChoiceButtonU />
