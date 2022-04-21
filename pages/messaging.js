@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import NavBar from '../comps/NavBar';
 import Text, { Message, SendIcon } from '../comps/Text';
 import { chat } from '../data/chat_content';
-import { PersonChat, PersonBubble } from '../comps/Chat';
+import { PersonChat, PersonBubble, MeBubble, MeChat } from '../comps/Chat';
 
 export default function Home() {
     const r = useRouter();
@@ -14,7 +14,7 @@ export default function Home() {
             <div class="chat">
                 <div class="message"><PersonBubble></PersonBubble><PersonChat text={chat[0].chat}/>
                 </div>
-                <div class="message1"><PersonChat text={chat[1].chat}/><PersonBubble name={chat[1].initals}></PersonBubble>
+                <div class="message1"><MeChat text={chat[1].chat}/><MeBubble name={chat[1].initals}  ></MeBubble>
                 </div>
                 <div class="message"><PersonBubble ></PersonBubble><PersonChat text={chat[2].chat} />
                 </div>
