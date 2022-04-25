@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 const ButtonCont = styled.button`
+font-size:1.2rem;
 text-align: center;
 background:#F3CA40;
 border:none;
@@ -13,6 +14,7 @@ animation-delay: .3s;
 `;
 
 const BButtonCont = styled.button`
+font-size:1.2rem;
 text-align: center;
 background:#FAEAB3;
 border:none;
