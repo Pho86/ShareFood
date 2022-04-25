@@ -32,6 +32,17 @@ const ImageText3 = styled.div
    color: white;   
    margin-top:-50px;
 `
+const Black = styled.div`
+`
+
+const Background = styled.img`
+width: 355px;
+height: 100px;
+display: flex;
+margin-left: auto;
+margin-right: auto;
+margin-top:-100px;
+`
 
 
 export function ImageText({
@@ -115,4 +126,11 @@ export function ImageTextComment({
     )
 }
 
-
+export function TextBackground({
+    img = "/igkbM.png"
+}) {
+    const r = useRouter();
+    return <Black>
+        <Background src={img}/>
+    </Black>
+}
