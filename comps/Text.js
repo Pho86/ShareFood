@@ -32,6 +32,11 @@ display: flex;
 `
 const SendCont = styled.div`
 `
+
+const FillSpace = styled.div`
+height: 400px;
+// temporarily used to move msg box down
+`
 export default function Text(
     {
         text = "Skip"
@@ -92,3 +97,8 @@ export function TutButton(
     </TutBtnCont>
 }
 
+export function Space(){
+    // temporariylhstk used to move msg box down
+    const r = useRouter();
+    return <FillSpace></FillSpace>
+}

@@ -14,7 +14,8 @@ export default function Home() {
       <TutorialText text="History"/>
       <History/>
       <SavedDetails text="{text}"/>
-
+      <div>Mar 5, 2022: gave away peanut butter</div>
+      {/* temporarily ^ used for testing lol */}
       <NavBar/>  
       </div>
       

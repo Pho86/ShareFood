@@ -19,21 +19,18 @@ const TextCont = styled.div`
 display: flex;
 line-height: 3em;
 gap: 4em;
-
-
 `
 const SelectedItem = styled.div`
 font-weight: 400;
 font-size: 24px;
 line-height: 32 px;
+align-items: center;
 text-align: center;
 position: block;
 padding-top: 50px;
 padding-bottom: 50px;
-left :8%;
-right: 8%;
-// top: 17%;
-// bottom: 74%;
+// left :8%;
+// right: 8%;
 `
 const Highlight = styled.div`
 display: inline-block;
@@ -55,7 +52,7 @@ font-size 20px;
 text-align: center;
 margin-right: auto;
 margin-left: auto;
-padding-bottom: 167px;
+padding-bottom: 20px;
 visibility: hidden;
 `
 const Saved = styled.div`
@@ -79,13 +76,13 @@ export default function ConfirmText() {
     if (confirm === "1") {
         return (
             <Text>
-                <TextCont>
-                    <TList>
                         <SelectedItem>
                             Thank you! Your order with
                             <Highlight>&nbsp;Jessica&nbsp;</Highlight>
                             has been confirmed.
                         </SelectedItem>
+                <TextCont>
+                    <TList>
                         <H2>
                             Order Details
                         </H2>
