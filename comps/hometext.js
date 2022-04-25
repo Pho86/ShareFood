@@ -127,7 +127,7 @@ export function ImageTextComment({
 }
 
 export function TextBackground({
-    img = "/igkbM.png"
+    img = "/tempbg.png"
 }) {
     const r = useRouter();
     return <Black>
