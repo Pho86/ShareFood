@@ -1,24 +1,41 @@
-//idk if i need this
-export const categories = [
+export const categories1 = [
     {
-        title: "Name of Food",
-        fill: "Peanut Butter"
+        title: "Name of Food:"
     },
     {
-        title: "Weight",
-        fill: "0.5 lbs"
+        title: "Weight"
     },
     {
-        title: "Date of Purchase",
-        fill: "Mar 26, 2022"
+        title: "Date of Purchase"
     },
     {
-        title: "Best Before Date",
-        fill: "Apr 2, 2022"
+        title: "Best Before Date"
     },
     {
-        title: "Additional Details",
-        fill: "\"Brand New\""
+        title: "Pick-up Location"
+    },
+    {
+        title: "Additional Details"
     },
 ]
 
+export const categories2 = [
+    {
+        fill: "Soy Sauce"
+    },
+    {
+        fill: "0.6 lbs"
+    },
+    {
+        fill: "Mar 26, 2022"
+    },
+    {
+        fill: "Apr 2, 2022"
+    },
+    {
+        fill: "1242 Main St."
+    },
+    {
+        fill: "\"Brand New\""
+    },
+]

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { useRouter } from 'next/router'
-
+import { useRouter } from 'next/router';
+import { categories1, categories2 } from '../data/confirm_content.js';
 const IList = styled.div`
 list-style: none;
 display: block;
@@ -64,7 +64,11 @@ right: 8%;
 const Text = styled.div`
 `
 
-export default function ConfirmText() {
+export default function ConfirmText({
+    title = "Name of Food:",
+    fill = "Soy Sauce"
+    }
+) {
     const r = useRouter();
     const { confirm } = r.query
     if (confirm === undefined) {
@@ -75,7 +79,7 @@ export default function ConfirmText() {
                     <SelectedItem>
                         You have selected
                         <Highlight>
-                            &nbsp;Soy Sauce&nbsp;
+                            &nbsp;{categories2[0].fill}&nbsp;
                         </Highlight> from
                         <Highlight>
                             &nbsp;Jessica
@@ -84,20 +88,20 @@ export default function ConfirmText() {
                 </ConfirmHeader>
                 <TextCont>
                     <TList>
-                        <li class="list">Name of Food:</li>
-                        <li class="list two">Weight:</li>
-                        <li class="list three">Date of Purchase:</li>
-                        <li class="list four">Best Before Date:</li>
-                        <li class="list five">Meeting Location:</li>
-                        <li class="list six">Additional Details:</li>
+                        <div class="list">{categories1[0].title}</div>
+                        <div class="list two">{categories1[1].title}</div>
+                        <div class="list three">{categories1[2].title}</div>
+                        <div class="list four">{categories1[3].title}</div>
+                        <div class="list five">{categories1[4].title}</div>
+                        <div class="list six">{categories1[5].title}:</div>
                     </TList>
                     <IList>
-                        <li class="list">Soy Sauce</li>
-                        <li class="list two">0.6 lbs</li>
-                        <li class="list three">Mar 26, 2022</li>
-                        <li class="list four">May 22, 2022</li>
-                        <li class="list five">1251 Main St.</li>
-                        <li class="list six">"Opened."</li>
+                        <div class="list">{categories2[0].fill}</div>
+                        <div class="list two">{categories2[1].fill}</div>
+                        <div class="list three">{categories2[2].fill}</div>
+                        <div class="list four">{categories2[3].fill}</div>
+                        <div class="list five">{categories2[4].fill}</div>
+                        <div class="list six">{categories2[5].fill}</div>
                     </IList>
                 </TextCont>
             </Text>

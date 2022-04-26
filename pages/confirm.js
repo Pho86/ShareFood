@@ -5,6 +5,7 @@ import ConfirmText from '../comps/ConfirmText';
 import { Confirm, Cancel } from '../comps/Button';
 import Confirmed from '../comps/Confirmed';
 import { Message } from '../comps/Button';
+import { categories1, categories2 } from '../data/confirm_content.js';
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <ConfirmText />
+      <ConfirmText  />
       <div className={styles.buttongrid}>
         <Cancel />
         <Confirm />
