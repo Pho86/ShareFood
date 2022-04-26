@@ -79,7 +79,7 @@ export function ImageTextInfo({
     
     const { image } = r.query
     if ( image === '0') {
-        text="Jessica Smith | Burnaby"
+        text="Amy Mo | Vancouver"
     }
     if ( image === '1') {
         text="Chad Bruno | Langley"
@@ -88,10 +88,10 @@ export function ImageTextInfo({
         text="Li Lee | New Westminister"
     }
     if ( image === '3') {
-        text="Amy Mo | Vancouver"
+        text="Hope Chen | Richmond"
     }
     if ( image === '4') {
-        text="Hope Chen | Richmond"
+        text="Jessica Smith | Burnaby"
     }
 
     return(

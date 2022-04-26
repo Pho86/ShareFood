@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { categories1, categories2 } from '../data/confirm_content.js';
+import { categories1, nameoffood, weight, dop, bbd, location, details, names } from '../data/confirm_content.js';
+
 const IList = styled.div`
 list-style: none;
 display: block;
@@ -64,11 +65,7 @@ right: 8%;
 const Text = styled.div`
 `
 
-export default function ConfirmText({
-    title = "Name of Food:",
-    fill = "Soy Sauce"
-    }
-) {
+export default function ConfirmText() {
     const r = useRouter();
     const { confirm } = r.query
     if (confirm === undefined) {
@@ -79,10 +76,10 @@ export default function ConfirmText({
                     <SelectedItem>
                         You have selected
                         <Highlight>
-                            &nbsp;{categories2[0].fill}&nbsp;
+                            &nbsp;{nameoffood[4].text}&nbsp;
                         </Highlight> from
                         <Highlight>
-                            &nbsp;Jessica
+                            &nbsp;{names[4].text}
                         </Highlight>
                     </SelectedItem>
                 </ConfirmHeader>
@@ -96,12 +93,12 @@ export default function ConfirmText({
                         <div class="list six">{categories1[5].title}:</div>
                     </TList>
                     <IList>
-                        <div class="list">{categories2[0].fill}</div>
-                        <div class="list two">{categories2[1].fill}</div>
-                        <div class="list three">{categories2[2].fill}</div>
-                        <div class="list four">{categories2[3].fill}</div>
-                        <div class="list five">{categories2[4].fill}</div>
-                        <div class="list six">{categories2[5].fill}</div>
+                        <div class="list">{nameoffood[4].text}</div>
+                        <div class="list two">{weight[4].text}</div>
+                        <div class="list three">{dop[4].text}</div>
+                        <div class="list four">{bbd[4].text}</div>
+                        <div class="list five">{location[4].text}</div>
+                        <div class="list six">{details[4].text}</div>
                     </IList>
                 </TextCont>
             </Text>

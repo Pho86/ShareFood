@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router'
+import { categories1, nameoffood, weight, dop, bbd, location, details, names } from '../data/confirm_content.js';
 
 const IList = styled.div`
 list-style: none;
@@ -78,7 +79,7 @@ export default function ConfirmText() {
             <Text>
                         <SelectedItem>
                             Thank you! Your order with
-                            <Highlight>&nbsp;Jessica&nbsp;</Highlight>
+                            <Highlight>&nbsp;{names[4].text}&nbsp;</Highlight>
                             has been confirmed.
                         </SelectedItem>
                 <TextCont>
@@ -86,23 +87,23 @@ export default function ConfirmText() {
                         <H2>
                             Order Details
                         </H2>
-                        <li class="list">Name of Food:</li>
-                        <li class="list two">Weight:</li>
-                        <li class="list three">Date of Purchase:</li>
-                        <li class="list four">Best Before Date:</li>
-                        <li class="list five">Meeting Location:</li>
-                        <li class="list six">Additional Details:</li>
+                        <div class="list">{categories1[0].title}</div>
+                        <div class="list two">{categories1[1].title}</div>
+                        <div class="list three">{categories1[2].title}</div>
+                        <div class="list four">{categories1[3].title}</div>
+                        <div class="list five">{categories1[4].title}</div>
+                        <div class="list six">{categories1[5].title}:</div>
                     </TList>
                     <IList>
                         <H3>
                             hidden text
                         </H3>
-                        <li class="list">Soy Sauce</li>
-                        <li class="list two">0.6 lbs</li>
-                        <li class="list three">Mar 26, 2022</li>
-                        <li class="list four">May 22, 2022</li>
-                        <li class="list five">1251 Main St.</li>
-                        <li class="list six">"Opened."</li>
+                        <div class="list">{nameoffood[4].text}</div>
+                        <div class="list two">{weight[4].text}</div>
+                        <div class="list three">{dop[4].text}</div>
+                        <div class="list four">{bbd[4].text}</div>
+                        <div class="list five">{location[4].text}</div>
+                        <div class="list six">{details[4].text}</div>
                     </IList>
                 </TextCont>
     
