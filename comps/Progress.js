@@ -32,49 +32,169 @@ export default function ProgressBar() {
     if (tut === '0') {
         return <ProgressCont>
         <ProgressFill></ProgressFill>
-        <Progress></Progress>
-        <Progress></Progress>
-        <Progress></Progress>
-        <Progress></Progress>
+        <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 1
+            }
+        })
+    }></Progress>
+        <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 2
+            }
+        })
+    }></Progress>
+        <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 3
+            }
+        })
+    }></Progress>
+        <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 4
+            }
+        })
+    }></Progress>
     </ProgressCont>
 
     }
     if (tut === '1') {
         return <ProgressCont>
-            <Progress></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 0
+            }
+        })
+    }></Progress>
             <ProgressFill></ProgressFill>
-            <Progress></Progress>
-            <Progress></Progress>
-            <Progress></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 2
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 3
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 4
+            }
+        })
+    }></Progress>
         </ProgressCont>
 
     }
     if (tut === '2') {
         return <ProgressCont>
-            <Progress></Progress>
-            <Progress></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 0
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 1
+            }
+        })
+    }></Progress>
             <ProgressFill></ProgressFill>
-            <Progress></Progress>
-            <Progress></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 3
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 4
+            }
+        })
+    }></Progress>
         </ProgressCont>
 
     }
     if (tut === '3') {
         return <ProgressCont>
-            <Progress></Progress>
-            <Progress></Progress>
-            <Progress></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 0
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 1
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 2
+            }
+        })
+    }></Progress>
             <ProgressFill></ProgressFill>
-            <Progress></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 4
+            }
+        })
+    }></Progress>
         </ProgressCont>
 
     }
     if (tut === '4') {
         return <ProgressCont>
-            <Progress></Progress>
-            <Progress></Progress>
-            <Progress></Progress>
-            <Progress></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 0
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 1
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 2
+            }
+        })
+    }></Progress>
+            <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 3
+            }
+        })
+    }></Progress>
             <ProgressFill></ProgressFill>
         </ProgressCont>
 
@@ -82,10 +202,34 @@ export default function ProgressBar() {
     else {
         return <ProgressCont>
         <ProgressFill></ProgressFill>
-        <Progress></Progress>
-        <Progress></Progress>
-        <Progress></Progress>
-        <Progress></Progress>
+        <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 1
+            }
+        })
+    }></Progress>
+        <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 2
+            }
+        })
+    }></Progress>
+        <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 3
+            }
+        })
+    }></Progress>
+        <Progress onClick={
+        () => r.replace({
+            query: {
+                tut: tut = 4
+            }
+        })
+    }></Progress>
     </ProgressCont>
     }
 
