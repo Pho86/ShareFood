@@ -9,14 +9,16 @@ gap: 3em;
 const Btn = styled.img`
 `
 export default function CameraBtn({
-    img = "/icons/camerabtn.svg"
+    cam = "/icons/camerabtn.svg",
+    pho = "/icons/photos_icon.svg",
+    flip = "/icons/flip_icon.svg"
 }) {
     const r = useRouter();
     const { image } = r.query;
 
     return <CameraCont>
-    <Btn src="/icons/flip_icon.svg"></Btn>
-    <Btn src={img}></Btn>
-    <Btn src="/icons/photos_icon.svg"></Btn> 
+    <Btn src={pho}></Btn> 
+    <Btn src={cam}></Btn>
+    <Btn src={flip}></Btn>
     </CameraCont>
 }
