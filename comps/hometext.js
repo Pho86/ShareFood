@@ -2,34 +2,40 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 
 const ImageText1 = styled.div`
-    position: relative 
-    font-size: 30 px;
-    color: white;   
-    margin-top:-90px;  
     position: relative;
+    font-size: 24px;
+    font-weight: 550;
+    color: white;   
+    margin-top:-120px;  
+    position: relative;
+    background: linear-gradient(0deg, #000000 14.72%, rgba(0, 0, 0, 0) 105%);
+    padding: 15px; 
+    width: 356px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 `
 
 const ImageText2 = styled.div
 `
-   position: absolute;
-//    top: 520px;
-//    left: 680px;
-//    width: 100%;
+    position: absolute;
     margin: 0 auto;
-    font-size: 20 px;
+    font-weight: 300;
+    font-size: 20px;
     color: white;   
-    margin-top:-75px;
+    margin-top:-4.5em;
+    margin-left: -7em;
+    padding: 15px;
+    
 `
 
 const ImageText3 = styled.div
 `
    position: absolute;
-//    top: 550px;
-//    left: 690px;
-
    margin: 0 auto;
-   font-size:10px;
-   color: white;   
+   font-size:16px;
+   color: #E3E3E3;   
+   padding: 5px;
+   margin-left: 6em;
    margin-top:-50px;
 `
 const Black = styled.div`
@@ -127,10 +133,10 @@ export function ImageTextComment({
 }
 
 export function TextBackground({
-    img = "/tempbg.png"
+    // img = "/tempbg.png"
 }) {
     const r = useRouter();
     return <Black>
-        <Background src={img}/>
+        {/* <Background src={img}/> */}
     </Black>
 }
