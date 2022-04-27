@@ -13,15 +13,21 @@ const TutorialSubTitle2 = styled.div`
 font-weight: 300
 font-size 10px;
 text-align: center;
+line-height: 25px;
 padding-bottom: 2em;
 opacity: 0;
 animation: revealText 1s forwards;
 animation-delay: .2s;
+width: 22rem;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
 `
 
 const TutorialSubTitleBold2 = styled.div
 `
 padding-top: 2em;
+padding-bottom: 1em;
 font-weight: 600;
 font-size 20px;
 text-align: center;
@@ -34,13 +40,13 @@ animation-delay: .2s;
 
 
 export default function TutorialTitle({
-    text="What is Share Food?"
+    text="What is ShareFood?"
 }) {
     const r = useRouter();
     
     const { tut } = r.query
     if (tut === '0') {
-        text="What is Share Food?"
+        text="What is ShareFood?"
     }
     if (tut === '1') {
         text="Share and Save Today"
@@ -79,7 +85,7 @@ export function TutorialTitleInfoBold({
         text="Post a Listing"
     }
     if (tut === '4') {
-        text=""
+        text="Save the Planet"
     }
     const { route } = r.query
     return(
@@ -116,13 +122,13 @@ export function TutorialTitleInfo({
 }
 
 export function TutorialSubTitle({
-    text="With Share Food, you can prevent food from being wasted away for free!"
+    text="With ShareFood, you can prevent food from being wasted away for free!"
 }){
     const r = useRouter();
 
     const { tut } = r.query
     if (tut === '0') {
-        text="With Share Food, you can prevent food from being wasted away for free!"
+        text="With ShareFood, you can prevent food from being wasted away for free!"
     }
     if (tut === '1') {
         text="Decide whether you want to give away food or receive food."

@@ -8,130 +8,140 @@ const ImageText1 = styled.div`
     color: white;   
     margin-top:-170px;  
     height: 170px;
-    background: linear-gradient(0deg, #000000 14.72%, rgba(0, 0, 0, 0) 105%);
+    background: linear-gradient(0deg, #000000 20%, rgba(0, 0, 0, 0) 100%);
     padding: 15px; 
     width: 356px;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    opacity: 0;
+    animation: revealText 1s forwards;
+    animation-delay: .1s;
 `
 
 const ImageText2 = styled.div
-`
+    `
     position: absolute;
     margin: 0 auto;
     font-weight: 300;
     font-size: 20px;
     color: white;   
-    margin-top:-135px;
-    margin-left: -100px;
+    margin-top:-137px;
+    // margin-left: -100px;
     padding: 15px;
     text-align: left;
+    width: 22rem;
+    opacity: 0;
+    animation: revealText 1s forwards;
+    animation-delay: .1s;
     
 `
 
 const ImageText3 = styled.div
-`
+    `
    position: absolute;
    margin: 0 auto;
    font-size:16px;
    color: #E3E3E3;   
    padding: 5px;
    margin-left: -1em;
-   margin-top:-100px;
+   margin-top:-97px;
    width: 20rem;
    line-height: 20px;
+   opacity: 0;
+    animation: revealText 1s forwards;
+    animation-delay: .1s;
 `
 const Black = styled.div`
 `
 
 const Background = styled.img`
-width: 355px;
-height: 100px;
-display: flex;
-margin-left: auto;
-margin-right: auto;
-margin-top:-100px;
-`
+    width: 355px;
+    height: 100px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:-100px;
+    `
 
 
 export function ImageText({
-    text="Peanut Butter"
+    text = "Peanut Butter"
 }) {
     const r = useRouter();
-    
+
     const { image } = r.query
-    if ( image === '0') {
-        text="Peanut Butter"
+    if (image === '0') {
+        text = "Peanut Butter"
     }
-    if ( image === '1') {
-        text="Box of Cereal"
+    if (image === '1') {
+        text = "Box of Cereal"
     }
-    if ( image === '2') {
-        text="Egg Carton"
+    if (image === '2') {
+        text = "Egg Carton"
     }
-    if ( image === '3') {
-        text="Instant Noodles"
+    if (image === '3') {
+        text = "Instant Noodles"
     }
-    if ( image === '4') {
-        text="Soy Sauce"
+    if (image === '4') {
+        text = "Soy Sauce"
     }
 
-    return(
-       <ImageText1>{text}</ImageText1>
+    return (
+        <ImageText1>{text}</ImageText1>
     )
 }
 
 export function ImageTextInfo({
-    text="Jessica Smith | Burnaby"
+    text = "Jessica Smith | Burnaby"
 }) {
     const r = useRouter();
-    
+
     const { image } = r.query
-    if ( image === '0') {
-        text="Amy Mo | Vancouver"
+    if (image === '0') {
+        text = "Amy Mo | Vancouver"
     }
-    if ( image === '1') {
-        text="Chad Bruno | Langley"
+    if (image === '1') {
+        text = "Chad Bruno | Langley"
     }
-    if ( image === '2') {
-        text="Li Lee | New Westminister"
+    if (image === '2') {
+        text = "Li Lee | New Westminister"
     }
-    if ( image === '3') {
-        text="Hope Chen | Richmond"
+    if (image === '3') {
+        text = "Hope Chen | Richmond"
     }
-    if ( image === '4') {
-        text="Jessica Smith | Burnaby"
+    if (image === '4') {
+        text = "Jessica Smith | Burnaby"
     }
 
-    return(
-       <ImageText2>{text}</ImageText2>
+    return (
+        <ImageText2>{text}</ImageText2>
     )
 }
 
 export function ImageTextComment({
-    text="“Opened, but never used. Forgot my kid has a nut allergy.”"
+    text = "“Opened, but never used. Forgot my kid has a nut allergy.”"
 }) {
     const r = useRouter();
-    
+
     const { image } = r.query
-    if ( image === '0') {
-        text="“Opened, but never used. Forgot my kid has a nut allergy.”"
+    if (image === '0') {
+        text = "“Opened, but never used. Forgot my kid has a nut allergy.”"
     }
-    if ( image === '1') {
-        text="“Never opened. My mom sent me a box of cereal, think she forgot that I’m lactose intolerant.”"
+    if (image === '1') {
+        text = "“Never opened. My mom sent me a box of cereal, think she forgot that I’m lactose intolerant.”"
     }
-    if ( image === '2') {
-        text="“1 egg gone. My kid recently turned vegan, I completely forgot about that. Has been complaining about the eggs and wants us to give it away.”"
+    if (image === '2') {
+        text = "“1 egg gone. My kid recently turned vegan, I completely forgot about that. Has been complaining about the eggs and wants us to give it away.”"
     }
-    if ( image === '3') {
-        text="“Thought instant noodles were easy to cook. I almost burned my house down trying to cook these. Willing to give multiple packs of Instant Noodles.”"
+    if (image === '3') {
+        text = "“Thought instant noodles were easy to cook. I almost burned my house down trying to cook these. Willing to give multiple packs of Instant Noodles.”"
     }
-    if ( image === '4') {
-        text="“Never opened. My roommate is dumb. She bought another thing of Soy Sauce when we already have full 3 bottles.”"
+    if (image === '4') {
+        text = "“Never opened. My roommate is dumb. She bought another thing of Soy Sauce when we already have full 3 bottles.”"
     }
 
-    return(
-       <ImageText3>{text}</ImageText3>
+    return (
+        <ImageText3>{text}</ImageText3>
     )
 }
 

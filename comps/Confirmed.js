@@ -65,6 +65,9 @@ position: block;
 left :8%;
 right: 8%;
 padding-bottom: 3em;
+opacity: 0;
+animation: revealText 1s forwards;
+animation-delay: .2s;
 `
 const Text = styled.div`
 `
