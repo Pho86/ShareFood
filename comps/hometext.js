@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { useRouter } from "next/router";
 
 const ImageText1 = styled.div`
-    position: relative;
+    position: absolute;
     font-size: 24px;
     font-weight: 550;
     color: white;   
-    margin-top:-120px;  
-    position: relative;
+    margin-top:-170px;  
+    height: 170px;
     background: linear-gradient(0deg, #000000 14.72%, rgba(0, 0, 0, 0) 105%);
     padding: 15px; 
     width: 356px;
@@ -22,9 +22,10 @@ const ImageText2 = styled.div
     font-weight: 300;
     font-size: 20px;
     color: white;   
-    margin-top:-4.5em;
-    margin-left: -7em;
+    margin-top:-135px;
+    margin-left: -100px;
     padding: 15px;
+    text-align: left;
     
 `
 
@@ -35,8 +36,10 @@ const ImageText3 = styled.div
    font-size:16px;
    color: #E3E3E3;   
    padding: 5px;
-   margin-left: 6em;
-   margin-top:-50px;
+   margin-left: -1em;
+   margin-top:-100px;
+   width: 20rem;
+   line-height: 20px;
 `
 const Black = styled.div`
 `
