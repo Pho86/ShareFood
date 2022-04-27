@@ -44,10 +44,10 @@ export default function NavBar({
         }></Img>
         <Img src="/icons/camera.svg" onClick={
             () => r.push({
-                //pathname: "/camera",
-                query: {
-                  type: "cameranotcoded"
-                }
+                pathname: "/camera",
+                // query: {
+                //   type: "cameranotcoded"
+                // }
               })
         }></Img>
         <Img src="/icons/messages.svg" onClick={
