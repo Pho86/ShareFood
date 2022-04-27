@@ -8,6 +8,9 @@ background:#F3CA40;
 border:none;
 border-radius:15px;
 padding:10px 35px 10px 35px;
+// opacity: 0;
+// animation: revealText 1s forwards;
+// animation-delay: .2s;
 `;
 
 const BButtonCont = styled.button`

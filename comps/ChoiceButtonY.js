@@ -15,6 +15,9 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 padding-top: 17px;
+opacity: 0;
+animation: revealText 1s forwards;
+animation-delay: .3s;
 
 `
 //check button
