@@ -125,8 +125,7 @@ export function TutorialSubTitle({
         text="When someone chooses your listing, you can message them to confirm details like when to meet in person."
     }
     if (tut === '4') {
-        text=`With every food that’s given away, you prevent it from being wasted. 
-        With every food that’s given away, you prevent it from being wasted.`
+        text=`With every food that's given away, you prevent it from being wasted. `
     }
 
     const { route } = r.query
@@ -154,7 +153,7 @@ export function TutorialSecondLine({
         text=""
     }
     if (tut === '4') {
-        text=`With every food that’s given away, you prevent it from being wasted.`
+        text=" We hope you have a good time with Share Food and eat well!"
     }
     
     const { route } = r.query
