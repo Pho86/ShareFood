@@ -13,6 +13,7 @@ import ChoiceButtonY from '../comps/ChoiceButtonY.js'
 import FoodCard from '../comps/FoodCard.js'
 import { foodImg } from '../data/img_content'
 import Navbar from '../comps/NavBar'
+import SlogonHeader from '../comps/slogon';
 import BackButton from '../comps/PreviousButton'
 import {ImageText, ImageTextInfo, ImageTextComment, TextBackground} from '../comps/hometext'
 
@@ -24,7 +25,7 @@ export default function Home() {
     if (image === 5) {
         image = 0;
     }
-
+    
 
     return (
         <div className={styles.container}>

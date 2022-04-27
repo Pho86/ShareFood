@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 const ButtonCont = styled.button`
-font-size:1.2rem;
+font-size:1.1rem;
 text-align: center;
 background:#F3CA40;
 border:none;
@@ -14,7 +14,7 @@ padding:10px 35px 10px 35px;
 `;
 
 const BButtonCont = styled.button`
-font-size:1.2rem;
+font-size:1.1rem;
 text-align: center;
 background:#FAEAB3;
 border:none;
@@ -69,15 +69,6 @@ export function BButton({
         </BButtonCont>
     }
 
-    // return <BButtonCont onClick={
-    //     () => r.replace({
-    //         query: {
-    //             tut: tut === undefined ? tut : Math.max(0, Number(tut) - 1)
-    //         }
-    //     })
-    // }>
-    //     {text}
-    // </BButtonCont>
 }
 
 export function Browse({

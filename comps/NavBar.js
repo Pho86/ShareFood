@@ -15,49 +15,123 @@ justify-content:center;
 
 const Img = styled.img`
 padding: 30px 40px 30px 40px;
-background-color:#F1F1F1;
-
+background-color:${props => props.backgroundcolor || "#F1F1F1"};
 `
 
 
-export default function NavBar({
+export default function HomeNavBar({
 }){
     const r = useRouter();
-    const {route} = r.query;    
-
-    return <BarCont>
-        <Img src="/icons/home.svg" onClick={
+        return <BarCont>
+        <Img src="/icons/home.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/home",
-                // query: {
-                //   type: "notcoded"
-                // }
               })
         } id="active"></Img>
         <Img src="/icons/history.svg" onClick={
             () => r.push({
                 pathname: "/history",
-                // query: {
-                //   type: "historynotcoded"
-                // }
               })
         }></Img>
         <Img src="/icons/camera.svg" onClick={
             () => r.push({
                 pathname: "/camera",
-                // query: {
-                //   type: "cameranotcoded"
-                // }
               })
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
                 pathname: "/messaging",
-                // query: {
-                //   type: "notcoded"
-                // }
               })
         }></Img>
     </BarCont>
+    
 }
 
+export function HistoryNavbar({
+}){
+    const r = useRouter();
+    var {route} = r.query;    
+        return <BarCont>
+        <Img src="/icons/home.svg"  onClick={
+            () => r.push({
+                pathname: "/home",
+              })
+        } id="active"></Img>
+        <Img src="/icons/history.svg" backgroundcolor = "#F3CA40" onClick={
+            () => r.push({
+                pathname: "/history",
+              })
+        }></Img>
+        <Img src="/icons/camera.svg" onClick={
+            () => r.push({
+                pathname: "/camera",
+              })
+        }></Img>
+        <Img src="/icons/messages.svg" onClick={
+            () => r.push({
+                pathname: "/messaging",
+              })
+        }></Img>
+    </BarCont>
+
+}
+
+export function CameraNavbar({
+}){
+    const r = useRouter();
+    var {route} = r.query;    
+
+        return <BarCont>
+        <Img src="/icons/home.svg"  onClick={
+            () => r.push({
+                pathname: "/home",
+              })
+        } id="active"></Img>
+        <Img src="/icons/history.svg"  onClick={
+            () => r.push({
+                pathname: "/history",
+              })
+        }></Img>
+        <Img src="/icons/camera.svg" backgroundcolor = "#F3CA40" onClick={
+            () => r.push({
+                pathname: "/camera",
+              })
+        }></Img>
+        <Img src="/icons/messages.svg" onClick={
+            () => r.push({
+                pathname: "/messaging",
+              })
+        }></Img>
+    </BarCont>
+
+}
+
+export function ChatNavbar({
+}){
+    const r = useRouter();
+    var {route} = r.query;    
+
+        return <BarCont>
+        <Img src="/icons/home.svg"  onClick={
+            () => r.push({
+                pathname: "/home",
+              })
+        } id="active"></Img>
+        <Img src="/icons/history.svg"  onClick={
+            () => r.push({
+                pathname: "/history",
+              })
+        }></Img>
+        <Img src="/icons/camera.svg"  onClick={
+            () => r.push({
+                pathname: "/camera",
+              })
+        }></Img>
+        <Img src="/icons/messages.svg" backgroundcolor = "#F3CA40" onClick={
+            () => r.push({
+                pathname: "/messaging",
+              })
+        }></Img>
+    </BarCont>
+    
+}
