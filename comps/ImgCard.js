@@ -9,6 +9,9 @@ const DispImg = styled.img`
 display:block;
 margin-left: auto;
 margin-right: auto;
+opacity: 0;
+animation: revealText 1s forwards;
+animation-delay: .2s;
 `
 
 export default function ImgCard({

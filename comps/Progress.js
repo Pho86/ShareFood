@@ -5,6 +5,9 @@ const ProgressCont = styled.div`
 display:flex;
 gap:10px;
 justify-content:center;
+opacity: 0;
+animation: revealText 1s forwards;
+animation-delay: .2s;
 `;
 
 const Progress = styled.div`

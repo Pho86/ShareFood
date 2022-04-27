@@ -29,8 +29,9 @@ const ImageText3 = styled.div
 
    margin: 0 auto;
    font-size:10px;
-   color: white;   
+   color: white;
    margin-top:-50px;
+   width: 20rem;
 `
 const Black = styled.div`
 `

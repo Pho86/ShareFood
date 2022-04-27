@@ -5,12 +5,18 @@ const TutorialTitle2 = styled.div`
 font-weight: 600;
 font-size 30px;
 text-align: center;
+opacity: 0;
+animation: revealText 1s forwards;
+animation-delay: .2s;
 `
 const TutorialSubTitle2 = styled.div`
 font-weight: 300
 font-size 10px;
 text-align: center;
 padding-bottom: 2em;
+opacity: 0;
+animation: revealText 1s forwards;
+animation-delay: .2s;
 `
 
 const TutorialSubTitleBold2 = styled.div
@@ -19,6 +25,9 @@ padding-top: 2em;
 font-weight: 600;
 font-size 20px;
 text-align: center;
+opacity: 0;
+animation: revealText 1s forwards;
+animation-delay: .2s;
 `
 
 
