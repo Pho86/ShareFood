@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import foody from '../data/food_content.json'
 import { categories1, nameoffood, weight, dop, bbd, location, details, names } from '../data/confirm_content.js';
 
 const IList = styled.div`
@@ -67,7 +68,8 @@ const Text = styled.div`
 
 export default function ConfirmText() {
     const r = useRouter();
-    const { confirm } = r.query
+    var { confirm } = r.query
+    var {food} = r.query
     if (confirm === undefined) {
 
         return (
@@ -76,10 +78,10 @@ export default function ConfirmText() {
                     <SelectedItem>
                         You have selected
                         <Highlight>
-                            &nbsp;{nameoffood[4].text}&nbsp;
-                        </Highlight> from
+                            &nbsp;{foody[food].food}&nbsp;
+                        </Highlight>from
                         <Highlight>
-                            &nbsp;{names[4].text}
+                            &nbsp;{foody[food].name}
                         </Highlight>
                     </SelectedItem>
                 </ConfirmHeader>
@@ -93,12 +95,12 @@ export default function ConfirmText() {
                         <div class="list six">{categories1[5].title}:</div>
                     </TList>
                     <IList>
-                        <div class="list">{nameoffood[4].text}</div>
-                        <div class="list two">{weight[4].text}</div>
-                        <div class="list three">{dop[4].text}</div>
-                        <div class="list four">{bbd[4].text}</div>
-                        <div class="list five">{location[4].text}</div>
-                        <div class="list six">{details[4].text}</div>
+                        <div class="list">{foody[food].food}</div>
+                        <div class="list two">{foody[food].weight}</div>
+                        <div class="list three">{foody[food].date_purchase}</div>
+                        <div class="list four">{foody[food].date_bbd}</div>
+                        <div class="list five">{foody[food].location}</div>
+                        <div class="list six">{foody[food].details}</div>
                     </IList>
                 </TextCont>
             </Text>

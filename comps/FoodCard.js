@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router'
 import { foodImg } from '../data/img_content'
+import food from '../data/food_content.json'
 
 
 const Cont = styled.div`
@@ -18,8 +19,6 @@ animation-delay: .2s;
 
 
 export default function FoodCard({
-    img = "/cereal.svg"
-    // img = [foodImg[1].img]
 
 }) {
     const r = useRouter();
@@ -34,6 +33,6 @@ export default function FoodCard({
 
 
     return <Cont>
-        <DispImg src={foodImg[image].img} />
+        <DispImg src={food[image].foodimg} />
     </Cont>
 }

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
+import food from '../data/food_content.json'
 
 const ImageText1 = styled.div`
     position: absolute;
@@ -65,88 +66,45 @@ const Background = styled.img`
 
 
 export function ImageText({
-    text = "Peanut Butter"
 }) {
     const r = useRouter();
-
-    const { image } = r.query
-    if (image === '0') {
-        text = "Peanut Butter"
-    }
-    if (image === '1') {
-        text = "Box of Cereal"
-    }
-    if (image === '2') {
-        text = "Egg Carton"
-    }
-    if (image === '3') {
-        text = "Instant Noodles"
-    }
-    if (image === '4') {
-        text = "Soy Sauce"
+    var { image } = r.query
+    if (image === undefined ) {
+        image = 0
     }
 
     return (
-        <ImageText1>{text}</ImageText1>
+        <ImageText1>{food[image].food}</ImageText1>
     )
 }
 
 export function ImageTextInfo({
-    text = "Jessica Smith | Burnaby"
 }) {
     const r = useRouter();
-
-    const { image } = r.query
-    if (image === '0') {
-        text = "Amy Mo | Vancouver"
-    }
-    if (image === '1') {
-        text = "Chad Bruno | Langley"
-    }
-    if (image === '2') {
-        text = "Li Lee | New Westminister"
-    }
-    if (image === '3') {
-        text = "Hope Chen | Richmond"
-    }
-    if (image === '4') {
-        text = "Jessica Smith | Burnaby"
+    var { image } = r.query
+    if (image === undefined ) {
+        image = 0
     }
 
     return (
-        <ImageText2>{text}</ImageText2>
+        <ImageText2>{food[image].name} | {food[image].location} </ImageText2>
     )
 }
 
 export function ImageTextComment({
-    text = "“Opened, but never used. Forgot my kid has a nut allergy.”"
 }) {
     const r = useRouter();
-
-    const { image } = r.query
-    if (image === '0') {
-        text = "“Opened, but never used. Forgot my kid has a nut allergy.”"
-    }
-    if (image === '1') {
-        text = "“Never opened. My mom sent me a box of cereal, think she forgot that I’m lactose intolerant.”"
-    }
-    if (image === '2') {
-        text = "“1 egg gone. My kid recently turned vegan, I completely forgot about that. Has been complaining about the eggs and wants us to give it away.”"
-    }
-    if (image === '3') {
-        text = "“Thought instant noodles were easy to cook. I almost burned my house down trying to cook these. Willing to give multiple packs of Instant Noodles.”"
-    }
-    if (image === '4') {
-        text = "“Never opened. My roommate is dumb. She bought another thing of Soy Sauce when we already have full 3 bottles.”"
+    var { image } = r.query
+    if (image === undefined ) {
+        image = 0
     }
 
     return (
-        <ImageText3>{text}</ImageText3>
+        <ImageText3>"{food[image].description}"</ImageText3>
     )
 }
 
 export function TextBackground({
-    // img = "/tempbg.png"
 }) {
     const r = useRouter();
     return <Black>
