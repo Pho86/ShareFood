@@ -41,8 +41,8 @@ export default function Home() {
             
             <div class="choices">
                 <ChoiceButtonX />
-                <ChoiceButtonU />
                 <ChoiceButtonY />
+                <ChoiceButtonU />
             </div>
             <Navbar></Navbar>
             
