@@ -25,7 +25,10 @@ export default function ChoiceButtonY({
     img = "/button_choices/check_button.svg"
 }) {
     const r = useRouter();
-    const { image } = r.query;
+    var { image } = r.query;
+    if (image === undefined ) {
+        image = 0
+    }
     return <ChoiceCont onClick={
         ()=>r.push({
             pathname: "/confirm",
