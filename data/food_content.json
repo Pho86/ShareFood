@@ -1,0 +1,86 @@
+[
+    {
+        "food": "Peanut Butter",
+        "name": "Amy Mo",
+        "location": "Vancouver",
+        "description": "Opened, but never used. Forgot my kid has a nut allergy.",
+        "weight": "0.5 lbs",
+        "date_purchase": "Mar 26, 2022",
+        "date_bbd": "Apr 2, 2022",
+        "meeting_location": "1251 Main St.",
+        "details": "Never opened.",
+        "foodimg": "/peanutbutter.png"
+    },
+    {
+        "food": "Box of Cereal",
+        "name": "Chad Bruno",
+        "location": "Langley",
+        "description": "Never Opened. My mom sent me a box of cereal, think she forgot that I'm lactose intolerant.",
+        "weight": "1 lbs",
+        "date_purchase": "Apr 28, 2022",
+        "date_bbd": "April 31, 2022",
+        "meeting_location": "130 201 St#5641",
+        "details": "Never opened.",
+        "foodimg": "/cereal.png"
+    },
+    {
+        "food": "Egg Carton",
+        "name": "Li Lee",
+        "location": "New Westminister",
+        "description": "1 egg gone. My kid recently turned vegan, I completely forgot about that. Has been complaining about the eggs and wants us to give it away.",
+        "weight": "2 lbs",
+        "date_purchase": "May 2, 2022",
+        "date_bbd": "May 26, 2022",
+        "meeting_location": "905 1st Street",
+        "details": "1 Egg gone.",
+        "foodimg": "/eggs.png"
+    },
+    {
+        "food": "Instant Noodles",
+        "name": "Hope Chen",
+        "location": "Richmond",
+        "description": "Thought instant noodles were easy to cook. I almost burned my house down trying to cook these. Willing to give multiple packs of Instant Noodles.",
+        "weight": "1.2 lbs",
+        "date_purchase": "Apr 18, 2022",
+        "date_bbd": "Mar 10, 2022",
+        "meeting_location": "3040 Richmond Street",
+        "details": "Fire Hazard I think.",
+        "foodimg": "/ramen.png"
+    },
+    {
+        "food": "Soy Sauce",
+        "name": "Jessica Smith",
+        "location": "Burnaby",
+        "description": "Never opened. My roommate is dumb. She bought another thing of Soy Sauce when we already have 3 bottles.",
+        "weight": "0.6 lbs",
+        "date_purchase": "Apr 13, 2022",
+        "date_bbd": "May 23, 2022",
+        "meeting_location": "4127 Burnaby Dr.",
+        "details": "On a diet.",
+        "foodimg": "/soysauce.png"
+    },
+    {
+        "food": "",
+        "name": "",
+        "location": "",
+        "description": "",
+        "weight": "",
+        "date_purchase": "",
+        "date_bbd": "",
+        "meeting_location": "",
+        "details": "",
+        "foodimg": ""
+    },
+    {
+        "food": "",
+        "name": "",
+        "location": "",
+        "description": "",
+        "weight": "",
+        "date_purchase": "",
+        "date_bbd": "",
+        "meeting_location": "",
+        "details": "",
+        "foodimg": ""
+    }
+]

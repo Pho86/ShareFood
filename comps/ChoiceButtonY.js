@@ -28,7 +28,10 @@ export default function ChoiceButtonY({
     const { image } = r.query;
     return <ChoiceCont onClick={
         ()=>r.push({
-            pathname: "/confirm"
+            pathname: "/confirm",
+            query: {
+                food:[image]
+            }
         })
     }>
         <Icon src={img}></Icon>

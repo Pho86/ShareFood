@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router'
+import foody from '../data/food_content.json'
 import { categories1, nameoffood, weight, dop, bbd, location, details, names } from '../data/confirm_content.js';
 
 const IList = styled.div`
@@ -77,14 +78,14 @@ export default function ConfirmText() {
     if (confirm === undefined) {
         return <div></div>
     }
-    if (confirm === "1") {
+    if (confirm === "102") {
         return (
             <Text>
-                        <SelectedItem>
-                            Thank you! Your order with
-                            <Highlight>&nbsp;{names[4].text}&nbsp;</Highlight>
-                            has been confirmed.
-                        </SelectedItem>
+                <SelectedItem>
+                    Thank you! Your order with
+                    <Highlight>&nbsp;{names[4].text}&nbsp;</Highlight>
+                    has been confirmed.
+                </SelectedItem>
                 <TextCont>
                     <TList>
                         <H2>
@@ -101,24 +102,24 @@ export default function ConfirmText() {
                         <H3>
                             hidden text
                         </H3>
-                        <div class="list">{nameoffood[4].text}</div>
-                        <div class="list two">{weight[4].text}</div>
-                        <div class="list three">{dop[4].text}</div>
-                        <div class="list four">{bbd[4].text}</div>
-                        <div class="list five">{location[4].text}</div>
-                        <div class="list six">{details[4].text}</div>
+                        <div class="list">{foody[food].food}</div>
+                        <div class="list two">{foody[food].weight}</div>
+                        <div class="list three">{foody[food].date_purchase}</div>
+                        <div class="list four">{foody[food].date_bbd}</div>
+                        <div class="list five">{foody[food].location}</div>
+                        <div class="list six">{foody[food].details}</div>
                     </IList>
                 </TextCont>
-    
+
                 <Saved>You have saved
-                    <Highlight>&nbsp;0.6 lbs&nbsp;</Highlight>
+                    <Highlight>&nbsp;{food[confirm]}&nbsp;</Highlight>
                     of food from going to waste.
                 </Saved>
             </Text>
         )
     }
 
-    
+
 }
 
 export function SavedDetails(
@@ -128,7 +129,7 @@ export function SavedDetails(
 ) {
     const r = useRouter();
     const { route } = r.query
-    
+
     return (
         <Text>
             <Saved>You have saved
@@ -137,5 +138,5 @@ export function SavedDetails(
             </Saved>
         </Text>
     )
-    
+
 }

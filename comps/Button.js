@@ -109,20 +109,35 @@ export function Confirm({
     text="Confirm"
 }) {
     const r = useRouter();
-    const { confirm } = r.query
-    if (confirm === undefined) {
+    var { food } = r.query
+    food = Number(food)
+    
+    
+    if (food === undefined) {
+        food = 0;
         return <ButtonCont onClick={
             () => r.push({
+                pathname:"/confirm",
                 query: {
-                    confirm:"1"
-                }
+                    confirm:[food]
+                },
+                
             })
         }>
             {text}
         </ButtonCont>
     }
-    if (confirm === "1") {
-    
+    else {
+        return <ButtonCont onClick={
+            () => r.push({
+                pathname:"/confirm",
+                query: {
+                    confirm:[food]
+                },
+            })
+        }>
+            {text}
+        </ButtonCont>
     }
 }
 
