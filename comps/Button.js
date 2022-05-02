@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import foody from '../data/food_content.json'
 import { useRouter } from 'next/router';
 
 const ButtonCont = styled.button`
@@ -35,11 +36,14 @@ export default function NButton({
     if (Number(tut) === 4) {
         return <ButtonCont onClick={
             () => r.push({
-                pathname:"/landing"
+                query: {tut: tut = 5}
             })
         }>
             Done {'>'}
         </ButtonCont>
+    }
+    if (tut === '5') {
+        return
     }
     return <ButtonCont onClick={
         () => r.replace({
@@ -56,8 +60,11 @@ export function BButton({
     text = "< Back"
 }) {
     const r = useRouter();
-    const { tut } = r.query;
-    if (Number(tut) >= 1 ) {
+    var { tut } = r.query;
+    if (tut === '5') {
+        return 
+    }
+    if (Number(tut) >= 1) {
         return <BButtonCont onClick={
             () => r.replace({
                 query: {
@@ -68,97 +75,91 @@ export function BButton({
             {text}
         </BButtonCont>
     }
+    
 
 }
 
 export function Browse({
-    text="Start Browsing"
+    text = "Start Browsing"
 }) {
     const r = useRouter();
-    return <ButtonCont onClick={
-        () => r.push({
-            pathname:"/home"
-        })
-    }>
-        {text}
-    </ButtonCont>
+    var {tut} = r.query
+    if (tut === '5') {
+        return <ButtonCont onClick={
+            () => r.push({
+                pathname: "/home"
+            })
+        }>
+            {text}
+        </ButtonCont>
+    }
 }
 
 export function Cancel({
-    text="Cancel"
+    text = "Cancel"
 }) {
     const r = useRouter();
-    const { confirm } = r.query
-    if (confirm === undefined) {
+    var { food } = r.query
+    if (food === undefined) {
+        food = 0;
+    }
+    else if (food < "100") {
         return <BButtonCont onClick={
             () => r.back()
         }>
             {text}
         </BButtonCont>
     }
-    if (confirm === "1") {
-    
-    }
-    
+
 }
 
 
 
 
 export function Confirm({
-    text="Confirm"
+    text = "Confirm"
 }) {
     const r = useRouter();
     var { food } = r.query
     food = Number(food)
-    
-    
     if (food === undefined) {
         food = 0;
+    }
+    else if (food < "100") {
         return <ButtonCont onClick={
             () => r.push({
-                pathname:"/confirm",
                 query: {
-                    confirm:[food]
+                    food: [food + 100]
                 },
-                
+
             })
         }>
             {text}
         </ButtonCont>
     }
-    else {
-        return <ButtonCont onClick={
-            () => r.push({
-                pathname:"/confirm",
-                query: {
-                    confirm:[food]
-                },
-            })
-        }>
-            {text}
-        </ButtonCont>
-    }
+
 }
 
 
 export function Message({
-    name = "Jessica",
-    text ="Message " + name
-    
 }) {
     const r = useRouter();
-    const { confirm } = r.query
-    if (confirm === undefined) {
+    var { food } = r.query
+    if (food === undefined) {
+        food = 0;
     }
-    if (confirm === "1") {
+    else if (food >= "100") {
         return <ButtonCont onClick={
             () => r.push({
-                pathname:"/messaging"
+                pathname: "/messaging",
+                query: {
+                    food: [food - 100]
+                }
             })
         }>
-            {text}
+            Message {foody[food - 100].name}
         </ButtonCont>
     }
-    
+
+
 }

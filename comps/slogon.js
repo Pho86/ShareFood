@@ -16,11 +16,12 @@ animation-delay: .2s;
 
 export default function SlogonHeader(){
     const r = useRouter();
-    const { route } = r.query
+    var { tut } = r.query
 
-    return(
-        <SlogonHeader2>Reduce Waste, Share the taste</SlogonHeader2>
-    )
+    if (tut === '5') {
+        return <SlogonHeader2>Reduce Waste, Share the taste</SlogonHeader2>
+
+    }
 }
 
 

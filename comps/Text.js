@@ -43,10 +43,15 @@ export default function Text(
     }
 ) {
     const r = useRouter();
+    var {tut } = r.query
+    if (tut === '5') {
+        return
+    }
     return <Skip>
         <button class="skip" onClick={
             () => r.push({
-                pathname: "/landing"
+                pathname: "/",
+                query: {tut: 5}
             })
         }>{text}</button>
     </Skip>
@@ -88,13 +93,18 @@ export function TutButton(
     }
 ) {
     const r = useRouter();
-    return <TutBtnCont>
+    var {tut} = r.query 
+    
+    if (tut === '5') {
+        return <TutBtnCont>
         <TutBtn src={img} onClick={
             () => r.push({
                 pathname: "/"
             })
         }></TutBtn>
     </TutBtnCont>
+    }
+    
 }
 
 export function Space(){

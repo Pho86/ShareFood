@@ -202,6 +202,9 @@ export default function ProgressBar() {
         </ProgressCont>
 
     }
+    if (tut === '5') {
+        return
+    }
     else {
         return <ProgressCont>
         <ProgressFill></ProgressFill>
