@@ -25,16 +25,27 @@ export default function ChoiceButtonU({
     img = "/button_choices/undo_button.svg"
 }) {
     const r = useRouter();
-    const { image } = r.query;
+    var { image } = r.query;
 
 
-    if (image === undefined || image === 0) {
-        return <ChoiceCont>
+    if (image === undefined ) {
+        image = 0; 
+    }
+
+    else if (image === "0") {
+        return <ChoiceCont onClick={
+            () => r.push({
+                query: {
+                    image: 8
+                }
+            })
+        }>
             <Icon src={img}></Icon>
         </ChoiceCont>
     }
 
-    else {return <ChoiceCont onClick={
+    else {
+        return <ChoiceCont onClick={
         () => r.push({
             query: {
                 image: image === undefined ? image : Math.max(0, Number(image) - 1)

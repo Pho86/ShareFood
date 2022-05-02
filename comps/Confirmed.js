@@ -107,7 +107,7 @@ export default function ConfirmText() {
                         <div class="list three">{foody[confirm].date_purchase}</div>
                         <div class="list four">{foody[confirm].date_bbd}</div>
                         <div class="list five">{foody[confirm].location}</div>
-                        <div class="list six">{foody[confirm].details}</div>
+                        <div class="list six">"{foody[confirm].details}"</div>
                     </IList>
                 </TextCont>
 

@@ -8,7 +8,7 @@ margin-right: auto;
 left: 0;
 right: 0;
 text-align: center;
-bottom:0;
+bottom:0px;
 display:flex;
 justify-content:center;
 `
