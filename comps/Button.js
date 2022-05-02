@@ -100,6 +100,7 @@ export function Cancel({
 }) {
     const r = useRouter();
     var { food } = r.query
+    food = Number(food)
     if (food === undefined) {
         food = 0;
     }
@@ -129,7 +130,7 @@ export function Confirm({
         return <ButtonCont onClick={
             () => r.push({
                 query: {
-                    food: [food + 100]
+                    confirm: [food]
                 },
 
             })
@@ -144,20 +145,20 @@ export function Confirm({
 export function Message({
 }) {
     const r = useRouter();
-    var { food } = r.query
-    if (food === undefined) {
-        food = 0;
+    var { confirm } = r.query
+    if (confirm === undefined) {
+        return 
     }
-    else if (food >= "100") {
+    else if (confirm >= "0") {
         return <ButtonCont onClick={
             () => r.push({
                 pathname: "/messaging",
                 query: {
-                    food: [food - 100]
+                    food: [confirm]
                 }
             })
         }>
-            Message {foody[food - 100].name}
+            Message {foody[confirm].name}
         </ButtonCont>
     }
 
