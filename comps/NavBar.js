@@ -23,7 +23,7 @@ export default function HomeNavBar({
 }){
     const r = useRouter();
         return <BarCont>
-        <Img src="/icons/home.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_home.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/home",
               })
@@ -57,7 +57,7 @@ export function HistoryNavbar({
                 pathname: "/home",
               })
         } id="active"></Img>
-        <Img src="/icons/history.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_history.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/history",
               })
@@ -92,7 +92,7 @@ export function CameraNavbar({
                 pathname: "/history",
               })
         }></Img>
-        <Img src="/icons/camera.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_camera.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/camera",
               })
@@ -127,11 +127,10 @@ export function ChatNavbar({
                 pathname: "/camera",
               })
         }></Img>
-        <Img src="/icons/messages.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_messages.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/messaging",
               })
         }></Img>
     </BarCont>
-    
 }
