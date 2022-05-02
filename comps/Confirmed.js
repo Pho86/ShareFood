@@ -78,12 +78,12 @@ export default function ConfirmText() {
     if (confirm === undefined) {
         return <div></div>
     }
-    if (confirm === "102") {
+    if (confirm >= "0") {
         return (
             <Text>
                 <SelectedItem>
                     Thank you! Your order with
-                    <Highlight>&nbsp;{names[4].text}&nbsp;</Highlight>
+                    <Highlight>&nbsp;{foody[confirm].name}&nbsp;</Highlight>
                     has been confirmed.
                 </SelectedItem>
                 <TextCont>
@@ -102,17 +102,17 @@ export default function ConfirmText() {
                         <H3>
                             hidden text
                         </H3>
-                        <div class="list">{foody[food].food}</div>
-                        <div class="list two">{foody[food].weight}</div>
-                        <div class="list three">{foody[food].date_purchase}</div>
-                        <div class="list four">{foody[food].date_bbd}</div>
-                        <div class="list five">{foody[food].location}</div>
-                        <div class="list six">{foody[food].details}</div>
+                        <div class="list">{foody[confirm].food}</div>
+                        <div class="list two">{foody[confirm].weight}</div>
+                        <div class="list three">{foody[confirm].date_purchase}</div>
+                        <div class="list four">{foody[confirm].date_bbd}</div>
+                        <div class="list five">{foody[confirm].location}</div>
+                        <div class="list six">{foody[confirm].details}</div>
                     </IList>
                 </TextCont>
 
                 <Saved>You have saved
-                    <Highlight>&nbsp;{food[confirm]}&nbsp;</Highlight>
+                    <Highlight>&nbsp;{foody[confirm].weight}&nbsp;</Highlight>
                     of food from going to waste.
                 </Saved>
             </Text>

@@ -8,7 +8,7 @@ list-style: none;
 display: block;
 margin-left: auto;
 margin-right: auto;
-padding-bottom: 10em;
+padding-bottom: 9em;
 `
 const TList = styled.div`
 list-style: none;
@@ -17,7 +17,7 @@ font-weight: bold;
 display: block;
 margin-left: auto;
 margin-right: auto;
-padding-bottom: 14em;
+padding-bottom: 8em;
 `
 const TextCont = styled.div`
 display: flex;
@@ -75,54 +75,23 @@ right: 8%;
 const Text = styled.div`
 `
 
+const FoodImg=styled.img`
+display:block;
+margin-left: auto;
+margin-right: auto;
+width:30%;
+padding-bottom:1em;
+@media (max-width: 768px) {
+    width:35%;
+  }
+`
+
 export default function ConfirmText() {
     const r = useRouter();
     var { food } = r.query
     if (food === undefined) {
-        food = 0
+        return 
     }
-    
-    else if (food >= "100") {
-        return (
-            <Text>
-                <SelectedItem>
-                    Thank you! Your order with
-                    <Highlight>&nbsp;{foody[food - 100].name}&nbsp;</Highlight>
-                    has been confirmed.
-                </SelectedItem>
-                <TextCont>
-                    <TList>
-                        <H2>
-                            Order Details
-                        </H2>
-                        <div class="list">{categories1[0].title}</div>
-                        <div class="list two">{categories1[1].title}</div>
-                        <div class="list three">{categories1[2].title}</div>
-                        <div class="list four">{categories1[3].title}</div>
-                        <div class="list five">{categories1[4].title}</div>
-                        <div class="list six">{categories1[5].title}:</div>
-                    </TList>
-                    <IList>
-                        <H3>
-                            hidden text
-                        </H3>
-                        <div class="list">{foody[food - 100].food}</div>
-                        <div class="list two">{foody[food - 100].weight}</div>
-                        <div class="list three">{foody[food - 100].date_purchase}</div>
-                        <div class="list four">{foody[food - 100].date_bbd}</div>
-                        <div class="list five">{foody[food - 100].location}</div>
-                        <div class="list six">{foody[food - 100].details}</div>
-                    </IList>
-                </TextCont>
-
-                <Saved>You have saved
-                    <Highlight>&nbsp;{foody[food - 100].weight}&nbsp;</Highlight>
-                    of food from going to waste.
-                </Saved>
-            </Text>
-        )
-    }
-    else if (food <= "100") {
         return (
             <Text>
                 <ConfirmHeader>
@@ -136,6 +105,7 @@ export default function ConfirmText() {
                         </Highlight>
                     </SelectedItem>
                 </ConfirmHeader>
+                <FoodImg src={foody[food].foodimg}></FoodImg>
                 <TextCont>
                     <TList>
                         <div class="list">{categories1[0].title}</div>
@@ -158,6 +128,6 @@ export default function ConfirmText() {
         )
     }
 
-}
+
 
 
