@@ -36,6 +36,9 @@ export default function ImgCard({
     if (tut === '4') {
         img="/img5.png"
     }
+    if (tut === '5') {
+        return 
+    }
 
     return <Cont>
         <DispImg src={img} />

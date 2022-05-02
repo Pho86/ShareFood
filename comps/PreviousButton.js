@@ -21,11 +21,14 @@ export default function BackButton({
 }) {
 
     const r = useRouter();
-    const { image } = r.query;
+    var { tut } = r.query;
     return <ChoiceCont onClick={
-        () => r.push({
-            pathname: "/landing"
-        })
+        ()=>r.push({
+            pathname: "/",
+            query: {tut: 5}
+        },
+        
+        )
     }>
         <Icon src={img}></Icon>
     </ChoiceCont>

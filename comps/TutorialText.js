@@ -60,6 +60,9 @@ export default function TutorialTitle({
     if (tut === '4') {
         text="Enjoy!"
     }
+    if (tut === '5') {
+        return
+    }
 
     return(
        <TutorialTitle2>{text}</TutorialTitle2>
@@ -86,6 +89,9 @@ export function TutorialTitleInfoBold({
     }
     if (tut === '4') {
         text="Save the Planet"
+    }
+    if (tut === '5') {
+        return
     }
     const { route } = r.query
     return(
@@ -115,6 +121,9 @@ export function TutorialTitleInfo({
     if (tut === '4') {
         text=""
     }
+    if (tut === '5') {
+        return
+    }
     const { route } = r.query
     return(
         <TutorialSubTitle2>{text}</TutorialSubTitle2>
@@ -141,6 +150,9 @@ export function TutorialSubTitle({
     }
     if (tut === '4') {
         text=`With every food that's given away, you prevent it from being wasted. `
+    }
+    if (tut === '5') {
+        return
     }
 
     const { route } = r.query
@@ -169,6 +181,9 @@ export function TutorialSecondLine({
     }
     if (tut === '4') {
         text=" We hope you have a good time with Share Food and eat well!"
+    }
+    if (tut === '5') {
+        return
     }
     
     const { route } = r.query

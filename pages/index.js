@@ -3,11 +3,12 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useRouter } from 'next/router'
 
-import NButton, { BButton, Browse} from '../comps/Button'
+import NButton, { BButton, Browse } from '../comps/Button'
 import ProgressBar from '../comps/Progress'
-import Text, {TutButton} from '../comps/Text.js'
+import Text, { TutButton } from '../comps/Text.js'
 import ImgCard from '../comps/ImgCard.js'
 import Logo from '../comps/Logo.js'
+import SlogonHeader from '../comps/slogon'
 import TutorialTitle, { TutorialSubTitle, TutorialTitleInfo, TutorialTitleInfoBold, TutorialSecondLine } from '../comps/TutorialText'
 
 
@@ -20,21 +21,22 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Text>Skip</Text>
-      <TutorialTitle/> 
+      <TutorialTitle />
       <TutorialTitleInfoBold></TutorialTitleInfoBold>
       <TutorialTitleInfo></TutorialTitleInfo>
       <ImgCard />
       <TutorialSubTitle></TutorialSubTitle>
       <TutorialSecondLine></TutorialSecondLine>
-      
+
       <ProgressBar></ProgressBar>
       <div className={styles.buttongrid}>
         <BButton text="< Back" route="tut"></BButton>
         <NButton text="Next >" route="tut"></NButton>
       </div>
-      
-      <TutButton/>
-      <Logo/>
+
+      <TutButton />
+      <Logo />
+      <SlogonHeader></SlogonHeader>
       <div className={styles.buttongrid}><Browse /></div>
     </div>
   )

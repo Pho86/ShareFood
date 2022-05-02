@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 
 const LogoCont = styled.div`
 `
@@ -18,7 +18,13 @@ export default function Landing({
     img = "/logo.svg"
 }) {
     const r = useRouter();
-    return <LogoCont>
-        <Logo src={img}/>
-    </LogoCont>
+    var { tut } = r.query
+
+    if (tut === '5') {
+        return <LogoCont>
+
+            <Logo src={img} />
+        </LogoCont>
+    }
+
 }
