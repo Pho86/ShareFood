@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {useRouter} from 'next/router'
+import food from '../data/food_content.json';
 
 
 const ChoiceCont = styled.div`

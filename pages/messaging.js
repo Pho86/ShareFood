@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <div className={styles.container}>
 
-            <div class="chat">
+            <div className={styles.chat}>
                 <div class="message"><PersonBubble></PersonBubble><PersonChat text={chat[0].chat} />
                 </div>
                 <div class="message1"><MeChat text={chat[1].chat} /><MeBubble name={chat[1].initals}  ></MeBubble>
