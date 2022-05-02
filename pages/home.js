@@ -14,7 +14,7 @@ import FoodCard from '../comps/FoodCard.js'
 import { foodImg } from '../data/img_content'
 import Navbar from '../comps/NavBar'
 import SlogonHeader from '../comps/slogon';
-import BackButton from '../comps/PreviousButton'
+import BackButton, { BackAPage } from '../comps/PreviousButton';
 import {ImageText, ImageTextInfo, ImageTextComment, TextBackground} from '../comps/hometext'
 
 export default function Home() {

@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
+const BtnCont = styled.div`
+display:flex;
+margin-left: auto;
+margin-right: auto;
+`
 const CameraCont = styled.div`
 display:flex;
 justify-content: center;
@@ -18,23 +23,27 @@ export default function CameraBtn({
     const r = useRouter();
     const { image } = r.query;
 
-    return <CameraCont onClick={
-        ()=>r.push({
-            pathname: "/details"
-        })}>
-    <Btn src={img}></Btn>
-    </CameraCont>
+    return <BtnCont>
+        <CameraCont onClick={
+            () => r.push({
+                pathname: "/details"
+            })}>
+            <Btn src={img}></Btn>
+        </CameraCont>
+    </BtnCont>
 }
 
 export function GalleryBtn({
     img = "/icons/photos_icon.svg"
 }) {
     const e = useRouter();
-    const  { image } = e.query;
+    const { image } = e.query;
 
-    return <GalleryCont>
-        <Btn src={img}></Btn>
-    </GalleryCont>
+    return <BtnCont>
+        <GalleryCont>
+            <Btn src={img}></Btn>
+        </GalleryCont>
+    </BtnCont>
 }
 
 export function FlipCamBtn({
@@ -43,7 +52,9 @@ export function FlipCamBtn({
     const w = useRouter();
     const { image } = w.query;
 
-    return <FlipCont>
-        <Btn src={img}></Btn>
-    </FlipCont>
+    return <BtnCont>
+        <FlipCont>
+            <Btn src={img}></Btn>
+        </FlipCont>
+    </BtnCont>
 }

@@ -15,9 +15,9 @@ padding-top: 17px;
 `
 
 
-
+//back to the landing page
 export default function BackButton({
-    img = "/button_choices/back_button.svg"
+    img = "/button_choices/back_button.svg",
 }) {
 
     const r = useRouter();
@@ -30,6 +30,18 @@ export default function BackButton({
         
         )
     }>
+        <Icon src={img}></Icon>
+    </ChoiceCont>
+}
+
+//back to previous page
+export function BackAPage({
+    img = "/button_choices/back_button.svg",
+}) {
+    const r = useRouter()
+
+    return <ChoiceCont onClick={
+        () => r.back()}>
         <Icon src={img}></Icon>
     </ChoiceCont>
 }
