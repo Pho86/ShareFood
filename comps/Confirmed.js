@@ -6,7 +6,7 @@ import { DownUp } from '../data/animation';
 
 const IList = styled.div`
 list-style: none;
-display: block;
+display: block; 
 margin-left: auto;
 margin-right: auto;
 `
