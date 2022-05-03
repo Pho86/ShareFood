@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
+import { DownUp } from '../data/animation';
 
 const SlogonHeader2 = styled.div
 `
@@ -8,9 +9,7 @@ font-size 20px;
 text-align: center;
 padding-top: 3em;
 padding-bottom: 3em;
-opacity: 0;
-animation: revealText 1s forwards;
-animation-delay: .2s;
+animation: ${DownUp} .9s;
 `
 
 

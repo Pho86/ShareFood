@@ -35,43 +35,7 @@ button {
   outline: none;
   display: flex;
 }
-/* animation for confirm page  */
-li {
-  /* background-color:red; */
-}
-.list {
-  opacity: 0;
-  animation: revealText .5s forwards;
-}
-.one {
-  animation-delay: .1s;
-}
-.two {
-  animation-delay: .2s;
-}
-.three {
-  animation-delay: .3s;
-}
-.four {
-  animation-delay: .4s;
-}
-.five {
-  animation-delay: .5s;
-}
-.six {
-  animation-delay: .6s;
-}
-@keyframes revealText {
-  from {
-    transform: translateY(20px);
-  }
 
-  to {
-    opacity: 1;
-    transform: none;
-  }
-
-}
 
 .skip {
   margin-left:auto;

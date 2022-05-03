@@ -1,13 +1,12 @@
 import styled from 'styled-components';
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/router';
+import { DownUp } from '../data/animation';
 
 const ProgressCont = styled.div`
 display:flex;
 gap:10px;
 justify-content:center;
-opacity: 0;
-animation: revealText 1s forwards;
-animation-delay: .2s;
+animation: ${DownUp} .8s;
 `;
 
 const Progress = styled.div`

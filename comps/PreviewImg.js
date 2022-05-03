@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import { DownUp } from '../data/animation';
 
 const ImageCont = styled.div`
 display: flex;
@@ -18,14 +19,55 @@ position: absolute;
 margin-left: 10px;
 `
 
-const SIcon = styled.img`
+const SIcon1 = styled.img`
 display:flex;
 position: relative;
-// background-color:red;
 margin-left: 40px;
 margin-bottom: 50px;
 margin-top: 10px;
+animation: ${DownUp} .4s;
 `
+const SIcon2 = styled.img`
+display:flex;
+position: relative;
+margin-left: 40px;
+margin-bottom: 50px;
+margin-top: 10px;
+animation: ${DownUp} .6s;
+`
+const SIcon3 = styled.img`
+display:flex;
+position: relative;
+margin-left: 40px;
+margin-bottom: 50px;
+margin-top: 10px;
+animation: ${DownUp} .8s;
+`
+const SIcon4 = styled.img`
+display:flex;
+position: relative;
+margin-left: 40px;
+margin-bottom: 50px;
+margin-top: 10px;
+animation: ${DownUp} 1s;
+`
+const SIcon5 = styled.img`
+display:flex;
+position: relative;
+margin-left: 40px;
+margin-bottom: 50px;
+margin-top: 10px;
+animation: ${DownUp} 1.2s;
+`
+const SIcon6 = styled.img`
+display:flex;
+position: relative;
+margin-left: 40px;
+margin-bottom: 50px;
+margin-top: 10px;
+animation: ${DownUp} 1.4s;
+`
+
 
 export default function PrevImg({
     img1="bread1.png",
@@ -50,11 +92,11 @@ export function SmallIcon({
 }) {
     const r = useRouter();
     return <IconCont>
-        <SIcon src={img1}></SIcon>
-        <SIcon src={img2}></SIcon>
-        <SIcon src={img3}></SIcon>
-        <SIcon src={img4}></SIcon>
-        <SIcon src={img5}></SIcon>
-        <SIcon src={img6}></SIcon>
+        <SIcon1 src={img1}></SIcon1>
+        <SIcon2 src={img2}></SIcon2>
+        <SIcon3 src={img3}></SIcon3>
+        <SIcon4 src={img4}></SIcon4>
+        <SIcon5 src={img5}></SIcon5>
+        <SIcon6 src={img6}></SIcon6>
     </IconCont>
 }
