@@ -27,10 +27,18 @@ export default function ChoiceButtonU({
 
 
     if (image === undefined ) {
-        image = 0; 
+        return <ChoiceCont onClick={
+            () => r.push({
+                query: {
+                    image: 8
+                }
+            })
+        }>
+            <Icon src={img}></Icon>
+        </ChoiceCont>
     }
 
-    else if (image === "0") {
+    if (image === '0') {
         return <ChoiceCont onClick={
             () => r.push({
                 query: {
