@@ -1,17 +1,16 @@
 import styled from 'styled-components';
 import {useRouter} from 'next/router';
+import { DownUp } from '../data/animation';
 
 const Cont = styled.div`
 margin-bottom: 20px;
+animation: ${DownUp} .4s;
 `;
 
 const DispImg = styled.img`
 display:block;
 margin-left: auto;
 margin-right: auto;
-opacity: 0;
-animation: revealText 1s forwards;
-animation-delay: .2s;
 `
 
 export default function ImgCard({

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import foody from '../data/food_content.json'
 import { useRouter } from 'next/router';
+import { DownUp } from '../data/animation';
 
 const ButtonCont = styled.button`
 font-size:1.1rem;
@@ -9,10 +10,8 @@ background:#F3CA40;
 border:none;
 border-radius:15px;
 padding:10px 35px 10px 35px;
-// opacity: 0;
-// animation: revealText 1s forwards;
-// animation-delay: .2s;
-`;
+animation: ${DownUp} 1s;
+`
 
 const BButtonCont = styled.button`
 font-size:1.1rem;
@@ -21,7 +20,8 @@ background:#FAEAB3;
 border:none;
 border-radius:15px;
 padding:10px 35px 10px 35px;
-`;
+// animation: ${DownUp} 1s;
+`
 
 
 export default function NButton({

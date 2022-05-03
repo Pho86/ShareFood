@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import { DownUp } from '../data/animation';
 
 const LogoCont = styled.div`
 `
@@ -10,8 +11,8 @@ height: 300px;
 display: flex;
 margin-left: auto;
 margin-right: auto;
-opacity: 0;
-animation: revealText 1s forwards;
+animation: ${DownUp} .4s;
+
 `
 
 export default function Landing({

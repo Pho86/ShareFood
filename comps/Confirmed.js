@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router'
 import foody from '../data/food_content.json'
 import { categories1, nameoffood, weight, dop, bbd, location, details, names } from '../data/confirm_content.js';
+import { DownUp } from '../data/animation';
 
 const IList = styled.div`
 list-style: none;
@@ -16,6 +17,25 @@ font-weight: bold;
 display: block;
 margin-left: auto;
 margin-right: auto;
+`
+const Line1 = styled.div`
+animation: ${DownUp} .4s;
+`
+const Line2 = styled.div`
+animation: ${DownUp} .6s;
+`
+const Line3 = styled.div`
+animation: ${DownUp} .8s;
+`
+const Line4 = styled.div`
+animation: ${DownUp} 1s;
+`
+const Line5 = styled.div`
+animation: ${DownUp} 1.2s;
+`
+const Line6 = styled.div`
+animation: ${DownUp} 1.4s;
+margin-bottom: 50px;
 `
 const TextCont = styled.div`
 display: flex;
@@ -33,11 +53,13 @@ padding-top: 50px;
 padding-bottom: 50px;
 // left :8%;
 // right: 8%;
+animation: ${DownUp} .2s;
 `
 const Highlight = styled.div`
 display: inline-block;
 font-weight: 500;
 color: #F08A4B;
+// animation: ${DownUp} .2s;
 `
 
 const H2 = styled.div`
@@ -47,6 +69,7 @@ text-align: left;
 margin-right: auto;
 margin-left: auto;
 padding-bottom: 20px;
+animation: ${DownUp} .3s;
 `
 const H3 = styled.div`
 font-weight: 400;
@@ -66,9 +89,7 @@ position: block;
 left :8%;
 right: 8%;
 padding-bottom: 3em;
-opacity: 0;
-animation: revealText 1s forwards;
-animation-delay: .2s;
+animation: ${DownUp} 1.5s;
 `
 const Text = styled.div`
 `
@@ -91,23 +112,32 @@ export default function ConfirmText() {
                         <H2>
                             Order Details
                         </H2>
-                        <div class="list">{categories1[0].title}</div>
-                        <div class="list two">{categories1[1].title}</div>
-                        <div class="list three">{categories1[2].title}</div>
-                        <div class="list four">{categories1[3].title}</div>
-                        <div class="list five">{categories1[4].title}</div>
-                        <div class="list six">{categories1[5].title}:</div>
+                        <Line1>{categories1[0].title}</Line1>
+                        <Line2>{categories1[1].title}</Line2>
+                        <Line3>{categories1[2].title}</Line3>
+                        <Line4>{categories1[3].title}</Line4>
+                        <Line5>{categories1[4].title}</Line5>
+                        <Line6>{categories1[5].title}:</Line6>
                     </TList>
                     <IList>
                         <H3>
                             hidden text
                         </H3>
+
+                        <Line1>{foody[confirm].food}</Line1>
+                        <Line2>{foody[confirm].weight}</Line2>
+                        <Line3>{foody[confirm].date_purchase}</Line3>
+                        <Line4>{foody[confirm].date_bbd}</Line4>
+                        <Line5>{foody[confirm].location}</Line5>
+                        <Line6>{foody[confirm].details}</Line6>
+
                         <div class="list">{foody[confirm].food}</div>
                         <div class="list two">{foody[confirm].weight}</div>
                         <div class="list three">{foody[confirm].date_purchase}</div>
                         <div class="list four">{foody[confirm].date_bbd}</div>
                         <div class="list five">{foody[confirm].location}</div>
                         <div class="list six">"{foody[confirm].details}"</div>
+
                     </IList>
                 </TextCont>
 

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import food from '../data/food_content.json'
+import food from '../data/food_content.json';
+import { DownUp } from '../data/animation';
 
 const ImageText1 = styled.div`
     position: absolute;
@@ -14,9 +15,7 @@ const ImageText1 = styled.div`
     width: 356px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    opacity: 0;
-    animation: revealText 1s forwards;
-    animation-delay: .1s;
+    animation: ${DownUp} .4s;
 `
 
 const ImageText2 = styled.div
@@ -31,9 +30,7 @@ const ImageText2 = styled.div
     padding: 15px;
     text-align: left;
     width: 22rem;
-    opacity: 0;
-    animation: revealText 1s forwards;
-    animation-delay: .1s;
+    animation: ${DownUp} .4s;
     
 `
 
@@ -48,9 +45,7 @@ const ImageText3 = styled.div
    margin-top:-97px;
    width: 20rem;
    line-height: 20px;
-   opacity: 0;
-    animation: revealText 1s forwards;
-    animation-delay: .1s;
+   animation: ${DownUp} .4s;
 `
 const Black = styled.div`
 `
