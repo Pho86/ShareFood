@@ -10,7 +10,7 @@ background:#F3CA40;
 border:none;
 border-radius:15px;
 padding:10px 35px 10px 35px;
-animation: ${DownUp} 1s;
+// animation: ${DownUp} 1s;
 `
 
 const BButtonCont = styled.button`

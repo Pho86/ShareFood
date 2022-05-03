@@ -9,7 +9,7 @@ list-style: none;
 display: block;
 margin-left: auto;
 margin-right: auto;
-padding-bottom: 9em;
+padding-bottom: 2em;
 `
 const TList = styled.div`
 list-style: none;
@@ -18,7 +18,7 @@ font-weight: bold;
 display: block;
 margin-left: auto;
 margin-right: auto;
-padding-bottom: 8em;
+padding-bottom: 2em;
 `
 
 const Line1 = styled.div`
@@ -133,7 +133,7 @@ export default function ConfirmText() {
                         <Line3>{categories1[2].title}</Line3>
                         <Line4>{categories1[3].title}</Line4>
                         <Line5>{categories1[4].title}</Line5>
-                        <Line6>{categories1[5].title}:</Line6>
+                        <Line6>{categories1[5].title}</Line6>
                     </TList>
                     <IList>
                         <Line1>{foody[food].food}</Line1>
