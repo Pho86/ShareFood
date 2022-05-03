@@ -88,7 +88,7 @@ export default function Details({
         <DetailBox3>{categories1[2].title}</DetailBox3>
         <DetailBox4>{categories1[3].title}</DetailBox4>
         <DetailBox5>{categories1[4].title}</DetailBox5>
-        <DetailBox6>{categories1[5].title}:</DetailBox6>
+        <DetailBox6>{categories1[5].title}</DetailBox6>
     </DetailsCont>
 }
 

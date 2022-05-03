@@ -3,19 +3,19 @@ export const categories1 = [
         title: "Name of Food:"
     },
     {
-        title: "Weight"
+        title: "Weight:"
     },
     {
-        title: "Date of Purchase"
+        title: "Date of Purchase:"
     },
     {
-        title: "Best Before text"
+        title: "Best Before text:"
     },
     {
-        title: "Pick-up Location"
+        title: "Pick-up Location:"
     },
     {
-        title: "Additional Details"
+        title: "Additional Details:"
     },
 ]
 
