@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router'
 import { foodImg } from '../data/img_content';
 import { DownUp } from '../data/animation';
+import food from '../data/food_content.json';
 
 
 const ChoiceCont = styled.div`
@@ -34,7 +35,7 @@ export default function ChoiceButtonX({
         () => {
             r.push({
                 query: {
-                    image: Number(image) + 1 > foodImg.length - 1 ? 0 : Number(image) + 1
+                    image: Number(image) + 1 > food.length - 1 ? 0 : Number(image) + 1
                 }
             })
         }

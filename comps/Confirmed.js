@@ -123,12 +123,21 @@ export default function ConfirmText() {
                         <H3>
                             hidden text
                         </H3>
+
                         <Line1>{foody[confirm].food}</Line1>
                         <Line2>{foody[confirm].weight}</Line2>
                         <Line3>{foody[confirm].date_purchase}</Line3>
                         <Line4>{foody[confirm].date_bbd}</Line4>
                         <Line5>{foody[confirm].location}</Line5>
                         <Line6>{foody[confirm].details}</Line6>
+
+                        <div class="list">{foody[confirm].food}</div>
+                        <div class="list two">{foody[confirm].weight}</div>
+                        <div class="list three">{foody[confirm].date_purchase}</div>
+                        <div class="list four">{foody[confirm].date_bbd}</div>
+                        <div class="list five">{foody[confirm].location}</div>
+                        <div class="list six">"{foody[confirm].details}"</div>
+
                     </IList>
                 </TextCont>
 

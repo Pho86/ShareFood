@@ -111,7 +111,6 @@ export function Cancel({
             {text}
         </BButtonCont>
     }
-
 }
 
 
@@ -131,14 +130,37 @@ export function Confirm({
             () => r.push({
                 query: {
                     confirm: [food]
-                },
-
+                }
             })
         }>
             {text}
         </ButtonCont>
     }
-
+    else {
+        
+    }
+}
+export function Confirm2({
+    text = "Confirm"
+}) {
+    const r = useRouter();
+    var { food } = r.query
+    food = Number(food)
+    return <ButtonCont onClick={
+        () => r.back()
+    }>
+        {text}
+    </ButtonCont>
+}
+export function Cancel2({
+    text = "Cancel"
+}) {
+    const r = useRouter();
+    return <BButtonCont onClick={
+        () => r.back()
+    }>
+        {text}
+    </BButtonCont>
 }
 
 
@@ -155,7 +177,9 @@ export function Message({
                 pathname: "/messaging",
                 query: {
                     food: [confirm]
-                }
+                },
+                
+                
             })
         }>
             Message {foody[confirm].name}
