@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import history_content from '../data/history_content'
-
+import { DownUp } from '../data/animation';
 
 const Chart = styled.img`
 padding-top: 20px;
@@ -13,6 +13,7 @@ margin-right: auto;
 `
 
 const GraphCont = styled.div`
+animation: ${DownUp} .5s;
 
 `
 

@@ -34,7 +34,7 @@ const SendCont = styled.div`
 `
 
 const FillSpace = styled.div`
-height: 400px;
+height: 350px;
 // temporarily used to move msg box down
 `
 export default function Text(

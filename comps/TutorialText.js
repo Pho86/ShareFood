@@ -6,6 +6,7 @@ const TutorialTitle2 = styled.div`
 font-weight: 600;
 font-size 30px;
 text-align: center;
+margin: 30px;
 animation: ${DownUp} .4s;
 `
 const TutorialSubTitle2 = styled.div`
