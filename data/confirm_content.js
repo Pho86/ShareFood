@@ -15,7 +15,7 @@ export const categories1 = [
         title: "Pick-up Location:"
     },
     {
-        title: "Additional Details:"
+        title: "Description:"
     },
 ]
 
