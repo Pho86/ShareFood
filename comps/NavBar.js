@@ -15,6 +15,8 @@ justify-content:center;
 
 const Img = styled.img`
 padding: 30px 40px 30px 40px;
+width: 100%;
+height: 80px;
 background-color:${props => props.backgroundcolor || "#F1F1F1"};
 `
 
