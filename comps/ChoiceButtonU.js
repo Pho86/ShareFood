@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { DownUp } from '../data/animation';
+import food from '../data/food_content.json';
 
 const ChoiceCont = styled.div`
 display:flex;
@@ -30,7 +31,7 @@ export default function ChoiceButtonU({
         return <ChoiceCont onClick={
             () => r.push({
                 query: {
-                    image: 8
+                    image: food.length -1
                 }
             })
         }>
@@ -42,7 +43,7 @@ export default function ChoiceButtonU({
         return <ChoiceCont onClick={
             () => r.push({
                 query: {
-                    image: 8
+                    image: food.length -1
                 }
             })
         }>

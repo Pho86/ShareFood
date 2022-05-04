@@ -78,21 +78,21 @@
         "foodimg": "/rice.png"
     },
     {
-        "food": "Can of Pasta",
+        "food": "Tomato Soup",
         "name": "Mario Juan",
         "initals": "MJ",
         "location": "Vancouver",
-        "description": "Pasta isn't really my thing, I tried eating it, but it just wasn't for me.",
+        "description": "Red reminds me of blood. Unopened.",
         "weight": "1lbs",
         "date_purchase": "May 5, 2022",
         "date_bbd": "June 5, 2023",
         "meeting_location": "3075 Slocan Street",
-        "details": "Pasta Masta.",
-        "foodimg": "/pasta.png"
+        "details": "Bloody texture?",
+        "foodimg": "/tomato.png"
     },
     {
         "food": "Box of Donuts",
-        "name": "Jer Holes",
+        "name": "Jeremy Holes",
         "initals": "JW",
         "location": "Burnaby",
         "description": "I mean, donuts are nice and all, but I'm allergic.",
@@ -100,21 +100,21 @@
         "date_purchase": "May 10, 2022",
         "date_bbd": "May 27, 2022",
         "meeting_location": "3700 Willingdon Avenue",
-        "details": "Really nice donut.",
-        "foodimg": "/donut.png"
+        "details": "Really nice donuts.",
+        "foodimg": "/donuts.png"
     },
     {
-        "food": "Can of Pasta",
-        "name": "Sam Warch",
-        "initals": "SW",
+        "food": "Banana",
+        "name": "Banana Man",
+        "initals": "BM",
         "location": "Vancouver",
-        "description": "",
-        "weight": "",
-        "date_purchase": "",
-        "date_bbd": "",
-        "meeting_location": "",
-        "details": "Pasta Masta.",
-        "foodimg": "/pasta.png"
+        "description": "Banana.",
+        "weight": "1lbs",
+        "date_purchase": "Today.",
+        "date_bbd": "Tommorow.",
+        "meeting_location": "Granville Street",
+        "details": "Banana.",
+        "foodimg": "/banana.png"
     }
     
 
