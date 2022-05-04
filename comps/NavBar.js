@@ -40,7 +40,7 @@ export default function HomeNavBar({
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
-                pathname: "/messaging",
+                pathname: "/messaging1",
               })
         }></Img>
     </BarCont>
@@ -69,7 +69,7 @@ export function HistoryNavbar({
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
-                pathname: "/messaging",
+                pathname: "/messaging1",
               })
         }></Img>
     </BarCont>
@@ -99,7 +99,7 @@ export function CameraNavbar({
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
-                pathname: "/messaging",
+                pathname: "/messaging1",
               })
         }></Img>
     </BarCont>
@@ -129,7 +129,7 @@ export function ChatNavbar({
         }></Img>
         <Img src="/icons/w_messages.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
-                pathname: "/messaging",
+                pathname: "/messaging1",
               })
         }></Img>
     </BarCont>
