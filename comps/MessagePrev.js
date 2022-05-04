@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { chat } from '../data/chat_content';
+import { chat, msg } from '../data/chat_content';
 
 //the entire message container
 const MsgCont = styled.div`
@@ -39,15 +39,15 @@ margin-top: -20px;
 //name of messager
 const Name = styled.div`
 display: flex;
-font-size: 26px;
-font-weight: 600;
-margin-left: 20px;
+font-size: 24px;
+font-weight: 500;
+margin-left: 15px;
 margin-bottom: 10px;
 `
 //preview of msg
 const Msg = styled.div`
 display:flex;
-margin-left: 20px;
+margin-left: 15px;
 `
 //time container
 const TimeCont = styled.div`
@@ -55,6 +55,7 @@ display: flex;
 margin-top: -40px;
 margin-left: auto;
 padding: 25px;
+font-size: 11px;
 `
 const Time = styled.div`
 `
@@ -66,11 +67,11 @@ export function ChatBox() {
         })
     }>
         <ProfileCont>
-            <Profile>JS</Profile>
+            <Profile>{msg[0].initials}</Profile>
         </ProfileCont>
         <MsgPrevCont>
-            <Name>{chat[3].name}</Name>
-            <Msg>{chat[3].chat}</Msg>
+            <Name>{msg[0].name}</Name>
+            <Msg>{msg[0].chat}</Msg>
         </MsgPrevCont>
         <TimeCont>
             <Time>Just Now</Time>
