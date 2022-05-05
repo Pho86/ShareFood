@@ -111,7 +111,7 @@
         "description": "Banana.",
         "weight": "1lbs",
         "date_purchase": "Today.",
-        "date_bbd": "Tommorow.",
+        "date_bbd": "Tomorrow.",
         "meeting_location": "Granville Street",
         "details": "Banana.",
         "foodimg": "/banana.png"

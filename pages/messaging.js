@@ -4,8 +4,10 @@ import NavBar, { ChatNavbar } from '../comps/NavBar';
 import Text, { Message, SendIcon, Space } from '../comps/Text';
 import { chat } from '../data/chat_content';
 import { PersonChat, PersonBubble, MeBubble, MeChat } from '../comps/Chat';
-import TutorialText from '../comps/TutorialText';
+import TutorialText, { Messager } from '../comps/TutorialText';
 import BackButton, { BackAPage } from '../comps/PreviousButton';
+import foody from '../data/food_content.json'
+
 
 export default function Home() {
     const r = useRouter();
@@ -14,7 +16,7 @@ export default function Home() {
     return (
         <div className={styles.container}>
             <BackAPage/>
-            <TutorialText text={chat[0].name} />
+            <Messager/>
             <div className={styles.chat}>
                 <div class="message"><PersonBubble></PersonBubble><PersonChat text={chat[0].chat} />
                 </div>
