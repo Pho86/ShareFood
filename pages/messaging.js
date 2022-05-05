@@ -6,21 +6,27 @@ import { chat } from '../data/chat_content';
 import { PersonChat, PersonBubble, MeBubble, MeChat } from '../comps/Chat';
 import TutorialText from '../comps/TutorialText';
 import BackButton, { BackAPage } from '../comps/PreviousButton';
+import foody from '../data/food_content.json';
+
+
 
 export default function Home() {
     const r = useRouter();
-    const { route } = r.query
+    var { food } = r.query
+    if (food === undefined) {
+        food = 0
+    }
 
     return (
         <div className={styles.container}>
             <BackAPage/>
-            <TutorialText text={chat[0].name} />
+            <TutorialText text={foody[food].name} />
             <div className={styles.chat}>
-                <div class="message"><PersonBubble></PersonBubble><PersonChat text={chat[0].chat} />
+                <div class="message"><PersonBubble name={foody[food].initals}></PersonBubble><PersonChat text={chat[0].chat} />
                 </div>
                 <div class="message1"><MeChat text={chat[1].chat} /><MeBubble name={chat[1].initials}  ></MeBubble>
                 </div>
-                <div class="message"><PersonBubble ></PersonBubble><PersonChat text={chat[2].chat} />
+                <div class="message"><PersonBubble name={foody[food].initals}></PersonBubble><PersonChat text={chat[2].chat} />
                 </div>
             </div>
             {/*  <Space is temporarily used to move msg box down */}
@@ -34,3 +40,5 @@ export default function Home() {
         </div>
     )
 }
+
+

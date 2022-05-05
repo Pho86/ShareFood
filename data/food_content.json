@@ -33,7 +33,7 @@
         "description": "1 egg gone. My kid recently turned vegan, I completely forgot about that. Has been complaining about the eggs and wants us to give it away.",
         "weight": "2 lbs",
         "date_purchase": "May 10, 2022",
-        "date_bbd": "May 28, 2022",
+        "date_bbd": "May 26, 2022",
         "meeting_location": "905 1st Street",
         "details": "1 Egg gone.",
         "foodimg": "/eggs.png"
@@ -46,9 +46,9 @@
         "description": "Thought instant noodles were easy to cook. I almost burned my house down trying to cook these. Willing to give multiple packs of Instant Noodles.",
         "weight": "1.2 lbs",
         "date_purchase": "May 10, 2022",
-        "date_bbd": "September 10, 2022",
+        "date_bbd": "September 10, 2023",
         "meeting_location": "3040 Richmond Street",
-        "details": "Fire Hazard I think.",
+        "details": "Not opened.",
         "foodimg": "/ramen.png"
     },
     {
@@ -57,11 +57,11 @@
         "initals": "JS",
         "location": "Burnaby",
         "description": "Never opened. I already have 3 unopened bottles of soy sauce.",
-        "weight": "0.6 lbs",
+        "weight": "1 lbs",
         "date_purchase": "May 10, 2022",
         "date_bbd": "May 23, 2023",
         "meeting_location": "4127 Burnaby Dr.",
-        "details": "Smells good.",
+        "details": "Never opened.",
         "foodimg": "/soysauce.png"
     },
     {
@@ -70,11 +70,11 @@
         "initals": "KN",
         "location": "Richmond",
         "description": "Don't need rice anymore.",
-        "weight": "2lbs",
+        "weight": "15lbs",
         "date_purchase": "May 7, 2022",
         "date_bbd": "June 30, 2022",
         "meeting_location": "1202 Georgia St.",
-        "details": "Rice is overrated.",
+        "details": "Opened some gone.",
         "foodimg": "/rice.png"
     },
     {
@@ -83,11 +83,11 @@
         "initals": "MJ",
         "location": "Vancouver",
         "description": "Red reminds me of blood. Unopened.",
-        "weight": "1lbs",
+        "weight": "10lbs",
         "date_purchase": "May 5, 2022",
         "date_bbd": "June 5, 2023",
         "meeting_location": "3075 Slocan Street",
-        "details": "Bloody texture?",
+        "details": "Unopened.",
         "foodimg": "/tomato.png"
     },
     {
@@ -96,11 +96,11 @@
         "initals": "JW",
         "location": "Burnaby",
         "description": "I mean, donuts are nice and all, but I'm allergic.",
-        "weight": "2lbs",
+        "weight": "4lbs",
         "date_purchase": "May 10, 2022",
-        "date_bbd": "May 27, 2022",
+        "date_bbd": "May 20, 2022",
         "meeting_location": "3700 Willingdon Avenue",
-        "details": "Really nice donuts.",
+        "details": "Opened, none aten.",
         "foodimg": "/donuts.png"
     },
     {
@@ -109,13 +109,11 @@
         "initals": "BM",
         "location": "Vancouver",
         "description": "Banana.",
-        "weight": "1lbs",
+        "weight": "1000lbs",
         "date_purchase": "Today.",
         "date_bbd": "Tommorow.",
         "meeting_location": "Granville Street",
         "details": "Banana.",
         "foodimg": "/banana.png"
     }
-    
-
 ]
