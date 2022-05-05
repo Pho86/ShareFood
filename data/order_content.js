@@ -1,5 +1,6 @@
 var selectedfood = [];
-export function ChangeFood(n, food) {
+
+export function ChangeFood(n, food, name) {
    selectedfood[food] = n;
     console.log(selectedfood)
 }

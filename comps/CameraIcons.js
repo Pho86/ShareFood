@@ -46,6 +46,7 @@ export function GalleryBtn({
 
     return <BtnCont>
         <GalleryCont>
+        <input id="upload" type="file" src={img} accept="image/*" multiple/>
             <Btn src={img}></Btn>
         </GalleryCont>
     </BtnCont>

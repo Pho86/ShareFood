@@ -96,6 +96,10 @@ const Text = styled.div`
 export default function ConfirmText() {
     const r = useRouter();
     const { confirm } = r.query
+    function FoodSelection() {
+        var name = foody[confirm].name;
+        var food = foody[confirm].food;
+    }
     if (confirm === undefined) {
         return <div></div>
     }
