@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { chat, msg } from '../data/chat_content';
+import { DownUp } from '../data/animation';
+
 
 //the entire message container
 const MsgCont = styled.div`
@@ -12,6 +14,7 @@ align-items: center;
 display: flex;
 margin-left: auto;
 margin-right: auto;
+animation: ${DownUp} 1.2s;
 `
 //the circle
 const ProfileCont = styled.div`
