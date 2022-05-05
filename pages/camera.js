@@ -17,7 +17,7 @@ export default function Home() {
         <GalleryBtn/>
         <CameraBtn/>
         <FlipCamBtn/>
-
+        <input type="file" src="/donuts.png" accept="image/*" multiple />
         </div>
         <CameraNavbar/>
         </div>
