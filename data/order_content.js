@@ -7,3 +7,4 @@ export function ChangeFood(n, food) {
 export function GetFood() {
     return selectedfood;
 }
+

@@ -38,7 +38,7 @@ button {
 
 
 .skip {
-  margin-left:auto;
+  margin-left: auto;
   padding-bottom: 10px;
 }
 
@@ -48,29 +48,36 @@ button {
 } */
 
 .chat {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap:2rem;
-  width:35rem;
-  margin-left:auto;
-  margin-right:auto;
+  gap: 2rem;
+  width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .message {
-  display:flex;
-  gap:1rem;
-  align-self:flex-start ;
+  display: flex;
+  gap: 1rem;
+  align-self: flex-start;
 }
+
 .message1 {
-  display:flex;
-  gap:1rem;
-  align-self:flex-end;
-  
+  display: flex;
+  gap: 1rem;
+  align-self: flex-end;
+
 }
 
 .camicons {
   display: flex;
   align-items: center;
+}
+
+.chatbox {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
