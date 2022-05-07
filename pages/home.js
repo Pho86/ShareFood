@@ -15,37 +15,37 @@ import { foodImg } from '../data/img_content'
 import Navbar from '../comps/NavBar'
 import SlogonHeader from '../comps/slogon';
 import BackButton, { BackAPage } from '../comps/PreviousButton';
-import {ImageText, ImageTextInfo, ImageTextComment, TextBackground} from '../comps/hometext'
+import { ImageText, ImageTextInfo, ImageTextComment, TextBackground } from '../comps/hometext';
+import { SwipeCard } from '../comps/Swipe.js';
 
 export default function Home() {
 
     const r = useRouter();
     var { image } = r.query
     console.log(image)
-    
+
     if (image === 5) {
         image = 0;
     }
-    
+
 
     return (
         <div className={styles.container}>
             <BackButton></BackButton>
             <FoodCard></FoodCard>
-            <TextBackground></TextBackground>
             <div className={styles.buttongrid}>
-                    <ImageText></ImageText>
-                    <ImageTextInfo></ImageTextInfo>
-                    <ImageTextComment></ImageTextComment>
+                {/* <SwipeCard></SwipeCard> */}
+                <ImageText></ImageText>
+                <ImageTextInfo></ImageTextInfo>
+                <ImageTextComment></ImageTextComment>
             </div>
-            
             <div class="choices">
                 <ChoiceButtonX />
                 <ChoiceButtonY />
                 <ChoiceButtonU />
             </div>
             <Navbar></Navbar>
-            
+
 
 
 
