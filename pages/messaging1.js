@@ -14,7 +14,10 @@ export default function Home() {
         <div className={styles.container}>
             <BackAPage />
             <TutorialText text="Messages" />
+            <div class="chatbox">
             <ChatBox/>
+            <ChatBox/>
+            </div>
             <ChatNavbar />
 
         </div>

@@ -47,8 +47,6 @@ const ImageText3 = styled.div
    line-height: 20px;
    animation: ${DownUp} .4s;
 `
-const Black = styled.div`
-`
 
 const Background = styled.img`
     width: 355px;
@@ -99,10 +97,3 @@ export function ImageTextComment({
     )
 }
 
-export function TextBackground({
-}) {
-    const r = useRouter();
-    return <Black>
-        {/* <Background src={img}/> */}
-    </Black>
-}
