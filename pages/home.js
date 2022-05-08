@@ -39,7 +39,7 @@ export default function Home() {
                 <ImageTextInfo></ImageTextInfo>
                 <ImageTextComment></ImageTextComment>
             </div>
-            <div class="choices">
+            <div className={styles.choices}>
                 <ChoiceButtonX />
                 <ChoiceButtonY />
                 <ChoiceButtonU />

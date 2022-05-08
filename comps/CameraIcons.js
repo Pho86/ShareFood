@@ -6,6 +6,8 @@ import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import { CamConfirm, Cancel2 } from './Button';
+import styles from '../styles/Home.module.css';
+
 
 
 const BtnCont = styled.div`
@@ -89,7 +91,7 @@ export function GalleryBtn({
                 <Box sx={style}>
                     <input id="browse" type="file" onChange={previewFile} multiple></input>
                     <div id="preview"> <img src="#" /> </div>
-                    <div class="padding">
+                    <div className={styles.padding}>
                         <Cancel2 />
                         <CamConfirm />
                     </div>
