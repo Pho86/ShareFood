@@ -1,3 +1,4 @@
+//inactive
 export const chat = [
     {
         name: "Jessica Smith",

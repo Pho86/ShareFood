@@ -8,7 +8,7 @@ import TutorialText, { Messager } from '../comps/TutorialText';
 import BackButton, { BackAPage } from '../comps/PreviousButton';
 import foody from '../data/food_content.json';
 import { GetFood } from '../data/order_content';
-import NewMsg from '../comps/MsgSender.js';
+import NewMsg, { MyMsg } from '../comps/MsgSender.js';
 
 
 
@@ -27,6 +27,7 @@ export default function Home() {
             <BackAPage />
             <Messager />
             <NewMsg />
+            <MyMsg />
             <Message />
             <ChatNavbar></ChatNavbar>
 

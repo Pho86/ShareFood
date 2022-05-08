@@ -11,7 +11,8 @@
         "meeting_location": "1251 Main St.",
         "details": "Never used.",
         "foodimg": "/peanutbutter.png",
-        "message": "Thanks for taking my peanut butter!"
+        "message": "Thanks for taking my peanut butter!",
+        "response": "Np"
     },
     {
         "food": "Box of Cereal",
@@ -25,7 +26,8 @@
         "meeting_location": "130 201 St#5641",
         "details": "Never opened.",
         "foodimg": "/cereal.png",
-        "message": "hey"
+        "message": "hey",
+        "response": "hi"
     },
     {
         "food": "Egg Carton",
@@ -39,7 +41,8 @@
         "meeting_location": "905 1st Street",
         "details": "1 Egg gone.",
         "foodimg": "/eggs.png",
-        "message": "Hope u dont mind that 1 egg is gone lol"
+        "message": "Hope u dont mind that 1 egg is gone lol",
+        "response": "it's okay"
     },
     {
         "food": "Instant Noodles",
@@ -53,7 +56,8 @@
         "meeting_location": "3040 Richmond Street",
         "details": "Not opened.",
         "foodimg": "/ramen.png",
-        "message": "good luck"
+        "message": "good luck",
+        "response": "thanks?"
     },
     {
         "food": "Soy Sauce",
@@ -67,7 +71,8 @@
         "meeting_location": "4127 Burnaby Dr.",
         "details": "Never opened.",
         "foodimg": "/soysauce.png",
-        "message": "What time do you want to meet?"
+        "message": "What time do you want to meet?",
+        "response": "I'm free tomorrow at 2 pm."
     },
     {
         "food": "Bag of Rice",
@@ -81,7 +86,8 @@
         "meeting_location": "1202 Georgia St.",
         "details": "Opened some gone.",
         "foodimg": "/rice.png",
-        "message": "y do u even like rice"
+        "message": "y do u even like rice", 
+        "response": "Rice is life."
     },
     {
         "food": "Tomato Soup",
@@ -95,7 +101,8 @@
         "meeting_location": "3075 Slocan Street",
         "details": "Unopened.",
         "foodimg": "/tomato.png",
-        "message": "Ew tomatoes are gross"
+        "message": "Ew tomatoes are gross",
+        "response": "ur gross"
     },
     {
         "food": "Box of Donuts",
@@ -109,7 +116,8 @@
         "meeting_location": "3700 Willingdon Avenue",
         "details": "Opened, none aten.",
         "foodimg": "/donuts.png",
-        "message": "These are really nice donuts"
+        "message": "These are really nice donuts",
+        "response": "How is a box of donuts 4 lbs...?"
     },
     {
         "food": "Banana",
@@ -123,6 +131,7 @@
         "meeting_location": "Granville Street",
         "details": "Banana.",
         "foodimg": "/banana.png",
-        "message": "Banana."
+        "message": "Banana.",
+        "response": "Banana."
     }
 ]
