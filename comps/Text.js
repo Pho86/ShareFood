@@ -4,22 +4,28 @@ const Skip = styled.div`
 margin-top: 50px;
 `
 const MBox = styled.div`
-width: 340px;
+width: 90%;
 height: 60px;
-top: 730px;
 border-radius: 50px;
 border: 1px solid black;
 text-align:left;
 padding: 15px;
+position: absolute;
+bottom: 100px;
+display: flex;
+`
+const MsgPlaceholder = styled.div`
+text-align:left;
+padding-left: 10px;
+padding-top: 5px;
 color: #7C7C7C;
-margin-left: auto;
+display: flex;
 margin-right: auto;
 `
 const Send = styled.img`
 margin-left: auto;
-margin-right: auto;
+align-items: center;
 display: flex;
-position: relative;
 `
 
 const TutBtn = styled.img`
@@ -60,11 +66,13 @@ export default function Text(
 export function Message(
     {
         text = "Message",
+        img = "/send.svg"
     }
 ) {
     const r = useRouter();
     return <MBox>
-        {text}
+        <MsgPlaceholder>{text}</MsgPlaceholder>
+        <Send src={img}></Send>
     </MBox>
 }
 

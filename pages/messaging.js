@@ -8,6 +8,7 @@ import TutorialText, { Messager } from '../comps/TutorialText';
 import BackButton, { BackAPage } from '../comps/PreviousButton';
 import foody from '../data/food_content.json';
 import { GetFood } from '../data/order_content';
+import NewMsg from '../comps/MsgSender.js';
 
 
 
@@ -19,26 +20,14 @@ export default function Home() {
     if (food === undefined) {
         food = 0
     }
-    
+
 
     return (
         <div className={styles.container}>
-            <BackAPage/>
-            <Messager/>
-            <div className={styles.chat}>
-                <div className={styles.message}><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text = {"Hi, thank you for deciding to come get my " + foody[food].food + "." }  />
-                </div>
-                <div className={styles.message1}><MeChat text={chat[1].chat} /><MeBubble name={chat[1].initials}  ></MeBubble>
-                </div>
-                <div className={styles.message}><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text={chat[2].chat} />
-                </div>
-            </div>
-            {/*  <Space is temporarily used to move msg box down */}
-            <Space />
-            <div className={styles.message}>
-                <Message />
-                {/* <SendIcon /> */}
-            </div>
+            <BackAPage />
+            <Messager />
+            <NewMsg />
+            <Message />
             <ChatNavbar></ChatNavbar>
 
         </div>
