@@ -5,6 +5,8 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { useState } from 'react';
+import { CamConfirm, Cancel2 } from './Button';
+
 
 const BtnCont = styled.div`
 display:flex;
@@ -34,7 +36,7 @@ const style = {
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
-    padding: 5,
+    padding: 8,
 };
 
 export default function CameraBtn({
@@ -62,7 +64,21 @@ export function GalleryBtn({
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    
+
+    function previewFile() {
+        const preview = document.querySelector('#preview > img');
+        const file = document.querySelector('input[type=file]').files[0];
+        const reader = new FileReader();
+
+        reader.addEventListener("load", function () {
+            // convert image file to base64 string
+            preview.src = reader.result;
+        }, false);
+
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
 
     return <BtnCont>
         <GalleryCont>
@@ -71,9 +87,15 @@ export function GalleryBtn({
                 onClose={handleClose}
             >
                 <Box sx={style}>
-                    <input id="upload" type="file" src={img} accept="image/*" multiple />
+                    <input id="browse" type="file" onChange={previewFile} multiple></input>
+                    <div id="preview"> <img src="#" /> </div>
+                    <div class="padding">
+                        <Cancel2 />
+                        <CamConfirm />
+                    </div>
+                    {/* <input id="upload" type="file" src={img} accept="image/*" multiple />
                     <img class="uploadimg" src="/" />
-                    <input type="file" className="filetype" id="group_image"/>
+                    <input type="file" className="filetype" id="group_image" /> */}
                 </Box>
             </Modal>
             <Btn src={img} onClick={handleOpen}></Btn>

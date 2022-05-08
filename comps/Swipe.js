@@ -14,7 +14,11 @@ margin-right: auto;
 export function SwipeCard() {
 
     const handleSwipe = (d) => {
-        //callback here
+        r.replace({
+            query: {
+                image: Number(image) + 1 > food.length - 1 ? 0 : Number(image) + 1
+            }
+        })
     };
     const r = useRouter();
 

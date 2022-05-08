@@ -125,25 +125,13 @@ export function Confirm({
     const r = useRouter();
     var { food } = r.query
     food = Number(food)
-    function FoodSelection() {
-        var selfood = foody[food].food;
-        return selfood;
-    }
-    function NameSelection() {
-        var name = foody[food].name;
-        return name;
-    }
     if (food === undefined) {
         food = 0;
     }
     else if (food < "100") {
         return <ButtonCont onClick={
             (e) => {
-                // ChangeFood([food], )
                 ChangeFood(foody[food].name, foody[food].food)
-                console.log(ChangeFood())
-                // console.log(FoodSelection())
-                // console.log(NameSelection())
                 r.push({
                 query: {
                     confirm: [food]
@@ -163,6 +151,18 @@ export function Confirm2({
     food = Number(food)
     return <ButtonCont onClick={
         () => r.back()
+    }>
+        {text}
+    </ButtonCont>
+}
+export function CamConfirm({
+    text = "Confirm"
+}) {
+    const r = useRouter();
+    return <ButtonCont onClick={
+        () => r.push({
+                pathname: "/details"
+        })
     }>
         {text}
     </ButtonCont>
