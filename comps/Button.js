@@ -126,8 +126,8 @@ export function Confirm({
     var { food } = r.query
     food = Number(food)
     function FoodSelection() {
-        var food = foody[food].food;
-        return food ;
+        var selfood = foody[food].food;
+        return selfood;
     }
     function NameSelection() {
         var name = foody[food].name;
@@ -140,13 +140,15 @@ export function Confirm({
         return <ButtonCont onClick={
             (e) => {
                 // ChangeFood([food], )
-                console.log(FoodSelection())
-                console.log(NameSelection())
-            //     r.push({
-            //     query: {
-            //         confirm: [food]
-            //     }
-            // })
+                ChangeFood(foody[food].name, foody[food].food)
+                console.log(ChangeFood())
+                // console.log(FoodSelection())
+                // console.log(NameSelection())
+                r.push({
+                query: {
+                    confirm: [food]
+                }
+            })
         }
         }>
             {text}

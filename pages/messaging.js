@@ -26,9 +26,7 @@ export default function Home() {
             <BackAPage/>
             <Messager/>
             <div className={styles.chat}>
-                <p> {foo}</p>
-                <p> {foo[0]}</p>
-                <div class="message"><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text = {"Hi, thank you for deciding to come get my " + {foody} }  />
+                <div class="message"><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text = {"Hi, thank you for deciding to come get my " + foody[food].food + "." }  />
                 </div>
                 <div class="message1"><MeChat text={chat[1].chat} /><MeBubble name={chat[1].initials}  ></MeBubble>
                 </div>
@@ -42,7 +40,7 @@ export default function Home() {
                 {/* <SendIcon /> */}
             </div>
             <ChatNavbar></ChatNavbar>
-            <p></p>
+
         </div>
     )
 }
