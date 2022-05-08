@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import food from '../data/food_content.json';
+import foody from '../data/food_content.json';
 import { DownUp } from '../data/animation';
 
 const ImageText1 = styled.div`
@@ -61,39 +61,39 @@ const Background = styled.img`
 export function ImageText({
 }) {
     const r = useRouter();
-    var { image } = r.query
-    if (image === undefined ) {
-        image = 0
+    var { food } = r.query
+    if (food === undefined ) {
+        food = 0
     }
 
     return (
-        <ImageText1>{food[image].food}</ImageText1>
+        <ImageText1>{foody[food].foody}</ImageText1>
     )
 }
 
 export function ImageTextInfo({
 }) {
     const r = useRouter();
-    var { image } = r.query
-    if (image === undefined ) {
-        image = 0
+    var { food } = r.query
+    if (food === undefined ) {
+        food = 0
     }
 
     return (
-        <ImageText2>{food[image].name} | {food[image].location} </ImageText2>
+        <ImageText2>{foody[food].name} | {foody[food].location} </ImageText2>
     )
 }
 
 export function ImageTextComment({
 }) {
     const r = useRouter();
-    var { image } = r.query
-    if (image === undefined ) {
-        image = 0
+    var { food } = r.query
+    if (food === undefined ) {
+        food = 0
     }
 
     return (
-        <ImageText3>"{food[image].description}"</ImageText3>
+        <ImageText3>"{foody[food].description}"</ImageText3>
     )
 }
 

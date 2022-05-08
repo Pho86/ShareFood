@@ -24,25 +24,41 @@ background-color:${props => props.backgroundcolor || "#F1F1F1"};
 export default function HomeNavBar({
 }){
     const r = useRouter();
+    var {food} = r.query;    
+    if(food === undefined) {
+        food = 0;
+    }
         return <BarCont>
         <Img src="/icons/w_home.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/home",
+                query: {
+                    food: [food]
+                }
               })
         } id="active"></Img>
         <Img src="/icons/history.svg" onClick={
             () => r.push({
                 pathname: "/history",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
         <Img src="/icons/camera.svg" onClick={
             () => r.push({
                 pathname: "/camera",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
                 pathname: "/messaging1",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
     </BarCont>
@@ -52,26 +68,41 @@ export default function HomeNavBar({
 export function HistoryNavbar({
 }){
     const r = useRouter();
-    var {route} = r.query;    
+    var {food} = r.query;    
+    if(food === undefined) {
+        food = 0;
+    }
         return <BarCont>
         <Img src="/icons/home.svg"  onClick={
             () => r.push({
                 pathname: "/home",
+                query: {
+                    food: [food]
+                }
               })
         } id="active"></Img>
         <Img src="/icons/w_history.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/history",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
         <Img src="/icons/camera.svg" onClick={
             () => r.push({
                 pathname: "/camera",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
                 pathname: "/messaging1",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
     </BarCont>
@@ -81,27 +112,42 @@ export function HistoryNavbar({
 export function CameraNavbar({
 }){
     const r = useRouter();
-    var {route} = r.query;    
+    var {food} = r.query;    
+    if(food === undefined) {
+        food = 0;
+    }
 
         return <BarCont>
         <Img src="/icons/home.svg"  onClick={
             () => r.push({
                 pathname: "/home",
+                query: {
+                    food: [food]
+                }
               })
         } id="active"></Img>
         <Img src="/icons/history.svg"  onClick={
             () => r.push({
                 pathname: "/history",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
         <Img src="/icons/w_camera.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/camera",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
                 pathname: "/messaging1",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
     </BarCont>
@@ -111,27 +157,42 @@ export function CameraNavbar({
 export function ChatNavbar({
 }){
     const r = useRouter();
-    var {route} = r.query;    
+    var {food} = r.query;    
+    if(food === undefined) {
+        food = 0;
+    }
 
         return <BarCont>
         <Img src="/icons/home.svg"  onClick={
             () => r.push({
                 pathname: "/home",
+                query: {
+                    food: [food]
+                }
               })
         } id="active"></Img>
         <Img src="/icons/history.svg"  onClick={
             () => r.push({
                 pathname: "/history",
+                query: {
+                    food: [food]
+                }
               })
         }></Img>
         <Img src="/icons/camera.svg"  onClick={
             () => r.push({
                 pathname: "/camera",
+                query: {
+                    food:[food]
+                } 
               })
         }></Img>
         <Img src="/icons/w_messages.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/messaging1",
+                query: {
+                    food:[food]
+                } 
               })
         }></Img>
     </BarCont>

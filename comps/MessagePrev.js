@@ -71,7 +71,10 @@ export function ChatBox() {
     }
     return <MsgCont onClick={
         () => r.push({
-            pathname: "/messaging"
+            pathname: "/messaging",
+            query: {
+                food: [food]
+            }
         })
     }>
         <ProfileCont>
