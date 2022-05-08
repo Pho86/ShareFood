@@ -206,14 +206,16 @@ export function TutorialSecondLine({
 export function Messager({
 
 }) {
+    const r = useRouter();
+    var { food } = r.query
+    if ( food === undefined){
+        food = 0;
+    }
     return <MsgName onClick={
         () => r.push({
             query: {
                 food: [confirm]
             }
         })
-    }>{foody[0].name}</MsgName>
+    }>{foody[food].name}</MsgName>
 }
-
-
-//{foody[confirm].name} doesn't work?

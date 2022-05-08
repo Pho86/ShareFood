@@ -10,7 +10,8 @@
         "date_bbd": "August 25, 2022",
         "meeting_location": "1251 Main St.",
         "details": "Never used.",
-        "foodimg": "/peanutbutter.png"
+        "foodimg": "/peanutbutter.png",
+        "message": "Thanks for taking my peanut butter!"
     },
     {
         "food": "Box of Cereal",
@@ -23,7 +24,8 @@
         "date_bbd": "August 1, 2022",
         "meeting_location": "130 201 St#5641",
         "details": "Never opened.",
-        "foodimg": "/cereal.png"
+        "foodimg": "/cereal.png",
+        "message": "hey"
     },
     {
         "food": "Egg Carton",
@@ -36,7 +38,8 @@
         "date_bbd": "May 26, 2022",
         "meeting_location": "905 1st Street",
         "details": "1 Egg gone.",
-        "foodimg": "/eggs.png"
+        "foodimg": "/eggs.png",
+        "message": "Hope u dont mind that 1 egg is gone lol"
     },
     {
         "food": "Instant Noodles",
@@ -49,7 +52,8 @@
         "date_bbd": "September 10, 2023",
         "meeting_location": "3040 Richmond Street",
         "details": "Not opened.",
-        "foodimg": "/ramen.png"
+        "foodimg": "/ramen.png",
+        "message": "good luck"
     },
     {
         "food": "Soy Sauce",
@@ -62,7 +66,8 @@
         "date_bbd": "May 23, 2023",
         "meeting_location": "4127 Burnaby Dr.",
         "details": "Never opened.",
-        "foodimg": "/soysauce.png"
+        "foodimg": "/soysauce.png",
+        "message": "What time do you want to meet?"
     },
     {
         "food": "Bag of Rice",
@@ -75,7 +80,8 @@
         "date_bbd": "June 30, 2022",
         "meeting_location": "1202 Georgia St.",
         "details": "Opened some gone.",
-        "foodimg": "/rice.png"
+        "foodimg": "/rice.png",
+        "message": "y do u even like rice"
     },
     {
         "food": "Tomato Soup",
@@ -88,7 +94,8 @@
         "date_bbd": "June 5, 2023",
         "meeting_location": "3075 Slocan Street",
         "details": "Unopened.",
-        "foodimg": "/tomato.png"
+        "foodimg": "/tomato.png",
+        "message": "Ew tomatoes are gross"
     },
     {
         "food": "Box of Donuts",
@@ -100,8 +107,9 @@
         "date_purchase": "May 10, 2022",
         "date_bbd": "May 20, 2022",
         "meeting_location": "3700 Willingdon Avenue",
-        "details": "Opened, all there.",
-        "foodimg": "/donuts.png"
+        "details": "Opened, none aten.",
+        "foodimg": "/donuts.png",
+        "message": "These are really nice donuts"
     },
     {
         "food": "Banana",
@@ -111,9 +119,10 @@
         "description": "Banana.",
         "weight": "1000lbs",
         "date_purchase": "Today.",
-        "date_bbd": "Tomorrow.",
+        "date_bbd": "Tmrw.",
         "meeting_location": "Granville Street",
         "details": "Banana.",
-        "foodimg": "/banana.png"
+        "foodimg": "/banana.png",
+        "message": "Banana."
     }
 ]

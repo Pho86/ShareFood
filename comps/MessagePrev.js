@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { chat, msg } from '../data/chat_content';
 import { DownUp } from '../data/animation';
-
+import foody from '../data/food_content.json';
+import {ChangeFood, GetFood }from '../data/order_content';
 
 //the entire message container
 const MsgCont = styled.div`
@@ -64,17 +65,21 @@ const Time = styled.div`
 `
 export function ChatBox() {
     const r = useRouter();
+    var {food} = r.query
+    if (food === undefined){
+        food = 0;
+    }
     return <MsgCont onClick={
         () => r.push({
             pathname: "/messaging"
         })
     }>
         <ProfileCont>
-            <Profile>{msg[0].initials}</Profile>
+            <Profile>{foody[food].initials}</Profile>
         </ProfileCont>
         <MsgPrevCont>
-            <Name>{msg[0].name}</Name>
-            <Msg>{msg[0].chat}</Msg>
+            <Name>{foody[food].name}</Name>
+            <Msg>{foody[food].message}</Msg>
         </MsgPrevCont>
         <TimeCont>
             <Time>Just Now</Time>
