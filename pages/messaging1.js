@@ -16,7 +16,6 @@ export default function Home() {
             <TutorialText text="Messages" />
             <div className={styles.chatbox}>
             <ChatBox/>
-            <ChatBox/>
             </div>
             <ChatNavbar />
 

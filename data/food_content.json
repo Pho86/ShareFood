@@ -2,7 +2,7 @@
     {
         "food": "Peanut Butter",
         "name": "Amy Mo",
-        "initals": "AM",
+        "initials": "AM",
         "location": "Vancouver",
         "description": "Opened, but never used. Forgot my kid has a nut allergy.",
         "weight": "0.5 lbs",
@@ -16,7 +16,7 @@
     {
         "food": "Box of Cereal",
         "name": "Chad Bruno",
-        "initals": "CB",
+        "initials": "CB",
         "location": "Langley",
         "description": "Never Opened. My mom sent me a box of cereal, think she forgot that I'm lactose intolerant.",
         "weight": "1 lbs",
@@ -30,7 +30,7 @@
     {
         "food": "Egg Carton",
         "name": "Li Lee",
-        "initals": "LL",
+        "initials": "LL",
         "location": "New Westminister",
         "description": "1 egg gone. My kid recently turned vegan, I completely forgot about that. Has been complaining about the eggs and wants us to give it away.",
         "weight": "2 lbs",
@@ -44,7 +44,7 @@
     {
         "food": "Instant Noodles",
         "name": "Hope Chen",
-        "initals": "HC",
+        "initials": "HC",
         "location": "Richmond",
         "description": "Thought instant noodles were easy to cook. I almost burned my house down trying to cook these. Willing to give multiple packs of Instant Noodles.",
         "weight": "1.2 lbs",
@@ -58,7 +58,7 @@
     {
         "food": "Soy Sauce",
         "name": "Jessica Smith",
-        "initals": "JS",
+        "initials": "JS",
         "location": "Burnaby",
         "description": "Never opened. I already have 3 unopened bottles of soy sauce.",
         "weight": "1 lbs",
@@ -72,7 +72,7 @@
     {
         "food": "Bag of Rice",
         "name": "Kevin Nguyen",
-        "initals": "KN",
+        "initials": "KN",
         "location": "Richmond",
         "description": "Don't need rice anymore.",
         "weight": "15lbs",
@@ -86,7 +86,7 @@
     {
         "food": "Tomato Soup",
         "name": "Mario Juan",
-        "initals": "MJ",
+        "initials": "MJ",
         "location": "Vancouver",
         "description": "Red reminds me of blood. Unopened.",
         "weight": "10lbs",
@@ -100,7 +100,7 @@
     {
         "food": "Box of Donuts",
         "name": "Jeremy Holes",
-        "initals": "JW",
+        "initials": "JW",
         "location": "Burnaby",
         "description": "I mean, donuts are nice and all, but I'm allergic.",
         "weight": "4lbs",
@@ -114,7 +114,7 @@
     {
         "food": "Banana",
         "name": "Banana Man",
-        "initals": "BM",
+        "initials": "BM",
         "location": "Vancouver",
         "description": "Banana.",
         "weight": "1000lbs",

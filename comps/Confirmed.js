@@ -150,9 +150,6 @@ export default function ConfirmText() {
 }
 
 export function SavedDetails(
-    {
-        text = "You have saved 5.3 lbs of food from going to waste this month."
-    }
 ) {
     const r = useRouter();
     const { route } = r.query
@@ -160,7 +157,7 @@ export function SavedDetails(
     return (
         <Text>
             <Saved>You have saved
-                <Highlight>&nbsp;5.3 lbs&nbsp;</Highlight>
+                <Highlight>&nbsp;5.2 lbs&nbsp;</Highlight>
                 of food waste from going to waste this month.
             </Saved>
         </Text>
