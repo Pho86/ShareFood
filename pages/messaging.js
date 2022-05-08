@@ -7,26 +7,30 @@ import { PersonChat, PersonBubble, MeBubble, MeChat } from '../comps/Chat';
 import TutorialText, { Messager } from '../comps/TutorialText';
 import BackButton, { BackAPage } from '../comps/PreviousButton';
 import foody from '../data/food_content.json';
+import { GetFood } from '../data/order_content';
 
 
 
 export default function Home() {
     const r = useRouter();
+    const foo = GetFood();
+    console.log(foo)
     var { food } = r.query
     if (food === undefined) {
         food = 0
     }
+    
 
     return (
         <div className={styles.container}>
             <BackAPage/>
             <Messager/>
             <div className={styles.chat}>
-                <div class="message"><PersonBubble name={foody[food].initals}></PersonBubble><PersonChat text={chat[0].chat} />
+                <div class="message"><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text = {"Hi, thank you for deciding to come get my " + foody[food].food + "." }  />
                 </div>
                 <div class="message1"><MeChat text={chat[1].chat} /><MeBubble name={chat[1].initials}  ></MeBubble>
                 </div>
-                <div class="message"><PersonBubble name={foody[food].initals}></PersonBubble><PersonChat text={chat[2].chat} />
+                <div class="message"><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text={chat[2].chat} />
                 </div>
             </div>
             {/*  <Space is temporarily used to move msg box down */}
@@ -36,7 +40,7 @@ export default function Home() {
                 {/* <SendIcon /> */}
             </div>
             <ChatNavbar></ChatNavbar>
-            <p></p>
+
         </div>
     )
 }

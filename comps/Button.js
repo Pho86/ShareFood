@@ -2,6 +2,9 @@ import styled from 'styled-components';
 import foody from '../data/food_content.json'
 import { useRouter } from 'next/router';
 import { DownUp } from '../data/animation';
+import { ChangeFood } from '../data/order_content';
+import ConfirmText from './Confirmed';
+
 
 const ButtonCont = styled.button`
 font-size:1.1rem;
@@ -127,17 +130,17 @@ export function Confirm({
     }
     else if (food < "100") {
         return <ButtonCont onClick={
-            () => r.push({
+            (e) => {
+                ChangeFood(foody[food].name, foody[food].food)
+                r.push({
                 query: {
                     confirm: [food]
                 }
             })
+        }
         }>
             {text}
         </ButtonCont>
-    }
-    else {
-        
     }
 }
 export function Confirm2({
@@ -148,6 +151,18 @@ export function Confirm2({
     food = Number(food)
     return <ButtonCont onClick={
         () => r.back()
+    }>
+        {text}
+    </ButtonCont>
+}
+export function CamConfirm({
+    text = "Confirm"
+}) {
+    const r = useRouter();
+    return <ButtonCont onClick={
+        () => r.push({
+                pathname: "/details"
+        })
     }>
         {text}
     </ButtonCont>
