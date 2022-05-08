@@ -26,16 +26,16 @@ export default function Home() {
             <BackAPage/>
             <Messager/>
             <div className={styles.chat}>
-                <div class="message"><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text = {"Hi, thank you for deciding to come get my " + foody[food].food + "." }  />
+                <div className={styles.message}><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text = {"Hi, thank you for deciding to come get my " + foody[food].food + "." }  />
                 </div>
-                <div class="message1"><MeChat text={chat[1].chat} /><MeBubble name={chat[1].initials}  ></MeBubble>
+                <div className={styles.message1}><MeChat text={chat[1].chat} /><MeBubble name={chat[1].initials}  ></MeBubble>
                 </div>
-                <div class="message"><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text={chat[2].chat} />
+                <div className={styles.message}><PersonBubble name={foody[food].initials}></PersonBubble><PersonChat text={chat[2].chat} />
                 </div>
             </div>
             {/*  <Space is temporarily used to move msg box down */}
             <Space />
-            <div class="message">
+            <div className={styles.message}>
                 <Message />
                 {/* <SendIcon /> */}
             </div>
