@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router'
 import { foodImg } from '../data/img_content';
 import { DownUp } from '../data/animation';
-import food from '../data/food_content.json';
+import foody from '../data/food_content.json';
 
 
 const ChoiceCont = styled.div`
@@ -26,16 +26,16 @@ export default function ChoiceButtonX({
     img = "/button_choices/x_button.svg"
 }) {
     const r = useRouter();
-    var { image } = r.query;
-    if (image === undefined) {
-        image = 0;
+    var { food } = r.query;
+    if (food === undefined) {
+        food = 0;
     }
 
     return <ChoiceCont onClick={
         () => {
             r.push({
                 query: {
-                    image: Number(image) + 1 > food.length - 1 ? 0 : Number(image) + 1
+                    food: Number(food) + 1 > foody.length - 1 ? 0 : Number(food) + 1
                 }
             })
         }

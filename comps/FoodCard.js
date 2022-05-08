@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router'
 import { foodImg } from '../data/img_content'
-import food from '../data/food_content.json';
+import foody from '../data/food_content.json';
 import { DownUp } from '../data/animation';
 
 
@@ -22,16 +22,16 @@ export default function FoodCard({
 }) {
     const r = useRouter();
 
-    let { image } = r.query
+    var { food } = r.query
 
-    if (image === undefined) {
-        image = 0;
+    if (food === undefined) {
+        food = 0;
     }
 
 
 
 
     return <Cont>
-        <DispImg src={food[image].foodimg} />
+        <DispImg src={foody[food].foodimg} />
     </Cont>
 }

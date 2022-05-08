@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { DownUp } from '../data/animation';
-import food from '../data/food_content.json';
+import foody from '../data/food_content.json';
 
 const ChoiceCont = styled.div`
 display:flex;
@@ -24,14 +24,14 @@ export default function ChoiceButtonU({
     img = "/button_choices/undo_button.svg"
 }) {
     const r = useRouter();
-    var { image } = r.query;
+    var { food } = r.query;
 
 
-    if (image === undefined ) {
+    if (food === undefined ) {
         return <ChoiceCont onClick={
             () => r.push({
                 query: {
-                    image: food.length -1
+                    food: foody.length -1
                 }
             })
         }>
@@ -39,11 +39,11 @@ export default function ChoiceButtonU({
         </ChoiceCont>
     }
 
-    if (image === '0') {
+    if (food === '0') {
         return <ChoiceCont onClick={
             () => r.push({
                 query: {
-                    image: food.length -1
+                    food: foody.length -1
                 }
             })
         }>
@@ -55,7 +55,7 @@ export default function ChoiceButtonU({
         return <ChoiceCont onClick={
         () => r.push({
             query: {
-                image: image === undefined ? image : Math.max(0, Number(image) - 1)
+                food: food === undefined ? food : Math.max(0, Number(food) - 1)
             }
         })
     }>
