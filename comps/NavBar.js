@@ -32,33 +32,33 @@ export default function HomeNavBar({
         <Img src="/icons/w_home.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/home",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         } id="active"></Img>
         <Img src="/icons/history.svg" onClick={
             () => r.push({
                 pathname: "/history",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
         <Img src="/icons/camera.svg" onClick={
             () => r.push({
                 pathname: "/camera",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
         <Img src="/icons/messages.svg" onClick={
             () => r.push({
                 pathname: "/messaging1",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
     </BarCont>

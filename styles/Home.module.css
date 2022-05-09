@@ -18,6 +18,7 @@
   align-items: center;
 }
 
+
 .footer {
   display: flex;
   flex: 1;
@@ -159,3 +160,14 @@
   flex-direction: column;
   gap: 20px;
 }
+.skip {
+  background-color: transparent;
+  border: none;
+  overflow: hidden;
+  outline: none;
+  display: flex;
+  margin-left:auto;
+  padding-bottom: 10px;
+}
+
+

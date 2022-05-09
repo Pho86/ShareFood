@@ -1,7 +1,7 @@
 import { CardSwiper } from "react-card-rotate-swiper";
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import food from '../data/food_content.json';
+import foody from '../data/food_content.json';
 import { DownUp } from '../data/animation';
 
 const ImgCard = styled.div`
@@ -16,15 +16,15 @@ export function SwipeCard() {
     const handleSwipe = (d) => {
         r.replace({
             query: {
-                image: Number(image) + 1 > food.length - 1 ? 0 : Number(image) + 1
+                food: Number(food) + 1 > foody.length - 1 ? 0 : Number(food) + 1
             }
         })
     };
     const r = useRouter();
 
-    let { image } = r.query
-    if (image === undefined) {
-        image = 0;
+    let { food } = r.query
+    if (food === undefined) {
+        food = 0;
     }
 
     return (
@@ -35,7 +35,7 @@ export function SwipeCard() {
                 contents={
                     //contents here
                     <ImgCard>
-                        <img src={food[image].foodimg} />
+                        <img src={foody[food].foodimg} />
                     </ImgCard>
                 }>
             </CardSwiper>

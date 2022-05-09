@@ -57,7 +57,7 @@ export const msg = [
         chat: "Hope you don't mind that 1 egg is gone lol"
     },
     {
-        name: "Hope Chen",
+        name: "Sally Chen",
         initials: "HC",
         chat: "Good luck."
     },
@@ -67,7 +67,7 @@ export const msg = [
         chat: "y do u even like rice"
     },
     {
-        name: "Mario Juan",
+        name: "Vladimir Edwards",
         initials: "MJ",
         chat: "Tomatoes are gross"
     },
@@ -82,3 +82,5 @@ export const msg = [
         chat: "Banana."
     },
 ]
+
+export var states = "none"

@@ -21,12 +21,8 @@ import { SwipeCard } from '../comps/Swipe.js';
 export default function Home() {
 
     const r = useRouter();
-    var { image } = r.query
-    console.log(image)
-
-    if (image === 5) {
-        image = 0;
-    }
+    var { food } = r.query
+    
 
 
     return (
