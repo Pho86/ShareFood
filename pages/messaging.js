@@ -9,6 +9,7 @@ import BackButton, { BackAPage } from '../comps/PreviousButton';
 import foody from '../data/food_content.json';
 import { GetFood } from '../data/order_content';
 import NewMsg, { MyMsg } from '../comps/MsgSender.js';
+import { MessageSend } from '../comps/MsgSender.js';
 
 
 

@@ -5,20 +5,37 @@ import TutorialText from '../comps/TutorialText';
 import { chat } from '../data/chat_content';
 import BackButton, { BackAPage } from '../comps/PreviousButton'
 import {ChatBox, ProfilePic} from '../comps/MessagePrev';
+import { GetFood } from '../data/order_content';
 
 export default function Home() {
     const r = useRouter();
-    const { route } = r.query
+    var { food } = r.query;
+    var foo = GetFood();
 
-    return (
-        <div className={styles.container}>
-            <BackAPage />
-            <TutorialText text="Messages" />
-            <div className={styles.chatbox}>
-            <ChatBox/>
+    if(foo.length > 1) {
+        return (
+            <div className={styles.container}>
+                <BackAPage />
+                <TutorialText text="Messages" />
+                <div className={styles.chatbox}>
+                <ChatBox/>
+                </div>
+                <ChatNavbar />
+    
             </div>
-            <ChatNavbar />
-
+        )
+    }
+    else if (food === undefined) {
+        return <div className={styles.container}>
+        <BackAPage />
+        <TutorialText text="Messages" />
+        <div className={styles.chatbox}>
         </div>
-    )
+        <ChatNavbar />
+
+    </div>
+        
+    }
+    
+    
 }
