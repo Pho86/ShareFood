@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <div>
         <div className={styles.buttongrid}>
-        <img src={"/camplaceholder.png"} width="400px" height="700px"/>
+        <img src={"/camplaceholder.png"} width="400px" height="600px"/>
         </div>
         <div className={styles.camicons}>
         <GalleryBtn/>

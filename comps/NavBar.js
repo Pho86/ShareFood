@@ -14,9 +14,9 @@ justify-content:center;
 `
 
 const Img = styled.img`
-padding: 30px 40px 30px 40px;
+padding: 20px 40px 20px 40px;
 width: 100%;
-height: 80px;
+height: 90px;
 background-color:${props => props.backgroundcolor || "#F1F1F1"};
 `
 
@@ -29,7 +29,7 @@ export default function HomeNavBar({
         food = 0;
     }
         return <BarCont>
-        <Img src="/icons/w_home.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_home1.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/home",
                 query: {
@@ -37,7 +37,7 @@ export default function HomeNavBar({
                 }
               })
         } id="active"></Img>
-        <Img src="/icons/history.svg" onClick={
+        <Img src="/icons/history1.svg" onClick={
             () => r.push({
                 pathname: "/history",
                 query: {
@@ -45,7 +45,7 @@ export default function HomeNavBar({
                 }
               })
         }></Img>
-        <Img src="/icons/camera.svg" onClick={
+        <Img src="/icons/camera1.svg" onClick={
             () => r.push({
                 pathname: "/camera",
                 query: {
@@ -53,7 +53,7 @@ export default function HomeNavBar({
                 }
               })
         }></Img>
-        <Img src="/icons/messages.svg" onClick={
+        <Img src="/icons/messages1.svg" onClick={
             () => r.push({
                 pathname: "/messaging1",
                 query: {
@@ -73,7 +73,7 @@ export function HistoryNavbar({
         food = 0;
     }
         return <BarCont>
-        <Img src="/icons/home.svg"  onClick={
+        <Img src="/icons/home1.svg"  onClick={
             () => r.push({
                 pathname: "/home",
                 query: {
@@ -81,7 +81,7 @@ export function HistoryNavbar({
                 }
               })
         } id="active"></Img>
-        <Img src="/icons/w_history.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_history1.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/history",
                 query: {
@@ -89,7 +89,7 @@ export function HistoryNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/camera.svg" onClick={
+        <Img src="/icons/camera1.svg" onClick={
             () => r.push({
                 pathname: "/camera",
                 query: {
@@ -97,7 +97,7 @@ export function HistoryNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/messages.svg" onClick={
+        <Img src="/icons/messages1.svg" onClick={
             () => r.push({
                 pathname: "/messaging1",
                 query: {
@@ -118,7 +118,7 @@ export function CameraNavbar({
     }
 
         return <BarCont>
-        <Img src="/icons/home.svg"  onClick={
+        <Img src="/icons/home1.svg"  onClick={
             () => r.push({
                 pathname: "/home",
                 query: {
@@ -126,7 +126,7 @@ export function CameraNavbar({
                 }
               })
         } id="active"></Img>
-        <Img src="/icons/history.svg"  onClick={
+        <Img src="/icons/history1.svg"  onClick={
             () => r.push({
                 pathname: "/history",
                 query: {
@@ -134,7 +134,7 @@ export function CameraNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/w_camera.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_camera1.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/camera",
                 query: {
@@ -142,7 +142,7 @@ export function CameraNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/messages.svg" onClick={
+        <Img src="/icons/messages1.svg" onClick={
             () => r.push({
                 pathname: "/messaging1",
                 query: {
@@ -163,7 +163,7 @@ export function ChatNavbar({
     }
 
         return <BarCont>
-        <Img src="/icons/home.svg"  onClick={
+        <Img src="/icons/home1.svg"  onClick={
             () => r.push({
                 pathname: "/home",
                 query: {
@@ -171,7 +171,7 @@ export function ChatNavbar({
                 }
               })
         } id="active"></Img>
-        <Img src="/icons/history.svg"  onClick={
+        <Img src="/icons/history1.svg"  onClick={
             () => r.push({
                 pathname: "/history",
                 query: {
@@ -179,7 +179,7 @@ export function ChatNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/camera.svg"  onClick={
+        <Img src="/icons/camera1.svg"  onClick={
             () => r.push({
                 pathname: "/camera",
                 query: {
@@ -187,7 +187,7 @@ export function ChatNavbar({
                 } 
               })
         }></Img>
-        <Img src="/icons/w_messages.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_messages1.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/messaging1",
                 query: {
