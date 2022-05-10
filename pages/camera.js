@@ -14,9 +14,9 @@ export default function Home() {
             <div className={styles.buttongrid}>
                 {/* <FakeCamera/>
          */}
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
+                <div className={styles.flip_card}>
+                    <div className={styles.flip_card_inner}>
+                        <div className={styles.flip_card_front}>
                             <img src="/fakecamera.png" height="600px"></img>
                         </div>
                         <div class="flip-card-back">
