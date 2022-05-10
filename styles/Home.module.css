@@ -152,6 +152,7 @@
 }
 .choices {
   display: flex;
+  align-items: center;
 }
 
 .chatbox {
@@ -159,3 +160,6 @@
   flex-direction: column;
   gap: 20px;
 }
+
+
+/* flip camera */

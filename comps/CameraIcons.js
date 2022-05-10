@@ -14,18 +14,22 @@ const BtnCont = styled.div`
 display:flex;
 margin-left: auto;
 margin-right: auto;
-animation: ${DownUp} .8s;
+padding-top: 20px;
+animation: ${DownUp} 1s;
 `
 const CameraCont = styled.div`
 display:flex;
 justify-content: center;
 gap: 3em;
-animation: ${DownUp} .8s;
+padding-top: 20px;
+animation: ${DownUp} 1s;
 `
 const GalleryCont = styled.div`
-animation: ${DownUp} .8s;
+animation: ${DownUp} 1s;
+padding-top: 20px;
 `
 const FlipCont = styled.div`
+padding-top: 20px;
 `
 const Btn = styled.img`
 `
