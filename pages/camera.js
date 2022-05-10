@@ -19,7 +19,7 @@ export default function Home() {
                         <div className={styles.flip_card_front}>
                             <img src="/fakecamera.png" height="600px"></img>
                         </div>
-                        <div class="flip-card-back">
+                        <div className={styles.flip_card_back}>
                             <img src="/fakecamera2.png" height="600px"></img>
                         </div>
                     </div>
