@@ -24,13 +24,13 @@ const CamBack = styled.div`
 `
 export default function FakeCamera({ }) {
     return <CamCont>
-        <CamPlaceholder className={styles.flip-card}>
-            <CamInner className={styles.flip-card-inner}>
-                <CamFake className={styles.flip-card-front}>
+        <CamPlaceholder className={styles.flip_card}>
+            <CamInner className={styles.flip_card_inner}>
+                <CamFake className={styles.flip_card_front}>
                     <CamImg src="/fakecamera.png"></CamImg>
                 </CamFake>
             </CamInner>
-            <CamBack className={styles.flip-card-back}>
+            <CamBack className={styles.flip_card_back}>
                 <CamImg2 src="/ramen.png"></CamImg2>
             </CamBack>
         </CamPlaceholder>
