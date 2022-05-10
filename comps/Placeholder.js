@@ -6,7 +6,9 @@ const CamCont = styled.div`
 display: flex;
 align-items: center;
 `
+
 const CamPlaceholder = styled.div`
+transform:${props => props.transform || 'rotateY(180deg'}
 `
 const CamInner = styled.div`
 `
@@ -22,13 +24,13 @@ const CamBack = styled.div`
 `
 export default function FakeCamera({ }) {
     return <CamCont>
-        <CamPlaceholder class="flip-card">
-            <CamInner class="flip-card-inner">
-                <CamFake class="flip-card-front">
+        <CamPlaceholder className={styles.flip-card}>
+            <CamInner className={styles.flip-card-inner}>
+                <CamFake className={styles.flip-card-front}>
                     <CamImg src="/fakecamera.png"></CamImg>
                 </CamFake>
             </CamInner>
-            <CamBack class="flip-card-back">
+            <CamBack className={styles.flip-card-back}>
                 <CamImg2 src="/ramen.png"></CamImg2>
             </CamBack>
         </CamPlaceholder>

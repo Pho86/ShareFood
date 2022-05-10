@@ -12,6 +12,7 @@ export default function Home() {
     var { food } = r.query;
     var foo = GetFood();
 
+    
     if(foo.length > 1) {
         return (
             <div className={styles.container}>
@@ -34,8 +35,16 @@ export default function Home() {
         <ChatNavbar />
 
     </div>
-        
     }
-    
+    else {
+        return <div className={styles.container}>
+        <BackAPage />
+        <TutorialText text="Messages" />
+        <div className={styles.chatbox}>
+        </div>
+        <ChatNavbar />
+
+    </div>
+    }
     
 }

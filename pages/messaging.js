@@ -12,12 +12,12 @@ import NewMsg, { MyMsg } from '../comps/MsgSender.js';
 import { MessageSend } from '../comps/MsgSender.js';
 
 
-
 export default function Home() {
     const r = useRouter();
     const foo = GetFood();
     console.log(foo)
     var { food } = r.query
+    var dog = 'none'
     if (food === undefined) {
         food = 0
     }
@@ -29,7 +29,7 @@ export default function Home() {
             <Messager />
             <NewMsg />
             <MyMsg />
-            <Message />
+            <MessageSend />
             <ChatNavbar></ChatNavbar>
 
         </div>
