@@ -28,7 +28,7 @@ button {
   display: flex;
 }
 
-.skip {
+/* .skip {
   background-color: transparent;
   border: none;
   overflow: hidden;
@@ -40,7 +40,7 @@ button {
 .skip {
   margin-left:auto;
   padding-bottom: 10px;
-}
+} */
 
 /* .message {
   background-color:red;

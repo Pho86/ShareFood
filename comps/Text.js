@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
+import styles from '../styles/Home.module.css';
+import { ChangeDisplay } from './MsgSender';
+
 const Skip = styled.div`
 margin-top: 50px;
 `
@@ -54,7 +57,7 @@ export default function Text(
         return
     }
     return <Skip>
-        <button class="skip" onClick={
+        <button className={styles.skip} onClick={
             () => r.push({
                 pathname: "/",
                 query: {tut: 5}
@@ -66,11 +69,12 @@ export default function Text(
 export function Message(
     {
         text = "Message",
-        img = "/send.svg"
+        img = "/send.svg",
+        real = 'none'
     }
 ) {
     const r = useRouter();
-    return <MBox>
+    return <MBox onClick = { () => {real='flex'; console.log(real)}}>
         <MsgPlaceholder>{text}</MsgPlaceholder>
         <Send src={img}></Send>
     </MBox>
