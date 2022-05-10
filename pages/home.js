@@ -7,10 +7,8 @@ import Button from '../comps/Button'
 import ProgressBar from '../comps/Progress'
 import Text from '../comps/Text.js'
 import ImgCard from '../comps/ImgCard.js'
-import ChoiceButtonX from '../comps/ChoiceButtonX.js'
-import ChoiceButtonU from '../comps/ChoiceButtonU.js'
-import ChoiceButtonY from '../comps/ChoiceButtonY.js'
-import FoodCard from '../comps/FoodCard.js'
+import ChoiceButtonY, {ChoiceButtonL, ChoiceButtonR} from '../comps/ChoiceButtonY.js'
+import FoodCard from '../comps/FoodCard.js';
 import { foodImg } from '../data/img_content'
 import Navbar from '../comps/NavBar'
 import SlogonHeader from '../comps/slogon';
@@ -30,15 +28,14 @@ export default function Home() {
             <BackButton></BackButton>
             <FoodCard></FoodCard>
             <div className={styles.buttongrid}>
-                {/* <SwipeCard></SwipeCard> */}
                 <ImageText></ImageText>
                 <ImageTextInfo></ImageTextInfo>
                 <ImageTextComment></ImageTextComment>
             </div>
             <div className={styles.choices}>
-                <ChoiceButtonX />
+                <ChoiceButtonL />
                 <ChoiceButtonY />
-                <ChoiceButtonU />
+                <ChoiceButtonR />
             </div>
             <Navbar></Navbar>
 

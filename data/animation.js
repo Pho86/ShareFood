@@ -4,7 +4,7 @@ import styled, {keyframes} from 'styled-components';
 export const DownUp = keyframes`
 from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(25px);
   }
 
   to {

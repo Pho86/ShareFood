@@ -153,6 +153,7 @@
 }
 .choices {
   display: flex;
+  align-items: center;
 }
 
 .chatbox {
@@ -160,6 +161,7 @@
   flex-direction: column;
   gap: 20px;
 }
+
 .skip {
   background-color: transparent;
   border: none;
@@ -169,5 +171,4 @@
   margin-left:auto;
   padding-bottom: 10px;
 }
-
 
