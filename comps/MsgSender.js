@@ -6,7 +6,7 @@ import foody from '../data/food_content.json';
 import { ChangeFood, GetFood } from '../data/order_content';
 import styles from '../styles/Home.module.css';
 import { useEffect, useState } from 'react';
-import states from '../data/chat_content'
+import states from '../data/chat_content';
 
 
 const NewMsgCont = styled.div`
@@ -49,7 +49,7 @@ border-radius: 15px;
 height: 130px;
 width: 100%;
 align-items: center;
-display: ${props =>props.display || "flex"};
+display: ${props =>props.displays || "none"};
 `
 const MsgCont2 = styled.div`
 display: flex;
@@ -91,7 +91,20 @@ position: absolute;
 bottom: 100px;
 display: flex;
 `
-var dis = "none"
+const MsgPlaceholder = styled.div`
+text-align:left;
+padding-left: 10px;
+padding-top: 5px;
+color: #7C7C7C;
+display: flex;
+margin-right: auto;
+`
+const Send = styled.img`
+margin-left: auto;
+align-items: center;
+display: flex;
+`
+
 
 
 export default function NewMsg() {
@@ -118,7 +131,7 @@ export function MessageSend(
     }
 ) {
     const r = useRouter();
-    return <MBox onClick = { () => {states = ('flex'); console.log(state)}}>
+    return <MBox onClick = { () => {states = 'flex'; console.log(states)}}>
         <MsgPlaceholder>{text}</MsgPlaceholder>
         <Send src={img}></Send>
     </MBox>
@@ -128,8 +141,6 @@ export function MyMsg(
 ) {
     const r = useRouter();
     var { food } = r.query;
-    var states = states;
-    console.log(states)
     if (food === undefined) {
         food = 0;
     }

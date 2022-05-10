@@ -1,4 +1,5 @@
 //inactive
+
 export const chat = [
     {
         name: "Jessica Smith",
@@ -84,3 +85,4 @@ export const msg = [
 ]
 
 export var states = "none"
+

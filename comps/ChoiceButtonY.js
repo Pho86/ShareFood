@@ -51,7 +51,7 @@ export function ChoiceButtonL({
 
     return <ChoiceCont onClick={
         () => {
-            r.push({
+            r.replace({
                 query: {
                     food: Number(food) + 1 > foody.length - 1 ? 0 : Number(food) + 1
                 }
@@ -71,7 +71,7 @@ export function ChoiceButtonR({
 
     if (food === undefined ) {
         return <ChoiceCont onClick={
-            () => r.push({
+            () => r.replace({
                 query: {
                     food: foody.length -1
                 }
@@ -83,7 +83,7 @@ export function ChoiceButtonR({
 
     if (food === '0') {
         return <ChoiceCont onClick={
-            () => r.push({
+            () => r.replace({
                 query: {
                     food: foody.length -1
                 }
@@ -95,7 +95,7 @@ export function ChoiceButtonR({
 
     else {
         return <ChoiceCont onClick={
-        () => r.push({
+        () => r.replace({
             query: {
                 food: food === undefined ? food : Math.max(0, Number(food) - 1)
             }
