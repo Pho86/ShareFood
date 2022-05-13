@@ -1,7 +1,7 @@
 import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import NavBar, { ChatNavbar } from '../comps/NavBar';
-import Text, { Message, SendIcon, Space } from '../comps/Text';
+import Text, { Heading } from '../comps/Text';
 import { chat } from '../data/chat_content';
 import { PersonChat, PersonBubble, MeBubble, MeChat } from '../comps/Chat';
 import TutorialText, { Messager } from '../comps/TutorialText';

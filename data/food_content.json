@@ -39,7 +39,7 @@
         "date_purchase": "May 10, 2022",
         "date_bbd": "May 26, 2022",
         "meeting_location": "905 1st Street",
-        "details": "1 Egg gone.",
+        "details": "1 egg gone.",
         "foodimg": "/eggs.png",
         "message": "Hope u dont mind that 1 egg is gone lol",
         "response": "it's okay"
@@ -54,7 +54,7 @@
         "date_purchase": "May 10, 2022",
         "date_bbd": "September 10, 2023",
         "meeting_location": "3040 Richmond Street",
-        "details": "Not opened.",
+        "details": "FIRE HAZARD!",
         "foodimg": "/ramen.png",
         "message": "good luck",
         "response": "thanks?"
@@ -84,7 +84,7 @@
         "date_purchase": "May 7, 2022",
         "date_bbd": "June 30, 2022",
         "meeting_location": "1202 Georgia St.",
-        "details": "Opened some gone.",
+        "details": "Don't need rice anymore.",
         "foodimg": "/rice.png",
         "message": "y do u even like rice", 
         "response": "Rice is life."
@@ -114,7 +114,7 @@
         "date_purchase": "May 10, 2022",
         "date_bbd": "May 20, 2022",
         "meeting_location": "3700 Willingdon Avenue",
-        "details": "Opened, none eaten.",
+        "details": "Allergic",
         "foodimg": "/donuts.png",
         "message": "These are really nice donuts.",
         "response": "How is a box of donuts 4 lbs...?"

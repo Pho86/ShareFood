@@ -3,7 +3,8 @@ import { useRouter } from 'next/router';
 import { SavedDetails } from '../comps/Confirmed';
 import NavBar, { HistoryNavbar } from '../comps/NavBar';
 import {History} from '../comps/History';
-import TutorialText from '../comps/TutorialText';
+import { HistoryHeading, MessagesHeading } from'../comps/Text.js';
+
 
 export default function Home() {
     const r = useRouter();
@@ -11,8 +12,8 @@ export default function Home() {
   
     return (
       <div className={styles.container}>
-      <TutorialText text="History"/>
-      <History/>
+      <HistoryHeading/>
+      <History/> 
       <SavedDetails text="{text}"/>
       <div className={styles.buttongrid}>
 

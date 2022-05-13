@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import styles from '../styles/Home.module.css';
 import { ChangeDisplay } from './MsgSender';
+import { DownUp } from '../data/animation';
 
 const Skip = styled.div`
 margin-top: 50px;
@@ -42,9 +43,17 @@ display: flex;
 const SendCont = styled.div`
 `
 
-const FillSpace = styled.div`
-height: 350px;
-// temporarily used to move msg box down
+const HeadingCont = styled.div`
+`
+
+const Header = styled.div`
+font-weight: 600;
+font-size: 30px;
+text-align: center;
+margin: 10px;
+margin-top: 50px;
+margin-bottom: 50px;
+animation: ${DownUp} .4s;
 `
 export default function Text(
     {
@@ -119,9 +128,19 @@ export function TutButton(
     
 }
 
-export function Space(){
-    // temporariylhstk used to move msg box down
+export function HistoryHeading({
+    text="History"
+}){
     const r = useRouter();
-    return <FillSpace></FillSpace>
+    return  <HeadingCont>
+        <Header>{text}</Header>
+    </HeadingCont>
 }
-
+export function MessagesHeading({
+    text="Messages"
+}){
+    const r = useRouter();
+    return  <HeadingCont>
+        <Header>{text}</Header>
+    </HeadingCont>
+}

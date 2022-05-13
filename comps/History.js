@@ -4,9 +4,8 @@ import history_content from '../data/history_content'
 import { DownUp } from '../data/animation';
 
 const Chart = styled.img`
-padding-top: 20px;
-width: 300px;
-height: 300px;
+width: 320px;
+height: 320px;
 display: flex;
 margin-left: auto;
 margin-right: auto;

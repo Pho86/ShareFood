@@ -6,7 +6,9 @@ import { chat } from '../data/chat_content';
 import BackButton, { BackAPage } from '../comps/PreviousButton'
 import {ChatBox, ProfilePic} from '../comps/MessagePrev';
 import { GetFood } from '../data/order_content';
+import { HistoryHeading, MessagesHeading } from'../comps/Text.js';
 
+//the page with all your messages
 export default function Home() {
     const r = useRouter();
     var { food } = r.query;
@@ -16,8 +18,7 @@ export default function Home() {
     if(foo.length > 1) {
         return (
             <div className={styles.container}>
-                <BackAPage />
-                <TutorialText text="Messages" />
+                <MessagesHeading />
                 <div className={styles.chatbox}>
                 <ChatBox/>
                 </div>
@@ -28,8 +29,7 @@ export default function Home() {
     }
     else if (food === undefined) {
         return <div className={styles.container}>
-        <BackAPage />
-        <TutorialText text="Messages" />
+        <MessagesHeading />
         <div className={styles.chatbox}>
         </div>
         <ChatNavbar />
@@ -38,8 +38,7 @@ export default function Home() {
     }
     else {
         return <div className={styles.container}>
-        <BackAPage />
-        <TutorialText text="Messages" />
+        <MessagesHeading />
         <div className={styles.chatbox}>
         </div>
         <ChatNavbar />

@@ -77,7 +77,7 @@ export default function PrevImg({
     const r = useRouter();
     return <ImageCont>
         <PreviewImg src={img1}></PreviewImg>
-        <PreviewImg src={img2}></PreviewImg>
+        <PreviewImg src={img3}></PreviewImg>
         <PreviewImg src={img3}></PreviewImg>
     </ImageCont>
 }
