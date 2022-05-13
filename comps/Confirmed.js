@@ -125,7 +125,7 @@ export default function ConfirmText() {
                     </TList>
                     <IList>
                         <H3>
-                            hidden text
+                            Order Details
                         </H3>
 
                         <Line1>{foody[confirm].food}</Line1>

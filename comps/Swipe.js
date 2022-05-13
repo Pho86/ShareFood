@@ -10,7 +10,6 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 `
-//https://reactjsexample.com/a-react-component-to-swipe-element-using-rotate/
 export function SwipeCard() {
 
     const handleSwipe = (d) => {

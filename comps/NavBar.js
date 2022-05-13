@@ -19,6 +19,13 @@ width: 100%;
 height: 90px;
 background-color:${props => props.backgroundcolor || "#F1F1F1"};
 `
+function changeBackground(e) {
+    e.target.style.background = "#F3CA40";
+  }
+
+function removeBackground(e) {
+    e.target.style.background ="#F1F1F1";
+}
 
 
 export default function HomeNavBar({
@@ -29,15 +36,13 @@ export default function HomeNavBar({
         food = 0;
     }
         return <BarCont>
-        <Img src="/icons/w_home1.svg" backgroundcolor = "#F3CA40" onClick={
+        <Img src="/icons/w_home1.svg" backgroundcolor = "#F3CA40"  onClick={
             () => r.push({
-                pathname: "/home",
-                // query: {
-                //     food: [food]
-                // }
+                pathname: "/home"
               })
+              
         } id="active"></Img>
-        <Img src="/icons/history1.svg" onClick={
+        <Img src="/icons/history1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/history",
                 // query: {
@@ -45,7 +50,7 @@ export default function HomeNavBar({
                 // }
               })
         }></Img>
-        <Img src="/icons/camera1.svg" onClick={
+        <Img src="/icons/camera1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/camera",
                 // query: {
@@ -53,7 +58,7 @@ export default function HomeNavBar({
                 // }
               })
         }></Img>
-        <Img src="/icons/messages1.svg" onClick={
+        <Img src="/icons/messages1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/messaging1",
                 // query: {
@@ -73,7 +78,7 @@ export function HistoryNavbar({
         food = 0;
     }
         return <BarCont>
-        <Img src="/icons/home1.svg"  onClick={
+        <Img src="/icons/home1.svg"  onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/home",
                 query: {
@@ -89,7 +94,7 @@ export function HistoryNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/camera1.svg" onClick={
+        <Img src="/icons/camera1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/camera",
                 query: {
@@ -97,7 +102,7 @@ export function HistoryNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/messages1.svg" onClick={
+        <Img src="/icons/messages1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/messaging1",
                 query: {
@@ -118,7 +123,7 @@ export function CameraNavbar({
     }
 
         return <BarCont>
-        <Img src="/icons/home1.svg"  onClick={
+        <Img src="/icons/home1.svg"  onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/home",
                 query: {
@@ -126,7 +131,7 @@ export function CameraNavbar({
                 }
               })
         } id="active"></Img>
-        <Img src="/icons/history1.svg"  onClick={
+        <Img src="/icons/history1.svg"  onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/history",
                 query: {
@@ -142,7 +147,7 @@ export function CameraNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/messages1.svg" onClick={
+        <Img src="/icons/messages1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/messaging1",
                 query: {
@@ -163,7 +168,7 @@ export function ChatNavbar({
     }
 
         return <BarCont>
-        <Img src="/icons/home1.svg"  onClick={
+        <Img src="/icons/home1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/home",
                 query: {
@@ -171,7 +176,7 @@ export function ChatNavbar({
                 }
               })
         } id="active"></Img>
-        <Img src="/icons/history1.svg"  onClick={
+        <Img src="/icons/history1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/history",
                 query: {
@@ -179,7 +184,7 @@ export function ChatNavbar({
                 }
               })
         }></Img>
-        <Img src="/icons/camera1.svg"  onClick={
+        <Img src="/icons/camera1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/camera",
                 query: {
