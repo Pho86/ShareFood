@@ -25,7 +25,23 @@ border-radius:15px;
 padding:10px 35px 10px 35px;
 // animation: ${DownUp} 1s;
 `
+//yellow button hover
+function changeBackground(e) {
+    e.target.style.background = "#C89E12";
+  }
 
+function removeBackground(e) {
+    e.target.style.background ="#F3CA40";
+}
+
+//cancel button hover (lighter yellow)
+function changeBackground2(e) {
+    e.target.style.background = "#DFCB87";
+  }
+
+function removeBackground2(e) {
+    e.target.style.background ="#FAEAB3";
+}
 
 export default function NButton({
     text = "Next >"
@@ -37,7 +53,7 @@ export default function NButton({
         tut = 0;
     }
     if (Number(tut) === 4) {
-        return <ButtonCont onClick={
+        return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 query: {tut: tut = 5}
             })
@@ -48,7 +64,7 @@ export default function NButton({
     if (tut === '5') {
         return
     }
-    return <ButtonCont onClick={
+    return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
         () => r.replace({
             query: {
                 tut: tut === undefined ? tut : Math.min(4, Number(tut) + 1)
@@ -68,7 +84,7 @@ export function BButton({
         return 
     }
     if (Number(tut) >= 1) {
-        return <BButtonCont onClick={
+        return <BButtonCont onMouseEnter={changeBackground2} onMouseLeave={removeBackground2} onClick={
             () => r.replace({
                 query: {
                     tut: tut === undefined ? tut : Math.max(0, Number(tut) - 1)
@@ -88,7 +104,7 @@ export function Browse({
     const r = useRouter();
     var {tut} = r.query
     if (tut === '5') {
-        return <ButtonCont onClick={
+        return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/home"
             })
@@ -108,7 +124,7 @@ export function Cancel({
         food = 0;
     }
     else if (food < "100") {
-        return <BButtonCont onClick={
+        return <BButtonCont onMouseEnter={changeBackground2} onMouseLeave={removeBackground2} onClick={
             () => r.back()
         }>
             {text}
@@ -129,7 +145,7 @@ export function Confirm({
         food = 0;
     }
     else if (food < "100") {
-        return <ButtonCont onClick={
+        return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             (e) => {
                 ChangeFood(foody[food].name, foody[food].food)
                 r.push({
@@ -149,7 +165,7 @@ export function Confirm2({
     const r = useRouter();
     var { food } = r.query
     food = Number(food)
-    return <ButtonCont onClick={
+    return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
         () => r.back()
     }>
         {text}
@@ -159,7 +175,7 @@ export function CamConfirm({
     text = "Confirm"
 }) {
     const r = useRouter();
-    return <ButtonCont onClick={
+    return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
         () => r.push({
                 pathname: "/details"
         })
@@ -187,7 +203,7 @@ export function Message({
         return 
     }
     else if (confirm >= "0") {
-        return <ButtonCont onClick={
+        return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/messaging",
                 query: {

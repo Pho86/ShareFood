@@ -16,10 +16,35 @@ animation: ${DownUp} 1s;
 
 const Icon = styled.img`
 display: block;
+background-color: #FAEAB3;
+border-radius: 50%;
 margin-left: auto;
 margin-right: auto;
 `
-//check button
+const YIcon = styled.img`
+display: block;
+background-color: #7EC980;
+border-radius: 50%;
+margin-left: auto;
+margin-right: auto;
+`
+
+//hover left and right button
+function hover(e) {
+    e.target.style.background = "#DFC887";
+  }
+
+function removeHover(e) {
+    e.target.style.background ="#FAEAB3";
+}
+//hover check button
+function hoverY(e) {
+    e.target.style.background = "#429946";
+  }
+
+function removeHoverY(e) {
+    e.target.style.background ="#7EC980";
+}
 export default function ChoiceButtonY({
     img = "/button_choices/check_button.svg"
 }) {
@@ -36,7 +61,7 @@ export default function ChoiceButtonY({
             }
         })
     }>
-        <Icon src={img}></Icon>
+        <YIcon onMouseEnter={hoverY} onMouseLeave={removeHoverY} src={img}></YIcon>
     </ChoiceCont>
 }
 
@@ -49,7 +74,7 @@ export function ChoiceButtonL({
         food = 0;
     }
 
-    return <ChoiceCont onClick={
+    return <ChoiceCont  onClick={
         () => {
             r.replace({
                 query: {
@@ -58,7 +83,7 @@ export function ChoiceButtonL({
             })
         }
     }>
-        <Icon src={img}></Icon>
+        <Icon onMouseEnter={hover} onMouseLeave={removeHover} src={img}></Icon>
     </ChoiceCont>
 }
 
@@ -77,7 +102,7 @@ export function ChoiceButtonR({
                 }
             })
         }>
-            <Icon src={img}></Icon>
+            <Icon onMouseEnter={hover} onMouseLeave={removeHover} src={img}></Icon>
         </ChoiceCont>
     }
 
@@ -89,7 +114,7 @@ export function ChoiceButtonR({
                 }
             })
         }>
-            <Icon src={img}></Icon>
+            <Icon onMouseEnter={hover} onMouseLeave={removeHover} src={img}></Icon>
         </ChoiceCont>
     }
 
@@ -101,6 +126,6 @@ export function ChoiceButtonR({
             }
         })
     }>
-        <Icon src={img}></Icon>
+        <Icon onMouseEnter={hover} onMouseLeave={removeHover} src={img}></Icon>
     </ChoiceCont>
 } }
