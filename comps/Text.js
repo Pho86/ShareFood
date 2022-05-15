@@ -55,6 +55,15 @@ margin-top: 50px;
 margin-bottom: 50px;
 animation: ${DownUp} .4s;
 `
+//hover skip button
+function skipHover(e) {
+    e.target.style.textDecoration = "underline";
+  }
+
+function removeSkipHover(e) {
+    e.target.style.textDecoration ="none";
+}
+
 export default function Text(
     {
         text = "Skip"
@@ -66,7 +75,7 @@ export default function Text(
         return
     }
     return <Skip>
-        <button className={styles.skip} onClick={
+        <button onMouseEnter={skipHover} onMouseLeave={removeSkipHover} className={styles.skip} onClick={
             () => r.push({
                 pathname: "/",
                 query: {tut: 5}

@@ -93,6 +93,7 @@ animation: ${DownUp} 1.5s;
 `
 const Text = styled.div`
 `
+
 export default function ConfirmText() {
     const r = useRouter();
     const { confirm } = r.query
