@@ -6,7 +6,7 @@ import { DownUp } from '../data/animation';
 const ImageText1 = styled.div`
     position: absolute;
     font-size: 24px;
-    font-weight: 550;
+    font-weight: 500;
     color: white;   
     margin-top:-170px;  
     height: 170px;
@@ -67,7 +67,7 @@ export function ImageText({
     }
 
     return (
-        <ImageText1>{foody[food].foody}</ImageText1>
+        <ImageText1>{foody[food].food}</ImageText1>
     )
 }
 
