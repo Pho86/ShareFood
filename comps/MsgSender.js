@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import states from '../data/chat_content';
 
 
+
 const NewMsgCont = styled.div`
 // background-color: red;
 border-radius: 15px;
@@ -111,16 +112,18 @@ export default function NewMsg() {
     const r = useRouter();
     var { food } = r.query;
     const foo = GetFood();
+    console.log(foo)
+    console.log()
     if (food === undefined) {
         food = 0;
     }
     
     return <NewMsgCont>
         <ProfileCont>
-            <Profile>{foo[0]}</Profile>
+            <Profile>{foo[0].food.initials}</Profile>
         </ProfileCont>
         <MsgCont>
-            <Message>{foody[food].message}</Message>
+            <Message>{foo[0].food.message}</Message>
         </MsgCont>
     </NewMsgCont>
 }
@@ -145,12 +148,13 @@ export function MyMsg(
 ) {
     const r = useRouter();
     var { food } = r.query;
+    const foo = GetFood();
     if (food === undefined) {
         food = 0;
     }
     return <MyMsgCont display={states} className={styles.MsgCont}>
         <MsgCont2>
-            <Message2>{foody[food].response}</Message2>
+            <Message2>{foo[0].food.response}</Message2>
         </MsgCont2>
         <ProfileCont2>
             <Profile2>ME</Profile2>

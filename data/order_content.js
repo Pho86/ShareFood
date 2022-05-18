@@ -24,20 +24,10 @@ export function ChangeFood(food
     //food.type = "getting"
 
     selectedfood.push({
-        food: food.name,
-        msg: food.message,
-        initials: food.initials,
-        location: food.location,
-        weight: food.weight,
-        date_purchase: food.date_purchase,
-        date_bbd: food.date_bbd,
-        meeting_location: food.meeting_location,
-        details: food.details,
-        foodimg: food.foodimg,
-        message: food.message,
-        response: food.response
+        food
     }) 
-    console.log(selectedfood)
+    console.log(selectedfood);
+    return selectedfood
 }
 
 export function ChangeMessage(name, text){

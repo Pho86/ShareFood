@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { chat, msg } from '../data/chat_content';
 import { DownUp } from '../data/animation';
 import foody from '../data/food_content.json';
-import {ChangeFood, GetFood }from '../data/order_content';
+import { ChangeFood, GetFood } from '../data/order_content';
 
 //the entire message container
 const MsgCont = styled.div`
@@ -65,10 +65,13 @@ const Time = styled.div`
 `
 export function ChatBox() {
     const r = useRouter();
-    var {food} = r.query
-    if (food === undefined){
+    const foodList = GetFood();
+    var { food } = r.query
+    if (food === undefined) {
         food = 0;
     }
+
+    // for (let i = 0; i < foodList.length - 1; i++) {
     return <MsgCont onClick={
         () => r.push({
             pathname: "/messaging",
@@ -78,15 +81,17 @@ export function ChatBox() {
         })
     }>
         <ProfileCont>
-            <Profile>{foody[food].initials}</Profile>
+            <Profile>{foodList[i].food.initials}</Profile>
         </ProfileCont>
         <MsgPrevCont>
-            <Name>{foody[food].name}</Name>
-            <Msg>{foody[food].message}</Msg>
+            <Name>{foodList[i].food.name}</Name>
+            <Msg>{foodList[i].food.message}</Msg>
         </MsgPrevCont>
         <TimeCont>
             <Time>Just Now</Time>
         </TimeCont>
     </MsgCont>
+    // }
 }
+
 
