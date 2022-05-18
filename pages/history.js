@@ -4,7 +4,7 @@ import { SavedDetails } from '../comps/Confirmed';
 import NavBar, { HistoryNavbar } from '../comps/NavBar';
 import {History} from '../comps/History';
 import { HistoryHeading, MessagesHeading } from'../comps/Text.js';
-
+import { GetFood } from '../data/order_content';
 
 export default function Home() {
     const r = useRouter();
@@ -17,11 +17,10 @@ export default function Home() {
     // {
     //   totalweight += history[i].weightunit;
     // }
-    return (
-      <div className={styles.container}>
+    return (<div className={styles.container}>
       <HistoryHeading/>
       <History/> 
-      <SavedDetails text="{text}"/>
+      {/* <SavedDetails text="{text}"/> */}
       <div className={styles.buttongrid}>
 
       Total = {totalweight}
@@ -30,7 +29,6 @@ export default function Home() {
       {/* temporarily ^ used for testing lol */}
       <HistoryNavbar/>  
       </div>
-      
     )
   }
   
