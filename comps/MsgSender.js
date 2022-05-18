@@ -132,9 +132,12 @@ export function MessageSend(
     }
 ) {
     const r = useRouter();
+    var {food} = r.query;
+    var array = [];
     return <MBox onClick = { () => {states = 'flex'; console.log(states)}}>
         <MsgPlaceholder>{text}</MsgPlaceholder>
         <Send src={img}></Send>
+        {/* {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food])}>{o}</Send>)} */}
     </MBox>
 }
 

@@ -98,7 +98,7 @@ export default function ConfirmText() {
     const r = useRouter();
     const { confirm } = r.query
     if (confirm === undefined) {
-        return <div></div>
+        return 
     }
     if (confirm >= "0") {
         return (
@@ -136,7 +136,7 @@ export default function ConfirmText() {
                 </TextCont>
 
                 <Saved>You have saved
-                    <Highlight>&nbsp;{foody[confirm].weight}&nbsp;</Highlight>
+                    <Highlight>&nbsp;{foody[confirm].weight} lbs&nbsp;</Highlight>
                     of food from going to waste.
                 </Saved>
             </Text>
@@ -146,18 +146,4 @@ export default function ConfirmText() {
 
 }
 
-export function SavedDetails(
-) {
-    const r = useRouter();
-    const { route } = r.query
 
-    return (
-        <Text>
-            <Saved>You have saved
-                <Highlight>&nbsp;5.2 lbs&nbsp;</Highlight>
-                of food waste from going to waste this month.
-            </Saved>
-        </Text>
-    )
-
-}
