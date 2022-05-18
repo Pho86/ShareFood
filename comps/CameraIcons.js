@@ -45,6 +45,15 @@ const style = {
     padding: 8,
 };
 
+const Div1 = styled.div`
+`
+const Div2 = styled.div`
+`
+const Div3 = styled.div`
+`
+const Div4 = styled.div`
+`
+
 export default function CameraBtn({
     img = "/icons/camerabtn.svg",
 
@@ -114,10 +123,28 @@ export function FlipCamBtn({
 }) {
     const w = useRouter();
     const { image } = w.query;
-
+    function updateBadgeState() {
+        console.log("hi")
+    }
     return <BtnCont>
         <FlipCont>
-            <Btn src={img}></Btn>
+            <Btn src={img} onClick={updateBadgeState}></Btn>
         </FlipCont>
     </BtnCont>
+}
+
+export function FakeCamera({
+    img = "/fakecamera.png"
+}) {
+
+    return <Div1 className={styles.flip_card}>
+        <Div2 className={styles.flip_card_inner}>
+            <Div3 className={styles.flip_card_front}>
+                <img src="/fakecamera.png" height="600px"></img>
+            </Div3>
+            <Div4 className={styles.flip_card_back}>
+                <img src="/fakecamera2.png" height="600px"></img>
+            </Div4>
+        </Div2>
+    </Div1>
 }

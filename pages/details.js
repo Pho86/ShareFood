@@ -15,7 +15,7 @@ export default function Home() {
         <div className={styles.container}>
             <BackAPage />
             <PrevImg />
-            <SmallIcon />
+            {/* <SmallIcon /> */}
             <Details />
             <CameraNavbar />
             <div className={styles.buttongrid}>
