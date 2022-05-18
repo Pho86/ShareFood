@@ -40,4 +40,5 @@ export function GetFood() {
 export function GetMessages() {
     return message;
 }
-
+ {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food])}>{o}</Send>)} 
+// 
