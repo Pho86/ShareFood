@@ -22,13 +22,14 @@ export default function Home() {
         food = 0
     }
 
+    const [flip, setFlip] = useState(false);
 
     return (
         <div className={styles.container}>
             <BackAPage />
             <Messager />
             <NewMsg />
-            <MyMsg />
+            <MyMsg style={{transform: flip? 'rotateY(180)' : 'rotate(0)'}}/>
             <MessageSend />
             <ChatNavbar></ChatNavbar>
 
