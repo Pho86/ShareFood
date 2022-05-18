@@ -12,3 +12,13 @@ from {
     transform: none;
   }
 `
+
+//animation for flip camera
+export const Flip1 = keyframes`
+from {
+  transform: rotateY(180deg);
+}
+to {
+  transform: rotateY(150deg);
+}
+`

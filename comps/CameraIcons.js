@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { DownUp } from '../data/animation';
+import { DownUp, Flip1 } from '../data/animation';
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
@@ -123,12 +123,13 @@ export function FlipCamBtn({
 }) {
     const w = useRouter();
     const { image } = w.query;
-    function updateBadgeState() {
+    const hi = useState(Flip1)
+    function useState(Flip1) {
         console.log("hi")
     }
     return <BtnCont>
         <FlipCont>
-            <Btn src={img} onClick={updateBadgeState}></Btn>
+            <Btn src={img} onClick={useState}></Btn>
         </FlipCont>
     </BtnCont>
 }
