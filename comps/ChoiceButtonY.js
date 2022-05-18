@@ -44,6 +44,7 @@ margin-left: auto;
 margin-right: auto;
 `
 
+
 //hover left and right button
 function hover(e) {
     e.target.style.background = "#DFC887";
@@ -66,7 +67,6 @@ var undoArray = [];
 function getRandomizedNum(min, max) {
     var x = Math.floor(Math.random() * (max - min + 1) + min);
     undoArray.unshift(x)
-    console.log(undoArray)
     return x
 }
 
@@ -126,28 +126,6 @@ export function ChoiceButtonR({
     const r = useRouter();
     var { food } = r.query;
 
-    // if (food === undefined ) {
-    //     return <ChoiceCont onClick={
-    //         () => r.replace({
-    //             query: {
-    //                 food: foody.length -1
-    //             }
-    //         })
-    //     }>
-    //         <Icon onMouseEnter={hover} onMouseLeave={removeHover} src={img}></Icon>
-    //     </ChoiceCont>
-    // }
-    // if (food === '0') {
-    //     return <ChoiceCont onClick={
-    //         () => r.replace({
-    //             query: {
-    //                 food: foody.length -1
-    //             }
-    //         })
-    //     }>
-    //         <Icon onMouseEnter={hover} onMouseLeave={removeHover} src={img}></Icon>
-    //     </ChoiceCont>
-    // }
     if (undoArray.length === undefined) {
         return
     }

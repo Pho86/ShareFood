@@ -97,10 +97,6 @@ const Text = styled.div`
 export default function ConfirmText() {
     const r = useRouter();
     const { confirm } = r.query
-    function FoodSelection() {
-        var name = foody[confirm].name;
-        var food = foody[confirm].food;
-    }
     if (confirm === undefined) {
         return <div></div>
     }
@@ -130,7 +126,7 @@ export default function ConfirmText() {
                         </H3>
 
                         <Line1>{foody[confirm].food}</Line1>
-                        <Line2>{foody[confirm].weight}</Line2>
+                        <Line2>{foody[confirm].weight} lbs</Line2>
                         <Line3>{foody[confirm].date_purchase}</Line3>
                         <Line4>{foody[confirm].date_bbd}</Line4>
                         <Line5>{foody[confirm].location}</Line5>

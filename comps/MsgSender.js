@@ -49,7 +49,7 @@ border-radius: 15px;
 height: 130px;
 width: 100%;
 align-items: center;
-display: ${props =>props.displays || "none"};
+display: ${props =>props.displays || "flex"};
 `
 const MsgCont2 = styled.div`
 display: flex;
@@ -109,14 +109,15 @@ display: flex;
 
 export default function NewMsg() {
     const r = useRouter();
-    var { food } = r.query
+    var { food } = r.query;
+    const foo = GetFood();
     if (food === undefined) {
         food = 0;
     }
     
     return <NewMsgCont>
         <ProfileCont>
-            <Profile>{foody[food].initials}</Profile>
+            <Profile>{foo[0]}</Profile>
         </ProfileCont>
         <MsgCont>
             <Message>{foody[food].message}</Message>

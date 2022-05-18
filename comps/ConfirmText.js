@@ -137,7 +137,7 @@ export default function ConfirmText() {
                     </TList>
                     <IList>
                         <Line1>{foody[food].food}</Line1>
-                        <Line2>{foody[food].weight}</Line2>
+                        <Line2>{foody[food].weight} lbs</Line2>
                         <Line3>{foody[food].date_purchase}</Line3>
                         <Line4>{foody[food].date_bbd}</Line4>
                         <Line5>{foody[food].location}</Line5>

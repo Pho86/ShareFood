@@ -7,7 +7,7 @@ import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import { CamConfirm, Cancel2 } from './Button';
 import styles from '../styles/Home.module.css';
-
+import SendData from '../data/order_content.js'
 
 
 const BtnCont = styled.div`
@@ -32,6 +32,10 @@ const FlipCont = styled.div`
 padding-top: 20px;
 `
 const Btn = styled.img`
+`
+const PreviewImg = styled.img`
+width:250px;
+height:400px;
 `
 const style = {
     position: 'absolute',
@@ -88,10 +92,15 @@ export function GalleryBtn({
         reader.addEventListener("load", function () {
             // convert image file to base64 string
             preview.src = reader.result;
+            var imgreader = reader.result;
+            console.log(imgreader)
+            // SendData(imgreader)
+            // SendData(x)
         }, false);
 
         if (file) {
             reader.readAsDataURL(file);
+            
         }
     }
 
@@ -103,7 +112,7 @@ export function GalleryBtn({
             >
                 <Box sx={style}>
                     <input id="browse" type="file" onChange={previewFile} multiple></input>
-                    <div id="preview"> <img src="#" /> </div>
+                    <div id="preview"> <PreviewImg src={"#"} /> </div>
                     <div className={styles.padding}>
                         <Cancel2 />
                         <CamConfirm />
