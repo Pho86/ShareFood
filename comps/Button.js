@@ -147,7 +147,7 @@ export function Confirm({
     else if (food < "100") {
         return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             (e) => {
-                ChangeFood(foody[food].name, foody[food].food)
+                ChangeFood(foody[food])
                 r.push({
                 query: {
                     confirm: [food]
