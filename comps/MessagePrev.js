@@ -81,11 +81,11 @@ export function ChatBox() {
         })
     }>
         <ProfileCont>
-            <Profile>{foodList[i].food.initials}</Profile>
+            <Profile>{foodList[0].food.initials}</Profile>
         </ProfileCont>
         <MsgPrevCont>
-            <Name>{foodList[i].food.name}</Name>
-            <Msg>{foodList[i].food.message}</Msg>
+            <Name>{foodList[0].food.name}</Name>
+            <Msg>{foodList[0].food.message}</Msg>
         </MsgPrevCont>
         <TimeCont>
             <Time>Just Now</Time>
