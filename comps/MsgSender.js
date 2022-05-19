@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 import states from '../data/chat_content';
 
 
+
 const NewMsgCont = styled.div`
 // background-color: red;
 border-radius: 15px;
@@ -22,7 +23,7 @@ margin-right: auto;
 const ProfileCont = styled.div`
 `
 const Profile = styled.div`
-background-color: #FE859C;
+background-color: ${props =>props.backgroundColor || "FE859C"};
 display: flex;
 width: 80px;
 height: 80px;
@@ -111,14 +112,17 @@ display: flex;
 
 export default function NewMsg() {
     const r = useRouter();
-    var { food } = r.query
+    var { food } = r.query;
+    const foo = GetFood();
+    // console.log(foo)
+    console.log()
     if (food === undefined) {
         food = 0;
     }
 
     return <NewMsgCont>
         <ProfileCont>
-            <Profile>{foody[food].initials}</Profile>
+            <Profile backgroundColor={foody[food].hex}>{foody[food].initials}</Profile>
         </ProfileCont>
         <MsgCont>
             <Message>{foody[food].message}</Message>
@@ -160,6 +164,7 @@ export function MyMsg(
 
     const r = useRouter();
     var { food } = r.query;
+    const foo = GetFood();
     if (food === undefined) {
         food = 0;
     }

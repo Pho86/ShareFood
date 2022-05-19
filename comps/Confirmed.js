@@ -97,12 +97,8 @@ const Text = styled.div`
 export default function ConfirmText() {
     const r = useRouter();
     const { confirm } = r.query
-    function FoodSelection() {
-        var name = foody[confirm].name;
-        var food = foody[confirm].food;
-    }
     if (confirm === undefined) {
-        return <div></div>
+        return 
     }
     if (confirm >= "0") {
         return (
@@ -130,7 +126,7 @@ export default function ConfirmText() {
                         </H3>
 
                         <Line1>{foody[confirm].food}</Line1>
-                        <Line2>{foody[confirm].weight}</Line2>
+                        <Line2>{foody[confirm].weight} lbs</Line2>
                         <Line3>{foody[confirm].date_purchase}</Line3>
                         <Line4>{foody[confirm].date_bbd}</Line4>
                         <Line5>{foody[confirm].location}</Line5>
@@ -140,7 +136,7 @@ export default function ConfirmText() {
                 </TextCont>
 
                 <Saved>You have saved
-                    <Highlight>&nbsp;{foody[confirm].weight}&nbsp;</Highlight>
+                    <Highlight>&nbsp;{foody[confirm].weight} lbs&nbsp;</Highlight>
                     of food from going to waste.
                 </Saved>
             </Text>
@@ -150,18 +146,4 @@ export default function ConfirmText() {
 
 }
 
-export function SavedDetails(
-) {
-    const r = useRouter();
-    const { route } = r.query
 
-    return (
-        <Text>
-            <Saved>You have saved
-                <Highlight>&nbsp;5.2 lbs&nbsp;</Highlight>
-                of food waste from going to waste this month.
-            </Saved>
-        </Text>
-    )
-
-}

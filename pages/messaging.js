@@ -10,6 +10,7 @@ import foody from '../data/food_content.json';
 import { GetFood } from '../data/order_content';
 import NewMsg, { MyMsg } from '../comps/MsgSender.js';
 import { MessageSend } from '../comps/MsgSender.js';
+import { useState } from 'react';
 
 
 export default function Home() {
@@ -22,13 +23,14 @@ export default function Home() {
         food = 0
     }
 
+    const [flip, setFlip] = useState(false);
 
     return (
         <div className={styles.container}>
             <BackAPage />
             <Messager />
             <NewMsg />
-            <MyMsg />
+            <MyMsg style={{transform: flip? 'rotateY(180)' : 'rotate(0)'}}/>
             <MessageSend />
             <ChatNavbar></ChatNavbar>
 

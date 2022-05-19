@@ -11,18 +11,13 @@ ___[1] for food
 export function ChangeFood(food
     //, type
     ) {
-    food.confirm_date = `
-    ${(new Date(Date.now())).getHours} 
-    `;
+    food.confirm_date = `${(new Date(Date.now())).getHours()}` + `:${(new Date(Date.now())).getMinutes()}`;
 
     // messages.push({
     //     name:food.name,
     //     msg:food.message
     // })
-    
-    //food.type = "getting"
-
-    selectedfood.push(food) 
+    selectedfood.unshift(food) 
     console.log(selectedfood)
 }
 
@@ -31,6 +26,7 @@ export function ChangeMessage(name, text){
         name:name,
         msg:text
     })
+    console.log(messages)
 }
 
 export function GetFood() {
@@ -40,5 +36,14 @@ export function GetFood() {
 export function GetMessages() {
     return message;
 }
-//  {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food])}>{o}</Send>)} 
+export function SendData(data) {
+    console.log(data)
+    return data
+}
+
+export function GetData() {
+    return data
+}
+
+//  {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food])}>{o.name}</Send>)} 
 // 
