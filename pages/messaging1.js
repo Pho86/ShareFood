@@ -15,7 +15,7 @@ export default function Home() {
     var foo = GetFood();
 
     
-    if(foo.length >= 1) {
+    // if(foo.length >= 1) {
         return (
             <div className={styles.container}>
                 <MessagesHeading />
@@ -26,25 +26,25 @@ export default function Home() {
     
             </div>
         )
-    }
-    else if (food === undefined) {
-        return <div className={styles.container}>
-        <MessagesHeading />
-        <div className={styles.chatbox}>
+    // }
+    // else if (food === undefined) {
+    //     return <div className={styles.container}>
+    //     <MessagesHeading />
+    //     <div className={styles.chatbox}>
             
-        </div>
-        <ChatNavbar />
+    //     </div>
+    //     <ChatNavbar />
 
-    </div>
-    }
-    else {
-        return <div className={styles.container}>
-        <MessagesHeading />
-        <div className={styles.chatbox}>
-        </div>
-        <ChatNavbar />
+    // </div>
+    // }
+    // else {
+    //     return <div className={styles.container}>
+    //     <MessagesHeading />
+    //     <div className={styles.chatbox}>
+    //     </div>
+    //     <ChatNavbar />
 
-    </div>
-    }
+    // </div>
+    // }
     
 }
