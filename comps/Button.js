@@ -43,6 +43,11 @@ function removeBackground2(e) {
     e.target.style.background ="#FAEAB3";
 }
 
+function getRandomizedNum(min, max) {
+    var x = Math.floor(Math.random() * (max - min + 1) + min);
+    return x
+}
+
 export default function NButton({
     text = "Next >"
 }) {
@@ -55,7 +60,9 @@ export default function NButton({
     if (Number(tut) === 4) {
         return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
-                query: {tut: tut = 5}
+                query: {
+                    tut: tut = 5
+                }
             })
         }>
             Done {'>'}
@@ -106,7 +113,10 @@ export function Browse({
     if (tut === '5') {
         return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
-                pathname: "/home"
+                pathname: "/home",
+                query: {
+                    food: getRandomizedNum(0, foody.length - 1)
+                }
             })
         }>
             {text}
@@ -195,6 +205,7 @@ export function Cancel2({
 }
 
 
+
 export function Message({
 }) {
     const r = useRouter();
@@ -216,6 +227,19 @@ export function Message({
             Message {foody[confirm].name}
         </ButtonCont>
     }
-
-
+}
+export function Home2({
+    text = "Home2"
+}) {
+    const r = useRouter();
+    var { food } = r.query
+    food = Number(food)
+    return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
+        () => r.push({
+            pathname:"/home",
+            query:{food:Math.random(getRandomizedNum(0, foody.length - 1))}
+        })
+    }>
+        {text}
+    </ButtonCont>
 }

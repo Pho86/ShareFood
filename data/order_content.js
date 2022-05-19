@@ -11,9 +11,7 @@ ___[1] for food
 export function ChangeFood(food
     //, type
     ) {
-    food.confirm_date = `
-    ${(new Date(Date.now())).getHours()} 
-    `;
+    food.confirm_date = `${(new Date(Date.now())).getHours()}` + `:${(new Date(Date.now())).getMinutes()}`;
 
     // messages.push({
     //     name:food.name,
@@ -21,8 +19,8 @@ export function ChangeFood(food
     // })
     
     //food.type = "getting"
-    ChangeMessage(food.name, food.)
-    selectedfood.push(food) 
+    // ChangeMessage(food.name, food.msg)
+    selectedfood.unshift(food) 
     console.log(selectedfood)
 }
 

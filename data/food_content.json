@@ -12,7 +12,9 @@
         "details": "Never used.",
         "foodimg": "/peanutbutter.png",
         "message": "Thanks for taking my peanut butter!",
-        "response": "Np"
+        "response": "Np",
+        "index": 0,
+        "hex": "#FF5733"
     },
     {
         "food": "Box of Cereal",
@@ -27,7 +29,9 @@
         "details": "Never opened.",
         "foodimg": "/cereal.png",
         "message": "hey",
-        "response": "hi"
+        "response": "hi",
+        "index": 1,
+        "hex": "#FAD556"
     },
     {
         "food": "Egg Carton",
@@ -42,7 +46,9 @@
         "details": "1 egg gone.",
         "foodimg": "/eggs.png",
         "message": "Hope u dont mind that 1 egg is gone lol",
-        "response": "it's okay"
+        "response": "it's okay",
+        "index": 2,
+        "hex": "#F3EE3B"
     },
     {
         "food": "Instant Noodles",
@@ -57,7 +63,9 @@
         "details": "FIRE HAZARD!",
         "foodimg": "/ramen.png",
         "message": "good luck",
-        "response": "thanks?"
+        "response": "thanks?",
+        "index": 3,
+        "hex": "#FB1717"
     },
     {
         "food": "Soy Sauce",
@@ -72,7 +80,9 @@
         "details": "Never opened.",
         "foodimg": "/soysauce.png",
         "message": "What time do you want to meet?",
-        "response": "I'm free tomorrow at 2 pm."
+        "response": "I'm free tomorrow at 2 pm.",
+        "index": 4,
+        "hex": "#211C17"
     },
     {
         "food": "Bag of Rice",
@@ -87,7 +97,9 @@
         "details": "Don't need rice anymore.",
         "foodimg": "/rice.png",
         "message": "y do u even like rice", 
-        "response": "Rice is life."
+        "response": "Rice is life.",
+        "index": 5,
+        "hex": "#7E7E7E"
     },
     {
         "food": "Tomato Soup",
@@ -102,7 +114,9 @@
         "details": "Unopened.",
         "foodimg": "/tomato.png",
         "message": "Ew tomatoes are gross",
-        "response": "ur gross"
+        "response": "ur gross",
+        "index": 6,
+        "hex": "#F91818"
     },
     {
         "food": "Box of Donuts",
@@ -117,7 +131,9 @@
         "details": "Allergic",
         "foodimg": "/donuts.png",
         "message": "These are really nice donuts.",
-        "response": "How is a box of donuts 4 lbs...?"
+        "response": "How is a box of donuts 4 lbs...?",
+        "index": 7,
+        "hex": "#1852F9"
     },
     {
         "food": "Banana",
@@ -132,7 +148,9 @@
         "details": "Banana.",
         "foodimg": "/banana.png",
         "message": "Banana.",
-        "response": "Banana."
+        "response": "Banana.",
+        "index": 8,
+        "hex": "#EEF87B"
     },
     {
         "food": "Ross' Sandwich",
@@ -145,9 +163,11 @@
         "date_bbd": "1 week from now",
         "meeting_location": "Central Perk",
         "details": "Tasty",
-        "foodimg": "/img6.png",
+        "foodimg": "/sandwich.png",
         "message": "Hey don't tell Ross this",
-        "response": "ok"
+        "response": "ok",
+        "index": 9,
+        "hex": "#5DCCF9"
     },
     {
         "food": "Coca Cola",
@@ -160,9 +180,11 @@
         "date_bbd": "n/a",
         "meeting_location": "Central Perk",
         "details": "l>sandwich",
-        "foodimg": "/img7.png",
+        "foodimg": "/coca.png",
         "message": "...you took my sandwich?",
-        "response": "yes"
+        "response": "yes",
+        "index": 10,
+        "hex": "#1B3039"
     },
     {
         "food": "Starbursts",
@@ -171,13 +193,15 @@
         "location": "Vancouver",
         "description": "JOEY DOESN'T SHARE FOOD",
         "weight": 42,
-        "date_purchase": "May 4",
+        "date_purchase": "May 4, 2022",
         "date_bbd": "none",
         "meeting_location": "Central Perk",
         "details": "How u doin'",
-        "foodimg": "/img8.png",
+        "foodimg": "/starbursts.png",
         "message": "How u doin'",
-        "response": "haha"
+        "response": "haha",
+        "index": 11,
+        "hex": "#F5B98C"
     },
     {
         "food": "Krabby Patty",
@@ -190,9 +214,11 @@
         "date_bbd": "Eat ASAP",
         "meeting_location": "Krusty Krab",
         "details": "Fresh",
-        "foodimg": "/img9.png",
+        "foodimg": "/patty.png",
         "message": "Enjoy your Krabby Patty!",
-        "response": "Thank you!"
+        "response": "Thank you!",
+        "index": 12,
+        "hex": "#FCF761"
     },
     {
         "food": "Ratatouille",
@@ -205,9 +231,11 @@
         "date_bbd": "May 30",
         "meeting_location": "Paris",
         "details": "Bon Appétit",
-        "foodimg": "/img10.png",
+        "foodimg": "/ratatouille.png",
         "message": "If you are what you eat, then I only want to eat the good stuff.",
-        "response": "."
+        "response": ".",
+        "index": 13,
+        "hex": "#FCAC61"
     },
     {
         "food": "Green Apples",
@@ -220,8 +248,11 @@
         "date_bbd": "June 1",
         "meeting_location": "Burnaby",
         "details": "Giving away",
-        "foodimg": "/img11.png",
+        "foodimg": "/apples.png",
         "message": "How many apples do you want?",
-        "response": "I'll take them all!"
+        "response": "I'll take them all!",
+        "index": 14,
+        "hex": "#9DF351"
     }
+
 ]

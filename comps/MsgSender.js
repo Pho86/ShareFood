@@ -23,7 +23,7 @@ margin-right: auto;
 const ProfileCont = styled.div`
 `
 const Profile = styled.div`
-background-color: #FE859C;
+background-color: ${props =>props.backgroundColor || "FE859C"};
 display: flex;
 width: 80px;
 height: 80px;
@@ -112,7 +112,7 @@ export default function NewMsg() {
     const r = useRouter();
     var { food } = r.query;
     const foo = GetFood();
-    console.log(foo)
+    // console.log(foo)
     console.log()
     if (food === undefined) {
         food = 0;
@@ -120,10 +120,10 @@ export default function NewMsg() {
     
     return <NewMsgCont>
         <ProfileCont>
-            <Profile>{foo[0].food.initials}</Profile>
+            <Profile backgroundColor={foody[food].hex}>{foody[food].initials}</Profile>
         </ProfileCont>
         <MsgCont>
-            <Message>{foo[0].food.message}</Message>
+            <Message>{foody[food].message}</Message>
         </MsgCont>
     </NewMsgCont>
 }
@@ -154,7 +154,7 @@ export function MyMsg(
     }
     return <MyMsgCont display={states} className={styles.MsgCont}>
         <MsgCont2>
-            <Message2>{foo[0].food.response}</Message2>
+            <Message2>{foody[food].response}</Message2>
         </MsgCont2>
         <ProfileCont2>
             <Profile2>ME</Profile2>
