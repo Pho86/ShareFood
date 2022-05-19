@@ -1,0 +1,65 @@
+[
+    {
+        "date": "March 25, 2022",
+        "food": "Peanut Butter",
+        "foodimg": "/eggs.png",
+        "lbs": "0.5lbs saved",
+        "state": "/gave.svg"
+
+    },
+    {
+        "date": "March 25, 2022",
+        "food": "Box of Cereal",
+        "foodimg":"/cereal.png",
+        "lbs": "1 lbs saved",
+        "state": "/gave.svg"
+
+    },
+    {
+        "date": "March 25, 2022",
+        "food": "Egg Carton",
+        "foodimg":"/eggs.png",
+        "lbs": "2 lbs saved",
+        "state": "/gave.svg"
+    },
+
+    {
+        "date": "March 25, 2022",
+        "food": "Instant Noodles",
+        "foodimg":"/ramen.png",
+        "lbs": "1.2 lbs saved",
+        "state": "/gave.svg"
+    },
+    
+    {
+        "date": "March 25, 2022",
+        "food": "Soy Sauce",
+        "foodimg":"/soysauce.png",
+        "lbs": "5 lbs saved",
+        "state": "/gave.svg"
+    },
+    
+    {
+        "date": "March 25, 2022",
+        "food": "Bag of Rice",
+        "foodimg":"/rice.png",
+        "lbs": "15lbs saved",
+        "state": "/gave.svg"
+    },
+    
+    {
+        "date": "March 25, 2022",
+        "food": "Bag of Rice",
+        "foodimg":"/rice.png",
+        "lbs": "15lbs saved",
+        "state": "/gave.svg"
+    },
+    
+    {
+        "date": "March 25, 2022",
+        "food": "Bag of Rice",
+        "foodimg":"/rice.png",
+        "lbs": "15lbs saved",
+        "state": "/gave.svg"
+    }
+]

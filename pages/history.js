@@ -4,6 +4,7 @@ import { SavedDetails } from '../comps/Confirmed';
 import NavBar, { HistoryNavbar } from '../comps/NavBar';
 import {History} from '../comps/History';
 import { HistoryHeading, MessagesHeading } from'../comps/Text.js';
+import { HistoryBox } from '../comps/History';
 
 
 export default function Home() {
@@ -16,12 +17,15 @@ export default function Home() {
       <History/> 
       <SavedDetails text="{text}"/>
       <div className={styles.buttongrid}>
-
-      <img src="/Placeholder.png" width="400px"/>
       </div>
       {/* temporarily ^ used for testing lol */}
       <HistoryNavbar/>  
+
+      <HistoryBox>
+        
+      </HistoryBox>
       </div>
+
       
     )
   }
