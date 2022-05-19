@@ -253,56 +253,6 @@
         "response": "I'll take them all!",
         "index": 14,
         "hex": "#9DF351"
-    },
-    {
-        "food": "Cookies",
-        "name": "Sucrose Melts",
-        "initials": "SM",
-        "location": "Burnaby",
-        "description": "These cookies are 100% safe to eat.",
-        "weight": 4,
-        "date_purchase": "Yesterday.",
-        "date_bbd": "Never.",
-        "meeting_location": "Burnaby",
-        "details": "Safe to eat.",
-        "foodimg": "/cookies.png",
-        "message": "These are 100% safe to eat!",
-        "response": "Are you sure?",
-        "index": 15,
-        "hex": "#36712C"
-    },
-    {
-        "food": "Ramen with Ducks",
-        "name": "Qiqi Dubu",
-        "initials": "QD",
-        "location": "Burnaby",
-        "description": "Ramen with Duckies!",
-        "weight": 8,
-        "date_purchase": "May 1",
-        "date_bbd": "June 1",
-        "meeting_location": "Burnaby",
-        "details": "Giving away",
-        "foodimg": "/qiqiramen.png",
-        "message": "Ducky!",
-        "response": "I'll take them all!",
-        "index": 16,
-        "hex": "#4EB3C5"  
-    },
-    {
-        "food": "Ramen with Ducks",
-        "name": "Hu Tao",
-        "initials": "HT",
-        "location": "Vancouver",
-        "description": "Ramen with Duckies!",
-        "weight": 8,
-        "date_purchase": "May 1",
-        "date_bbd": "June 1",
-        "meeting_location": "Wangsheng",
-        "details": "Giving away",
-        "foodimg": "/qiqiramen.png",
-        "message": "Ducky!",
-        "response": "I'll take them all!",
-        "index": 17,
-        "hex": "#EE4422"  
     }
+
 ]
