@@ -50,7 +50,9 @@ border-radius: 15px;
 height: 130px;
 width: 100%;
 align-items: center;
-display: ${props =>props.displays || "flex"};
+// display: ${props => props.displays || "none"};
+display: flex;
+// visibility: hidden
 `
 const MsgCont2 = styled.div`
 display: flex;
@@ -117,7 +119,7 @@ export default function NewMsg() {
     if (food === undefined) {
         food = 0;
     }
-    
+
     return <NewMsgCont>
         <ProfileCont>
             <Profile backgroundColor={foody[food].hex}>{foody[food].initials}</Profile>
@@ -134,33 +136,51 @@ export function MessageSend(
         img = "/send.svg",
     }
 ) {
+    const [click, sendMsg] = useState(false);
+
+    const sendYes = () => sendMsg(true);
+    const sendNo = () => sendMsg(false);
+
     const r = useRouter();
-    var {food} = r.query;
+    var { food } = r.query;
     var array = [];
-    return <MBox onClick = { () => {states = 'flex'; console.log(states)}}>
+    
+
+    return <MBox onClick={() => { states = 'visible'; console.log(states) }}>
         <MsgPlaceholder>{text}</MsgPlaceholder>
-        <Send src={img}></Send>
+        <Send src={img} onClick={click? sendYes : sendNo} />
+        {/* <Send src={img} onClick={sendNo} />no */}
         {/* {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food])}>{o}</Send>)} */}
     </MBox>
+    
 }
 
 export function MyMsg(
 ) {
+    const [click, sendMsg] = useState(false);
+
+    const sendYes = () => sendMsg(true);
+    const sendNo = () => sendMsg(false);
+
     const r = useRouter();
     var { food } = r.query;
     const foo = GetFood();
     if (food === undefined) {
         food = 0;
     }
-    return <MyMsgCont display={states} className={styles.MsgCont}>
-        <MsgCont2>
-            <Message2>{foody[food].response}</Message2>
-        </MsgCont2>
-        <ProfileCont2>
-            <Profile2>ME</Profile2>
-        </ProfileCont2> 
-    </MyMsgCont>
-    
+    // if (sendMsg === true) {
+        return <MyMsgCont 
+        visibility="visible"
+         className={styles.MsgCont}>
+            <MsgCont2>
+                <Message2>{foody[food].response}</Message2>
+            </MsgCont2>
+            <ProfileCont2>
+                <Profile2>ME</Profile2>
+            </ProfileCont2>
+        </MyMsgCont>
+    // }
 
-    
+
+
 } 

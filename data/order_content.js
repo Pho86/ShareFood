@@ -17,9 +17,6 @@ export function ChangeFood(food
     //     name:food.name,
     //     msg:food.message
     // })
-    
-    //food.type = "getting"
-    // ChangeMessage(food.name, food.msg)
     selectedfood.unshift(food) 
     console.log(selectedfood)
 }

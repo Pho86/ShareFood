@@ -17,7 +17,8 @@ export default function Home() {
     // {
     //   totalweight += history[i].weightunit;
     // }
-    return (<div className={styles.container}>
+    return (
+      <div className={styles.container}>
       <HistoryHeading/>
       <History/> 
       {/* <SavedDetails text="{text}"/> */}

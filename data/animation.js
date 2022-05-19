@@ -19,6 +19,15 @@ from {
   transform: rotateY(180deg);
 }
 to {
-  transform: rotateY(150deg);
+  transform: rotateY(0deg);
+}
+`
+
+export const Flip2 = keyframes`
+from {
+  transform: rotateY(0deg);
+}
+to {
+  transform: rotateY(180deg);
 }
 `
