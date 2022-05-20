@@ -82,27 +82,15 @@ function getChoices() {
 function getRandomizedNum(min, max) {
 
     var x = Math.floor(Math.random() * (max - min + 1) + min);
-    for (let i = 0; i < undoArray.length; i++) {
-        if (x === undoArray[i]) {
+    for (let i = 0; i < foody.length; i++) {
+        if (undoArray.includes(Number(x))) {
+            // console.log(x)
             var x = Math.floor(Math.random() * (max - min + 1) + min);
-            for (let help = 0; help < i.length; help++) {
-                if (x === undoArray[i]) {
-                    var x = Math.floor(Math.random() * (max - min + 1) + min);
-                    for (let die = 0; die < help.length; die++) {
-                        if (x === undoArray[i]) {
-                            var x = Math.floor(Math.random() * (max - min + 1) + min);
-                        }
-                    }
-                }
-
-            }
-        }
-        else {
-            var x;
         }
     }
-    if (undoArray.length === 30) {
-        for (let i = 0; i < 10; i++) {
+
+    if (undoArray.length === 39) {
+        for (let i = 0; i < 5; i++) {
             undoArray.pop()
         }
     }
