@@ -30,7 +30,7 @@ export function ChangeMessage(name, text){
         name:name,
         msg:text
     })
-    console.log(messages)
+    // console.log(messages)
 }
 
 export function GetFood() {
@@ -50,7 +50,7 @@ export function SendData(data) {
 }
 
 export function GetData() {
-    console.log(reader)
+    // console.log(reader)
     return reader
 }
 export function EmptyData() {
@@ -71,5 +71,5 @@ export function GetAllDetails() {
     fooddetails = {food:name, weight:weight, date_purchase:datepur, date_bbd:datebbd, meeting_location:pickup, location:pickup, description:description, foodimg, name:"YOU", details:description}
     
     foody.push(fooddetails)
-    console.log(foody)
+    // console.log(foody)
 }
