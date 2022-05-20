@@ -64,9 +64,14 @@ function removeHoverY(e) {
 
 var x = 0
 var undoArray = [];
+
+
 function getRandomizedNum(min, max) {
+    // const r = useRouter();
+    // var food = r.query;
     var x = Math.floor(Math.random() * (max - min + 1) + min);
-    undoArray.unshift(x)
+    undoArray.unshift()
+    console.log(undoArray)
     return x
 }
 

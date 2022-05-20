@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import foody from '../data/food_content.json'
 import { useRouter } from 'next/router';
 import { DownUp } from '../data/animation';
-import { ChangeFood } from '../data/order_content';
+import { ChangeFood, ChangeHistory } from '../data/order_content';
 import ConfirmText from './Confirmed';
 import { GetAllDetails } from '../data/order_content';
 import * as React from 'react';
@@ -172,7 +172,7 @@ export function Confirm({
     if (food === undefined) {
         food = 0;
     }
-    else if (food >= 25) {
+    else if (food >= 41) {
         return <div>
             <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
                 (e) => {
@@ -194,6 +194,7 @@ export function Confirm({
         return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             (e) => {
                 ChangeFood(foody[food])
+                ChangeHistory(foody[food].food, foody[food].weight, foody[food].foodimg)
                 r.push({
                     query: {
                         confirm: [food]
@@ -214,7 +215,6 @@ export function Confirm2({
     food = Number(food)
     return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
         () => {
-
             GetAllDetails();
             r.push({
                 pathname: "/home",
@@ -251,7 +251,6 @@ export function Cancel2({
         {text}
     </BButtonCont>
 }
-
 
 
 export function Message({

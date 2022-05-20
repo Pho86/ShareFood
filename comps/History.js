@@ -54,8 +54,8 @@ width: auto%;
 `
 
 const DateCont = styled.div`
-margin-top: -30px;
-margin-left: -15px;
+// margin-top: -30px;
+// margin-left: -15px;
 display: flex;
 `
 
@@ -63,8 +63,8 @@ const Date = styled.div`
 display: flex;
 font-size: 18px;
 font-weight: 500;
-margin-left: 20px;
-margin-top; 100px;
+// margin-left: 20px;
+// margin-top; 100px;
 white-space: nowrap;
 // background-color:red;
 text-align: left;
@@ -73,7 +73,7 @@ text-align: left;
 const FoodCont = styled.div
 `
 display: flex;
-margin-top: 5px;
+// margin-top: 5px;
 // margin-left: -135px;
 // background-color: blue;
 text-align: left;
@@ -81,35 +81,38 @@ text-align: left;
 
 const FoodName = styled.div`
 display: flex;
-font-size: 12px;
-font-weight: 250;
+font-size: 14px;
+font-weight: 350;
 // background-color: white;
-margin-left: -135px;
-margin-top; 10px;
+// margin-left: -135px;
+// margin-top; 10px;
 white-space: nowrap;
-text-align: left;
+// text-align: left;
 overflow-wrap: break-word;
 `
 
 const WeightCont = styled.div
 `
 display: flex;
-margin-top: 35px;
+// margin-top: 35px;
 // margin-left: -76px;
 // background-color: purple;
 `
 
 const FoodWeight = styled.div`
 display: flex;
-font-size: 12px;
+font-size: 14px;
 font-weight: 250;
-margin-left: -135px;
-margin-top; 10px;
+// margin-left: -135px;
+// margin-top; 10px;
 white-space: nowrap;
 // background-color: purple;
 `
 
-
+const ContentCont = styled.div`
+display:flex;
+flex-direction:column;
+`
 
 
 export default function Graph({
@@ -145,13 +148,13 @@ export function HistoryBox() {
 
  
     return historia.map((o,i) => {
-        console.log(o)
 
         return(
         <HisCon>
                 <ImageCircle>
                 <Picture src={o.foodimg} alt="Avatar"/>
                 </ImageCircle>
+                <ContentCont>
             <DateCont>
                 <Date>{o.date}</Date>
             </DateCont>
@@ -159,8 +162,9 @@ export function HistoryBox() {
                 <FoodName>{o.food}</FoodName>
             </FoodCont>
             <WeightCont>
-                <FoodWeight>{o.lbs} lbs saved</FoodWeight>    
+                <FoodWeight>{o.weight} lbs saved</FoodWeight>    
             </WeightCont>    
+                </ContentCont>
         </HisCon>)})
     }    
     
