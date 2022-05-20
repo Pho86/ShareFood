@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { chat, msg } from '../data/chat_content';
-import n from '../data/animation';
+import { DownUp } from '../data/animation';
 import foody from '../data/food_content.json';
 import { ChangeFood, GetFood } from '../data/order_content';
 import styles from '../styles/Home.module.css';
@@ -53,6 +53,7 @@ align-items: center;
 display: ${props => props.display || "none"};
 // display: flex;
 visibility: ${props => props.visibility || "hidden"};
+animation: ${DownUp} .4s;
 `
 const MsgCont2 = styled.div`
 display: flex;
