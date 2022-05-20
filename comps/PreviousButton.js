@@ -12,6 +12,8 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 padding-top: 17px;
+width:50px;
+height:65px;
 `
 
 
