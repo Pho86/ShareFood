@@ -6,7 +6,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import { useState } from 'react';
-import { CamConfirm, Cancel2 } from './Button';
+import { CamConfirm, Cancel2, } from './Button';
 import styles from '../styles/Home.module.css';
 
 const ImageCont = styled.div`
@@ -80,6 +80,7 @@ margin-bottom: 50px;
 // margin-top: 5px;
 animation: ${DownUp} 1.4s;
 `
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -91,7 +92,39 @@ const style = {
     boxShadow: 24,
     padding: 8,
 };
+const BButtonCont = styled.button`
+font-size:1.1rem;
+text-align: center;
+background:#FAEAB3;
+border:none;
+border-radius:15px;
+padding:10px 35px 10px 35px;
+// animation: ${DownUp} 1s;
+`
+const ButtonCont = styled.button`
+font-size:1.1rem;
+text-align: center;
+background:#F3CA40;
+border:none;
+border-radius:15px;
+padding:10px 35px 10px 35px;
+// animation: ${DownUp} 1s;
+`
+function changeBackground(e) {
+    e.target.style.background = "#C89E12";
+}
 
+function removeBackground(e) {
+    e.target.style.background = "#F3CA40";
+}
+
+function changeBackground2(e) {
+    e.target.style.background = "#DFCB87";
+}
+
+function removeBackground2(e) {
+    e.target.style.background = "#FAEAB3";
+}
 
 export default function PrevImg({
     img1 = "bread1.png",
@@ -121,38 +154,42 @@ export default function PrevImg({
     }
     if (reader.length >= 1) {
         return <ImageCont>
-        <Modal
-            open={open}
-            onClose={handleClose}
-        >
-            <Box sx={style}>
-                <input id="browse" type="file" onChange={previewFile} multiple></input>
-                <div id="preview"> <ImgPreview src="#"/> </div>
-                <div className={styles.padding}>
-                    <Cancel2 />
-                    <CamConfirm />
-                </div>
-            </Box>
-        </Modal>
-        <PreviewImg src={reader} id="foodimg" onClick={handleOpen}></PreviewImg>
-    </ImageCont> 
+            <Modal
+                open={open}
+                onClose={handleClose}
+            >
+                <Box sx={style}>
+                    <input id="browse" type="file" onChange={previewFile} multiple></input>
+                    <div id="preview"> <ImgPreview src="#" /> </div>
+                    <div className={styles.padding}>
+                        <Cancel2 />
+                        <CamConfirm />
+                    </div>
+                </Box>
+            </Modal>
+            <PreviewImg src={reader} id="foodimg" onClick={handleOpen}></PreviewImg>
+        </ImageCont>
     } else {
         return <ImageCont>
-        <Modal
-            open={open}
-            onClose={handleClose}
-        >
-            <Box sx={style}>
-                <input id="browse" type="file" onChange={previewFile} multiple></input>
-                <div id="preview"> <ImgPreview src="#" /> </div>
-                <div className={styles.padding}>
-                    <Cancel2 />
-                    <CamConfirm />
-                </div>
-            </Box>
-        </Modal>
-        <PreviewImg src={img1} id="foodimg" onClick={handleOpen}></PreviewImg>
-    </ImageCont>
+            <Modal
+                open={open}
+                onClose={handleClose}
+            >
+                <Box sx={style}>
+                    <input id="browse" type="file" onChange={previewFile} multiple></input>
+                    <div id="preview"> <ImgPreview src="#" /> </div>
+                    <div className={styles.padding}>
+                        <BButtonCont onMouseEnter={changeBackground2} onMouseLeave={removeBackground2} onClick={
+                            () => { handleClose() }}>
+                            Cancel
+                        </BButtonCont>
+                        <ButtonCont onMouseEnter={changeBackground2} onMouseLeave={removeBackground2} onClick={
+                            () => { handleClose() }}> Confirm</ButtonCont>
+                    </div>
+                </Box>
+            </Modal>
+            <PreviewImg src={img1} id="foodimg" onClick={handleOpen}></PreviewImg>
+        </ImageCont>
     }
 }
 

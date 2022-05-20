@@ -44,6 +44,7 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     padding: 8,
+    borderRadius:5
 };
 
 const Div1 = styled.div`
