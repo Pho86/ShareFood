@@ -183,13 +183,26 @@ export function HistoryBox() {
 export function TotalWeight() {
     const r = useRouter();
     var totalweight = 0;
+    
     // console.log(historia)
     for (var i = 0; i < historia.length; i++) {
         totalweight += historia[i].weight;
     }
-    return <TotalLBS>
+    if (historia.length === 0) {
+        return <TotalLBS>
+        You have saved a total of
+        <Highlight> &nbsp;{totalweight} lbs&nbsp;</Highlight>
+        of food from going to waste.
+        <br></br>
+        <br></br>
+        Go find some food!
+    </TotalLBS>
+    }
+    else {
+        return <TotalLBS>
         You have saved a total of
         <Highlight> &nbsp;{totalweight} lbs&nbsp;</Highlight>
         of food from going to waste.
     </TotalLBS>
+    }
 }

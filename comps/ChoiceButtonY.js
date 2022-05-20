@@ -64,12 +64,50 @@ function removeHoverY(e) {
 
 var x = 0
 var undoArray = [];
+var choices = []
+
+function getAllFood() {
+    for (let i = 0; i < foody.length; i++) {
+        choices.push(i)
+    }
+}
+getAllFood()
+console.log(choices)
+function getChoices() {
+    var remove = choices.length
+    return remove
+}
 
 
 function getRandomizedNum(min, max) {
+
     var x = Math.floor(Math.random() * (max - min + 1) + min);
-    undoArray.unshift(x)
+    for (let i = 0; i < undoArray.length; i++) {
+        if (x === undoArray[i]) {
+            var x = Math.floor(Math.random() * (max - min + 1) + min);
+            for (let help = 0; help < i.length; help++) {
+                if (x === undoArray[i]) {
+                    var x = Math.floor(Math.random() * (max - min + 1) + min);
+                    for (let die = 0; die < help.length; die++) {
+                        if (x === undoArray[i]) {
+                            var x = Math.floor(Math.random() * (max - min + 1) + min);
+                        }
+                    }
+                }
+
+            }
+        }
+        else {
+            var x;
+        }
+    }
+    if (undoArray.length === 30) {
+        for (let i = 0; i < 10; i++) {
+            undoArray.pop()
+        }
+    }
     // console.log(undoArray)
+    undoArray.unshift(x)
     return x
 }
 
@@ -136,7 +174,7 @@ export function ChoiceButtonR({
     if (undoArray.length === 0) {
         return <UnanimatedChoice opacity="0" onClick={
             () => console.log("I'm an invisible button.")
-            
+
         }>
             <Icon onMouseEnter={hover} onMouseLeave={removeHover} src={img}></Icon>
         </UnanimatedChoice>
