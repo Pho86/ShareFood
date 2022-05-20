@@ -115,8 +115,6 @@ export default function NewMsg() {
     const r = useRouter();
     var { food } = r.query;
     const foo = GetFood();
-    // console.log(foo)
-    console.log()
     if (food === undefined) {
         food = 0;
     }
