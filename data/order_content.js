@@ -23,6 +23,8 @@ export function ChangeFood(food
 var selectedHist;
 export function ChangeHistory(food, weight, img) {
     var month = `${(new Date(Date.now())).getMonth()}`.toLocaleString()
+    month = Number(month)
+    month = Number(month + 1)
     var day = `${(new Date(Date.now())).getDate()}`
     var year = `${(new Date(Date.now())).getFullYear()}`
     var date = month + '/' + day + '/' + year
