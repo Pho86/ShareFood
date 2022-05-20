@@ -208,3 +208,11 @@
   transform: rotateY(180deg);
   background-color: red;
 }
+
+.notSent {
+  visibility: hidden;
+}
+
+.isSent {
+  visibility: visible;
+}
