@@ -9,7 +9,7 @@ export const categories1 = [
         title: "Date of Purchase:"
     },
     {
-        title: "Best Before text:"
+        title: "Best Before Date:"
     },
     {
         title: "Pick-up Location:"
