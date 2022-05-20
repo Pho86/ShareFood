@@ -15,7 +15,7 @@ export default function Home() {
     var foo = GetFood();
 
     
-    if(foo.length > 1) {
+    if(foo.length >= 1) {
         return (
             <div className={styles.container}>
                 <MessagesHeading />
@@ -31,6 +31,7 @@ export default function Home() {
         return <div className={styles.container}>
         <MessagesHeading />
         <div className={styles.chatbox}>
+            
         </div>
         <ChatNavbar />
 

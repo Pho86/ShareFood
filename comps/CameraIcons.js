@@ -7,6 +7,7 @@ import Modal from '@mui/material/Modal';
 import { useState } from 'react';
 import { CamConfirm, Cancel2 } from './Button';
 import styles from '../styles/Home.module.css';
+import { Flip1, Flip2 } from '../data/animation';
 
 
 
@@ -46,12 +47,31 @@ const style = {
 };
 
 const Div1 = styled.div`
+background-color: transparent;
+width: 350px;
+height: 600px;
+perspective: 1000px;
 `
 const Div2 = styled.div`
+position: relative;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+animation:${Flip1} 0.5s;
 `
 const Div3 = styled.div`
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
 `
 const Div4 = styled.div`
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
 `
 
 export default function CameraBtn({
@@ -121,14 +141,28 @@ export function GalleryBtn({
 export function FlipCamBtn({
     img = "/icons/flip_icon.svg"
 }) {
-    const w = useRouter();
-    const { image } = w.query;
-    function updateBadgeState() {
-        console.log("hi")
+    const r = useRouter();
+    var { camera } = r.query;
+    if (camera === undefined) {
+        camera = 0;
     }
+    // const [flip, setFlip] = useState(false);
+
+    // const flipOn = () => setFlip(true);
+    // const flipOff = () => setFlip(false);
+    // i gave up on this
+
     return <BtnCont>
         <FlipCont>
-            <Btn src={img} onClick={updateBadgeState}></Btn>
+            {/* <Btn src={img} onClick={(o) => { setFlip(!flip) }}></Btn>
+            <Btn src={img} style={{ transform: flip ? "rotateY(180deg)" : "rotate(0deg)" }}></Btn> */}
+            <Btn src={img} onClick={() => {
+                r.push({
+                    query: { camera: Number(camera) + 1 }
+                    // camera: Number(camera) + 1 > cam.length - 1? 0 : Number(camera) + 1
+                    // }
+                })
+            }} />
         </FlipCont>
     </BtnCont>
 }
@@ -136,15 +170,30 @@ export function FlipCamBtn({
 export function FakeCamera({
     img = "/fakecamera.png"
 }) {
-
+    const r = useRouter();
+    var { camera } = r.query;
+    // if (camera === undefined){
+    //     camera = 0;
+    if (camera % 2 === 0) {
+        img = "/fakecamera.png"
+    }
+    if (camera % 2 === 1) {
+        img = "/fakecamera2.png"
+    }
     return <Div1 className={styles.flip_card}>
         <Div2 className={styles.flip_card_inner}>
             <Div3 className={styles.flip_card_front}>
-                <img src="/fakecamera.png" height="600px"></img>
+                <img src={img}
+                    height="600px"
+
+                ></img>
             </Div3>
-            <Div4 className={styles.flip_card_back}>
-                <img src="/fakecamera2.png" height="600px"></img>
-            </Div4>
+            {/* <Div4 className={styles.flip_card_back}>
+                <img src={cam[camera].back}
+                    height="600px"
+
+                ></img>
+            </Div4> */}
         </Div2>
     </Div1>
 }

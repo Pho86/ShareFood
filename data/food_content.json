@@ -5,14 +5,16 @@
         "initials": "AM",
         "location": "Vancouver",
         "description": "Opened, but never used. Forgot my kid has a nut allergy.",
-        "weight": "0.5 lbs",
+        "weight": 0.5,
         "date_purchase": "May 1, 2022",
         "date_bbd": "August 25, 2022",
         "meeting_location": "1251 Main St.",
         "details": "Never used.",
         "foodimg": "/peanutbutter.png",
         "message": "Thanks for taking my peanut butter!",
-        "response": "Np"
+        "response": "Np",
+        "index": 0,
+        "hex": "#FF5733"
     },
     {
         "food": "Box of Cereal",
@@ -20,14 +22,16 @@
         "initials": "CB",
         "location": "Langley",
         "description": "Never Opened. My mom sent me a box of cereal, think she forgot that I'm lactose intolerant.",
-        "weight": "1 lbs",
+        "weight": 1,
         "date_purchase": "May 3, 2022",
         "date_bbd": "August 1, 2022",
         "meeting_location": "130 201 St#5641",
         "details": "Never opened.",
         "foodimg": "/cereal.png",
         "message": "hey",
-        "response": "hi"
+        "response": "hi",
+        "index": 1,
+        "hex": "#FAD556"
     },
     {
         "food": "Egg Carton",
@@ -35,14 +39,16 @@
         "initials": "LL",
         "location": "New Westminister",
         "description": "1 egg gone. My kid recently turned vegan, I completely forgot about that. Has been complaining about the eggs and wants us to give it away.",
-        "weight": "2 lbs",
+        "weight": 2,
         "date_purchase": "May 10, 2022",
         "date_bbd": "May 26, 2022",
         "meeting_location": "905 1st Street",
         "details": "1 egg gone.",
         "foodimg": "/eggs.png",
         "message": "Hope u dont mind that 1 egg is gone lol",
-        "response": "it's okay"
+        "response": "it's okay",
+        "index": 2,
+        "hex": "#F3EE3B"
     },
     {
         "food": "Instant Noodles",
@@ -50,14 +56,16 @@
         "initials": "SC",
         "location": "Richmond",
         "description": "Thought instant noodles were easy to cook. I almost burned my house down trying to cook these. FIRE HAZARD!",
-        "weight": "1.2 lbs",
+        "weight": 1.2,
         "date_purchase": "May 10, 2022",
         "date_bbd": "September 10, 2023",
         "meeting_location": "3040 Richmond Street",
         "details": "FIRE HAZARD!",
         "foodimg": "/ramen.png",
         "message": "good luck",
-        "response": "thanks?"
+        "response": "thanks?",
+        "index": 3,
+        "hex": "#FB1717"
     },
     {
         "food": "Soy Sauce",
@@ -65,14 +73,16 @@
         "initials": "JS",
         "location": "Burnaby",
         "description": "Never opened. I already have 3 unopened bottles of soy sauce.",
-        "weight": "5 lbs",
+        "weight": 5,
         "date_purchase": "May 10, 2022",
         "date_bbd": "May 23, 2023",
         "meeting_location": "4127 Burnaby Dr.",
         "details": "Never opened.",
         "foodimg": "/soysauce.png",
         "message": "What time do you want to meet?",
-        "response": "I'm free tomorrow at 2 pm."
+        "response": "I'm free tomorrow at 2 pm.",
+        "index": 4,
+        "hex": "#211C17"
     },
     {
         "food": "Bag of Rice",
@@ -80,14 +90,16 @@
         "initials": "KN",
         "location": "Richmond",
         "description": "Don't need rice anymore.",
-        "weight": "15lbs",
+        "weight": 15,
         "date_purchase": "May 7, 2022",
         "date_bbd": "June 30, 2022",
         "meeting_location": "1202 Georgia St.",
         "details": "Don't need rice anymore.",
         "foodimg": "/rice.png",
         "message": "y do u even like rice", 
-        "response": "Rice is life."
+        "response": "Rice is life.",
+        "index": 5,
+        "hex": "#7E7E7E"
     },
     {
         "food": "Tomato Soup",
@@ -95,14 +107,16 @@
         "initials": "VE",
         "location": "Vancouver",
         "description": "Red reminds me of blood. I hate blood. Unopened.",
-        "weight": "8lbs",
+        "weight": 8,
         "date_purchase": "May 5, 2022",
         "date_bbd": "June 5, 2023",
         "meeting_location": "3075 Slocan Street",
         "details": "Unopened.",
         "foodimg": "/tomato.png",
         "message": "Ew tomatoes are gross",
-        "response": "ur gross"
+        "response": "ur gross",
+        "index": 6,
+        "hex": "#F91818"
     },
     {
         "food": "Box of Donuts",
@@ -110,14 +124,16 @@
         "initials": "JW",
         "location": "Burnaby",
         "description": "I mean, donuts are nice and all, but I'm allergic.",
-        "weight": "4lbs",
+        "weight": 4,
         "date_purchase": "May 10, 2022",
         "date_bbd": "May 20, 2022",
         "meeting_location": "3700 Willingdon Avenue",
         "details": "Allergic",
         "foodimg": "/donuts.png",
         "message": "These are really nice donuts.",
-        "response": "How is a box of donuts 4 lbs...?"
+        "response": "How is a box of donuts 4 lbs...?",
+        "index": 7,
+        "hex": "#1852F9"
     },
     {
         "food": "Banana",
@@ -125,14 +141,16 @@
         "initials": "BM",
         "location": "Vancouver",
         "description": "Banana.",
-        "weight": "100lbs",
+        "weight": 100,
         "date_purchase": "Today.",
         "date_bbd": "Tmrw.",
         "meeting_location": "Granville Street",
         "details": "Banana.",
         "foodimg": "/banana.png",
         "message": "Banana.",
-        "response": "Banana."
+        "response": "Banana.",
+        "index": 8,
+        "hex": "#EEF87B"
     },
     {
         "food": "Ross' Sandwich",
@@ -140,14 +158,16 @@
         "initials": "CB",
         "location": "Vancouver",
         "description": "Could this sandwich BE any tastier?",
-        "weight": "0.2lbs",
+        "weight": 0.2,
         "date_purchase": "Today",
         "date_bbd": "1 week from now",
         "meeting_location": "Central Perk",
         "details": "Tasty",
-        "foodimg": "/img6.png",
+        "foodimg": "/sandwich.png",
         "message": "Hey don't tell Ross this",
-        "response": "ok"
+        "response": "ok",
+        "index": 9,
+        "hex": "#5DCCF9"
     },
     {
         "food": "Coca Cola",
@@ -155,14 +175,16 @@
         "initials": "RG",
         "location": "Vancouver",
         "description": "Somebody stole my sandwich.",
-        "weight": "1lbs",
+        "weight": 1,
         "date_purchase": "Today.",
         "date_bbd": "n/a",
         "meeting_location": "Central Perk",
         "details": "l>sandwich",
-        "foodimg": "/img7.png",
+        "foodimg": "/coca.png",
         "message": "...you took my sandwich?",
-        "response": "yes"
+        "response": "yes",
+        "index": 10,
+        "hex": "#1B3039"
     },
     {
         "food": "Starbursts",
@@ -170,14 +192,16 @@
         "initials": "JT",
         "location": "Vancouver",
         "description": "JOEY DOESN'T SHARE FOOD",
-        "weight": "42lbs",
-        "date_purchase": "May 4",
+        "weight": 42,
+        "date_purchase": "May 4, 2022",
         "date_bbd": "none",
         "meeting_location": "Central Perk",
         "details": "How u doin'",
-        "foodimg": "/img8.png",
+        "foodimg": "/starbursts.png",
         "message": "How u doin'",
-        "response": "haha"
+        "response": "haha",
+        "index": 11,
+        "hex": "#F5B98C"
     },
     {
         "food": "Krabby Patty",
@@ -185,14 +209,16 @@
         "initials": "SS",
         "location": "Richmond",
         "description": "Fresh off the grill!",
-        "weight": "0.3lbs",
+        "weight": 0.3,
         "date_purchase": "Cooked today",
         "date_bbd": "Eat ASAP",
         "meeting_location": "Krusty Krab",
         "details": "Fresh",
-        "foodimg": "/img9.png",
+        "foodimg": "/patty.png",
         "message": "Enjoy your Krabby Patty!",
-        "response": "Thank you!"
+        "response": "Thank you!",
+        "index": 12,
+        "hex": "#FCF761"
     },
     {
         "food": "Ratatouille",
@@ -200,14 +226,16 @@
         "initials": "R",
         "location": "Vancouver",
         "description": "Bon Appétit",
-        "weight": "2lbs",
+        "weight": 2,
         "date_purchase": "May 20",
         "date_bbd": "May 30",
         "meeting_location": "Paris",
         "details": "Bon Appétit",
-        "foodimg": "/img10.png",
+        "foodimg": "/ratatouille.png",
         "message": "If you are what you eat, then I only want to eat the good stuff.",
-        "response": "."
+        "response": ".",
+        "index": 13,
+        "hex": "#FCAC61"
     },
     {
         "food": "Green Apples",
@@ -215,13 +243,16 @@
         "initials": "RF",
         "location": "Burnaby",
         "description": "I own an apple business. Giving away some apples on this app.",
-        "weight": "15lbs",
+        "weight": 15,
         "date_purchase": "May 1",
         "date_bbd": "June 1",
         "meeting_location": "Burnaby",
         "details": "Giving away",
-        "foodimg": "/img11.png",
+        "foodimg": "/apples.png",
         "message": "How many apples do you want?",
-        "response": "I'll take them all!"
+        "response": "I'll take them all!",
+        "index": 14,
+        "hex": "#9DF351"
     }
+
 ]

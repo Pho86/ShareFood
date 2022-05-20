@@ -6,17 +6,28 @@ import {History} from '../comps/History';
 import { HistoryHeading, MessagesHeading } from'../comps/Text.js';
 import { HistoryBox } from '../comps/History';
 
+import { GetFood } from '../data/order_content';
 
 export default function Home() {
     const r = useRouter();
     const { route } = r.query
-  
+
+    var totalweight = 0;
+    // const history = GetFood();
+
+    // for(var i = 0; i<history.length; i++)
+    // {
+    //   totalweight += history[i].weightunit;
+    // }
     return (
       <div className={styles.container}>
       <HistoryHeading/>
       <History/> 
-      <SavedDetails text="{text}"/>
+      {/* <SavedDetails text="{text}"/> */}
       <div className={styles.buttongrid}>
+
+      Total = {totalweight}
+      {/* <img src="/Placeholder.png" width="400px"/> */}
       </div>
       {/* temporarily ^ used for testing lol */}
       <HistoryNavbar/>  

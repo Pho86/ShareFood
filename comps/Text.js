@@ -105,9 +105,9 @@ export function SendIcon(
 ) {
     const r = useRouter();
     return <SendCont>
-        <Send src={img}>
-        {/* onClick={ () => */}
+        <Send src={img} >
         </Send>
+        {/* {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, qnum)}>{o}</Send>)} */}
     </SendCont>
 }
 

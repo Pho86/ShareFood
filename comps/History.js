@@ -30,6 +30,7 @@ align-items: center;
 display: flex;
 margin-left: auto;
 margin-right: auto;
+margin-bottom:10px;
 animation: ${DownUp} 1.2s;
 `
 
@@ -140,20 +141,27 @@ export function HistoryBox() {
     if (history === undefined){
         history = 0;
     }
+
+
  
-    return <HisCon>
+    return historia.map((o,i) => {
+        console.log(o)
+
+        return(
+        <HisCon>
                 <ImageCircle>
-                <Picture src={historia[history].foodimg} alt="Avatar"/>
+                <Picture src={o.foodimg} alt="Avatar"/>
                 </ImageCircle>
             <DateCont>
-                <Date>{historia[history].date}</Date>
+                <Date>{o.date}</Date>
             </DateCont>
             <FoodCont>
-                <FoodName>{historia[history].food}</FoodName>
+                <FoodName>{o.food}</FoodName>
             </FoodCont>
             <WeightCont>
-                <FoodWeight>{historia[history].lbs}</FoodWeight>    
+                <FoodWeight>{o.lbs} lbs saved</FoodWeight>    
             </WeightCont>    
-    </HisCon>
-}
-        
+        </HisCon>)})
+    }    
+    
+    

@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import { chat, msg } from '../data/chat_content';
 import { DownUp } from '../data/animation';
 import foody from '../data/food_content.json';
-import {ChangeFood, GetFood }from '../data/order_content';
+import { ChangeFood, GetFood } from '../data/order_content';
 
 //the entire message container
 const MsgCont = styled.div`
@@ -20,7 +20,7 @@ animation: ${DownUp} 1.2s;
 //the circle
 const ProfileCont = styled.div`
 display: flex;
-background-color: #FE859C;
+background-color: ${props =>props.backgroundColor || "FE859C"};
 width: 100px;
 height: 100px;
 border-radius: 50%;
@@ -59,34 +59,110 @@ display: flex;
 margin-top: -40px;
 margin-left: auto;
 padding: 25px;
-font-size: 11px;
+font-size: 16px;
 `
 const Time = styled.div`
 `
 export function ChatBox() {
     const r = useRouter();
-    var {food} = r.query
-    if (food === undefined){
-        food = 0;
-    }
-    return <MsgCont onClick={
-        () => r.push({
-            pathname: "/messaging",
-            query: {
-                food: [food]
-            }
-        })
-    }>
-        <ProfileCont>
-            <Profile>{foody[food].initials}</Profile>
-        </ProfileCont>
-        <MsgPrevCont>
-            <Name>{foody[food].name}</Name>
-            <Msg>{foody[food].message}</Msg>
-        </MsgPrevCont>
-        <TimeCont>
-            <Time>Just Now</Time>
-        </TimeCont>
-    </MsgCont>
+    const foodList = GetFood();
+    var { food } = r.query
+
+    return foodList.map((o, i) => {
+        console.log(o)
+        return (<MsgCont onClick={
+            () => r.push({
+                pathname: "/messaging",
+                query: {
+                    food: [o.index]
+                }
+            })
+        }>
+            <ProfileCont backgroundColor={o.hex}>
+                <Profile >{o.initials}</Profile>
+            </ProfileCont>
+            <MsgPrevCont>
+                <Name>{o.name}</Name>
+                <Msg>{o.message}</Msg>
+            </MsgPrevCont>
+            <TimeCont>
+                <Time>{o.confirm_date}</Time>
+            </TimeCont>
+        </MsgCont>
+        )
+    })
+
+
+
+    // for (let i = 0; i < foodList.length - 1; i++) {
+
+    // foodList.map(function(o, i) {
+    //     return ( <MsgCont onClick={
+    //                 () => r.push({
+    //                     pathname: "/messaging",
+    //                     query: {
+    //                         food: [food]
+    //                     }
+    //                 })
+    //             }>
+    //                 <ProfileCont>
+    //                     <Profile>{o.initials}</Profile>
+    //                 </ProfileCont>
+    //                 <MsgPrevCont>
+    //                     <Name>{o.name}</Name>
+    //                     <Msg>{o.message}</Msg>
+    //                 </MsgPrevCont>
+    //                 <TimeCont>
+    //                     <Time>Just Now</Time>
+    //                 </TimeCont>
+    //             </MsgCont> 
+    //             )
+    // })
+
+
+    // foodList.map(((o, i) => { 
+    //     return ( <MsgCont onClick={
+    //         () => r.push({
+    //             pathname: "/messaging",
+    //             query: {
+    //                 food: [food]
+    //             }
+    //         })
+    //     }>
+    //         <ProfileCont>
+    //             <Profile>{o.initials}</Profile>
+    //         </ProfileCont>
+    //         <MsgPrevCont>
+    //             <Name>{o.name}</Name>
+    //             <Msg>{o.message}</Msg>
+    //         </MsgPrevCont>
+    //         <TimeCont>
+    //             <Time>Just Now</Time>
+    //         </TimeCont>
+    //     </MsgCont> 
+    //     )
+    // }))
+
+    // return <MsgCont onClick={
+    //     () => r.push({
+    //         pathname: "/messaging",
+    //         query: {
+    //             food: [food]
+    //         }
+    //     })
+    // }>
+    //     <ProfileCont>
+    //         <Profile>{foodList[0].initials}</Profile>
+    //     </ProfileCont>
+    //     <MsgPrevCont>
+    //         <Name>{foodList[0].name}</Name>
+    //         <Msg>{foodList[0].message}</Msg>
+    //     </MsgPrevCont>
+    //     <TimeCont>
+    //         <Time>Just Now</Time>
+    //     </TimeCont>
+    // </MsgCont>
+    // // }
 }
+
 

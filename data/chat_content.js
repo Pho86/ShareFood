@@ -84,5 +84,6 @@ export const msg = [
     },
 ]
 
-export var states = "none"
+export var states = "hidden"
+
 
