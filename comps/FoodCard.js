@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { useRouter } from 'next/router'
 import { foodImg } from '../data/img_content'
 import foody from '../data/food_content.json';
-import { DownUp } from '../data/animation';
+import { DownUp, Scale } from '../data/animation';
 
 
 

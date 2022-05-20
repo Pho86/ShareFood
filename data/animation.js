@@ -23,11 +23,14 @@ to {
 }
 `
 
-export const Flip2 = keyframes`
-from {
-  transform: rotateY(0deg);
-}
-to {
-  transform: rotateY(180deg);
-}
-`
+// export const Scale = keyframes`
+// from {
+//   transform: scale(1.0)
+// }
+// to {
+//   transform: scale(1.2)
+// }
+// `
+// function Scale() {
+//   target.style.transform ="scale(1.2)";
+// }
