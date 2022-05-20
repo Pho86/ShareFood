@@ -92,7 +92,7 @@ export function Message(
     }
 ) {
     const r = useRouter();
-    return <MBox onClick = { () => {real='flex'; console.log(real)}}>
+    return <MBox onClick = { () => {real='flex'}}>
         <MsgPlaceholder>{text}</MsgPlaceholder>
         <Send src={img}></Send>
     </MBox>
