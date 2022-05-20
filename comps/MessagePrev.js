@@ -78,7 +78,6 @@ animation: ${DownUp} .2s;
 export function ChatBox() {
     const r = useRouter();
     const foodList = GetFood();
-    console.log(foodList)
     var { food } = r.query;
 
     if (foodList.length === 0) {
@@ -108,7 +107,6 @@ export function ChatBox() {
             </MsgCont>
             )
         })
-
     }
 }
 

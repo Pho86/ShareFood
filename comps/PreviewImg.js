@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { DownUp } from '../data/animation';
+import { GetData, SendData } from '../data/order_content';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import { useState } from 'react';
+import { CamConfirm, Cancel2 } from './Button';
+import styles from '../styles/Home.module.css';
 
 const ImageCont = styled.div`
 display: flex;
@@ -13,6 +20,12 @@ display: flex;
 margin-left: auto;
 margin-right: auto;
 align-items: center;
+width:300px;
+height:400px;
+`
+const ImgPreview = styled.img`
+width:300px;
+height:400px;
 `
 const IconCont = styled.div`
 position: absolute;
@@ -67,28 +80,89 @@ margin-bottom: 50px;
 // margin-top: 5px;
 animation: ${DownUp} 1.4s;
 `
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    padding: 8,
+};
 
 
 export default function PrevImg({
-    img1="bread1.png",
-    img2="bread2.png",
-    img3="add1.png"
+    img1 = "bread1.png",
+    img2 = "bread2.png",
+    img3 = "add1.png"
 }) {
+    var reader = GetData();
     const r = useRouter();
-    return <ImageCont>
-        <PreviewImg src={img1}></PreviewImg>
-        <PreviewImg src={img3}></PreviewImg>
-        <PreviewImg src={img3}></PreviewImg>
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+
+    function previewFile() {
+        const preview = document.querySelector('#preview > img');
+        const file = document.querySelector('input[type=file]').files[0];
+        const reader = new FileReader();
+
+        reader.addEventListener("load", function () {
+            // convert image file to base64 string
+            preview.src = reader.result;
+            let read = reader.result
+            SendData(read)
+        }, false);
+        if (file) {
+            reader.readAsDataURL(file);
+        }
+    }
+    if (reader.length >= 1) {
+        return <ImageCont>
+        <Modal
+            open={open}
+            onClose={handleClose}
+        >
+            <Box sx={style}>
+                <input id="browse" type="file" onChange={previewFile} multiple></input>
+                <div id="preview"> <ImgPreview src="#"/> </div>
+                <div className={styles.padding}>
+                    <Cancel2 />
+                    <CamConfirm />
+                </div>
+            </Box>
+        </Modal>
+        <PreviewImg src={reader} id="foodimg" onClick={handleOpen}></PreviewImg>
+    </ImageCont> 
+    } else {
+        return <ImageCont>
+        <Modal
+            open={open}
+            onClose={handleClose}
+        >
+            <Box sx={style}>
+                <input id="browse" type="file" onChange={previewFile} multiple></input>
+                <div id="preview"> <ImgPreview src="#" /> </div>
+                <div className={styles.padding}>
+                    <Cancel2 />
+                    <CamConfirm />
+                </div>
+            </Box>
+        </Modal>
+        <PreviewImg src={img1} id="foodimg" onClick={handleOpen}></PreviewImg>
     </ImageCont>
+    }
 }
 
 export function SmallIcon({
-    img1="/icons/smallicon1.svg",
-    img2="/icons/smallicon2.svg",
-    img3="/icons/smallicon3.svg",
-    img4="/icons/smallicon4.svg",
-    img5="/icons/smallicon5.svg",
-    img6="/icons/smallicon6.svg",
+    img1 = "/icons/smallicon1.svg",
+    img2 = "/icons/smallicon2.svg",
+    img3 = "/icons/smallicon3.svg",
+    img4 = "/icons/smallicon4.svg",
+    img5 = "/icons/smallicon5.svg",
+    img6 = "/icons/smallicon6.svg",
 }) {
     const r = useRouter();
     return <IconCont>

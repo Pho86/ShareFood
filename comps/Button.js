@@ -4,6 +4,11 @@ import { useRouter } from 'next/router';
 import { DownUp } from '../data/animation';
 import { ChangeFood } from '../data/order_content';
 import ConfirmText from './Confirmed';
+import { GetAllDetails } from '../data/order_content';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import Modal from '@mui/material/Modal';
+import styles from '../styles/Home.module.css';
 
 
 const ButtonCont = styled.button`
@@ -15,7 +20,19 @@ border-radius:15px;
 padding:10px 35px 10px 35px;
 // animation: ${DownUp} 1s;
 `
-
+const Btn = styled.img`
+`
+const style = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: 'background.paper',
+    border: '2px solid #000',
+    boxShadow: 24,
+    padding: 8,
+};
 const BButtonCont = styled.button`
 font-size:1.1rem;
 text-align: center;
@@ -28,19 +45,19 @@ padding:10px 35px 10px 35px;
 //yellow button hover
 function changeBackground(e) {
     e.target.style.background = "#C89E12";
-  }
+}
 
 function removeBackground(e) {
-    e.target.style.background ="#F3CA40";
+    e.target.style.background = "#F3CA40";
 }
 
 //cancel button hover (lighter yellow)
 function changeBackground2(e) {
     e.target.style.background = "#DFCB87";
-  }
+}
 
 function removeBackground2(e) {
-    e.target.style.background ="#FAEAB3";
+    e.target.style.background = "#FAEAB3";
 }
 
 function getRandomizedNum(min, max) {
@@ -88,7 +105,7 @@ export function BButton({
     const r = useRouter();
     var { tut } = r.query;
     if (tut === '5') {
-        return 
+        return
     }
     if (Number(tut) >= 1) {
         return <BButtonCont onMouseEnter={changeBackground2} onMouseLeave={removeBackground2} onClick={
@@ -101,15 +118,13 @@ export function BButton({
             {text}
         </BButtonCont>
     }
-    
-
 }
 
 export function Browse({
     text = "Start Browsing"
 }) {
     const r = useRouter();
-    var {tut} = r.query
+    var { tut } = r.query
     if (tut === '5') {
         return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
@@ -151,24 +166,46 @@ export function Confirm({
     const r = useRouter();
     var { food } = r.query
     food = Number(food)
+    const [open, setOpen] = React.useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
     if (food === undefined) {
         food = 0;
+    }
+    else if (food >= 25) {
+        return <div>
+            <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
+                (e) => {
+                    handleOpen()
+                }
+            }>
+                {text}
+            </ButtonCont>
+            <Modal
+                open={open}
+                onClose={handleClose}>
+                <Box sx={style}>
+                    <p>This is your food. Why would you want it.</p>
+                </Box>
+            </Modal>
+        </div>
     }
     else if (food < "100") {
         return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             (e) => {
                 ChangeFood(foody[food])
                 r.push({
-                query: {
-                    confirm: [food]
-                }
-            })
-        }
+                    query: {
+                        confirm: [food]
+                    }
+                })
+            }
         }>
             {text}
         </ButtonCont>
     }
 }
+
 export function Confirm2({
     text = "Confirm"
 }) {
@@ -176,23 +213,34 @@ export function Confirm2({
     var { food } = r.query
     food = Number(food)
     return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
-        () => r.back()
+        () => {
+
+            GetAllDetails();
+            r.push({
+                pathname: "/home",
+                query: {
+                    food: foody.length - 1
+                }
+            })
+        }
     }>
         {text}
     </ButtonCont>
 }
+
 export function CamConfirm({
     text = "Confirm"
 }) {
     const r = useRouter();
     return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
         () => r.push({
-                pathname: "/details"
+            pathname: "/details"
         })
     }>
         {text}
     </ButtonCont>
 }
+
 export function Cancel2({
     text = "Cancel"
 }) {
@@ -211,7 +259,7 @@ export function Message({
     const r = useRouter();
     var { confirm } = r.query
     if (confirm === undefined) {
-        return 
+        return
     }
     else if (confirm >= "0") {
         return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
@@ -220,8 +268,6 @@ export function Message({
                 query: {
                     food: [confirm]
                 },
-                
-                
             })
         }>
             Message {foody[confirm].name}
@@ -236,8 +282,8 @@ export function Home2({
     food = Number(food)
     return <ButtonCont onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
         () => r.push({
-            pathname:"/home",
-            query:{food:Math.random(getRandomizedNum(0, foody.length - 1))}
+            pathname: "/home",
+            query: { food: Math.random(getRandomizedNum(0, foody.length - 1)) }
         })
     }>
         {text}

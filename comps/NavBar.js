@@ -45,9 +45,9 @@ export default function HomeNavBar({
         <Img src="/icons/w_home1.svg" backgroundcolor = "#F3CA40"  onClick={
             () => r.push({
                 pathname: "/home",
-                // query: {
-                //     food: getRandomizedNum(0, foody.length - 1)
-                // }
+                query: {
+                    food: [food]
+                }
               })
               
         } id="active"></Img>
@@ -89,25 +89,25 @@ export function HistoryNavbar({
         <Img src="/icons/w_history1.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/history",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
         <Img src="/icons/camera1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/camera",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
         <Img src="/icons/messages1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/messaging1",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
     </BarCont>
@@ -134,25 +134,25 @@ export function CameraNavbar({
         <Img src="/icons/history1.svg"  onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/history",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
         <Img src="/icons/w_camera1.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/camera",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
         <Img src="/icons/messages1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/messaging1",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
     </BarCont>
@@ -179,25 +179,25 @@ export function ChatNavbar({
         <Img src="/icons/history1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/history",
-                query: {
-                    food: [food]
-                }
+                // query: {
+                //     food: [food]
+                // }
               })
         }></Img>
         <Img src="/icons/camera1.svg" onMouseEnter={changeBackground} onMouseLeave={removeBackground} onClick={
             () => r.push({
                 pathname: "/camera",
-                query: {
-                    food:[food]
-                } 
+                // query: {
+                //     food:[food]
+                // } 
               })
         }></Img>
         <Img src="/icons/w_messages1.svg" backgroundcolor = "#F3CA40" onClick={
             () => r.push({
                 pathname: "/messaging1",
-                query: {
-                    food:[food]
-                } 
+                // query: {
+                //     food:[food]
+                // } 
               })
         }></Img>
     </BarCont>

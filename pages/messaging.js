@@ -15,8 +15,6 @@ import { useState } from 'react';
 
 export default function Home() {
     const r = useRouter();
-    const foo = GetFood();
-    console.log(foo)
     var { food } = r.query
     if (food === undefined) {
         food = 0
