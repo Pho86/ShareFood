@@ -158,8 +158,8 @@ export function HistoryBox() {
 
 
 
-    return (
-        <HisCon key={i}>
+    return historia.map((o,i)=> {
+        return <HisCon key={i}>
             <ImageCircle>
                 <Picture src={o.foodimg} alt="Avatar" />
             </ImageCircle>
@@ -174,12 +174,14 @@ export function HistoryBox() {
                     <FoodWeight>{o.weight} lbs saved</FoodWeight>
                 </WeightCont>
             </ContentCont>
-        </HisCon>)
+        </HisCon>
+})
 }
+
+
 
 export function TotalWeight() {
     const r = useRouter();
-    // const historia = GetFood();
     var totalweight = 0;
     console.log(historia)
     for (var i = 0; i < historia.length; i++) {
