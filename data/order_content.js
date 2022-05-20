@@ -1,8 +1,9 @@
 var selectedfood = [];
 var messages = [];
 var reader = [];
-import foody from '../data/food_content.json'
 
+import foody from '../data/food_content.json'
+import historia from '../data/history_content.json'
 /*
 import GetFood
 const ___ = GetFood();
@@ -15,14 +16,15 @@ export function ChangeFood(food
     ) {
     food.confirm_date = `${(new Date(Date.now())).getHours()}` + `:${(new Date(Date.now())).getMinutes()}`;
 
-    // messages.push({
-    //     name:food.name,
-    //     msg:food.message
-    // })
     selectedfood.unshift(food) 
-    console.log(selectedfood)
+
 }
 
+var selectedHist;
+export function ChangeHistory(food, weight, img) {
+    selectedHist = {food:food, date:"today", foodimg:img, weight:weight}
+    historia.unshift(selectedHist)
+}
 export function ChangeMessage(name, text){
     messages.push({
         name:name,
@@ -42,7 +44,6 @@ export function GetMessages() {
 
 
 export function SendData(data) {
-    // console.log(data)
     reader.length = 0;
     reader.unshift(data)
     return reader
