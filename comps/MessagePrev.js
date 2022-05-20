@@ -20,7 +20,7 @@ animation: ${DownUp} 1.2s;
 //the circle
 const ProfileCont = styled.div`
 display: flex;
-background-color: ${props =>props.backgroundColor || "FE859C"};
+background-color: ${props => props.backgroundColor || "FE859C"};
 width: 100px;
 height: 100px;
 border-radius: 50%;
@@ -63,106 +63,50 @@ font-size: 16px;
 `
 const Time = styled.div`
 `
+const Message = styled.div`
+font-weight: 400;
+font-size: 18px;
+line-height: 32 px;
+text-align: center;
+position: block;
+padding-top: 50px;
+padding-bottom: 50px;
+left :8%;
+right: 8%;
+animation: ${DownUp} .2s;
+`
 export function ChatBox() {
     const r = useRouter();
     const foodList = GetFood();
-    var { food } = r.query
+    var { food } = r.query;
 
-    return foodList.map((o, i) => {
-        console.log(o)
-        return (<MsgCont onClick={
-            () => r.push({
-                pathname: "/messaging",
-                query: {
-                    food: [o.index]
-                }
-            })
-        }>
-            <ProfileCont backgroundColor={o.hex}>
-                <Profile >{o.initials}</Profile>
-            </ProfileCont>
-            <MsgPrevCont>
-                <Name>{o.name}</Name>
-                <Msg>{o.message}</Msg>
-            </MsgPrevCont>
-            <TimeCont>
-                <Time>{o.confirm_date}</Time>
-            </TimeCont>
-        </MsgCont>
-        )
-    })
+    if (foodList.length === 0) {
+        return <Message>Please select a food to see messages.</Message>
+    }
 
-
-
-    // for (let i = 0; i < foodList.length - 1; i++) {
-
-    // foodList.map(function(o, i) {
-    //     return ( <MsgCont onClick={
-    //                 () => r.push({
-    //                     pathname: "/messaging",
-    //                     query: {
-    //                         food: [food]
-    //                     }
-    //                 })
-    //             }>
-    //                 <ProfileCont>
-    //                     <Profile>{o.initials}</Profile>
-    //                 </ProfileCont>
-    //                 <MsgPrevCont>
-    //                     <Name>{o.name}</Name>
-    //                     <Msg>{o.message}</Msg>
-    //                 </MsgPrevCont>
-    //                 <TimeCont>
-    //                     <Time>Just Now</Time>
-    //                 </TimeCont>
-    //             </MsgCont> 
-    //             )
-    // })
-
-
-    // foodList.map(((o, i) => { 
-    //     return ( <MsgCont onClick={
-    //         () => r.push({
-    //             pathname: "/messaging",
-    //             query: {
-    //                 food: [food]
-    //             }
-    //         })
-    //     }>
-    //         <ProfileCont>
-    //             <Profile>{o.initials}</Profile>
-    //         </ProfileCont>
-    //         <MsgPrevCont>
-    //             <Name>{o.name}</Name>
-    //             <Msg>{o.message}</Msg>
-    //         </MsgPrevCont>
-    //         <TimeCont>
-    //             <Time>Just Now</Time>
-    //         </TimeCont>
-    //     </MsgCont> 
-    //     )
-    // }))
-
-    // return <MsgCont onClick={
-    //     () => r.push({
-    //         pathname: "/messaging",
-    //         query: {
-    //             food: [food]
-    //         }
-    //     })
-    // }>
-    //     <ProfileCont>
-    //         <Profile>{foodList[0].initials}</Profile>
-    //     </ProfileCont>
-    //     <MsgPrevCont>
-    //         <Name>{foodList[0].name}</Name>
-    //         <Msg>{foodList[0].message}</Msg>
-    //     </MsgPrevCont>
-    //     <TimeCont>
-    //         <Time>Just Now</Time>
-    //     </TimeCont>
-    // </MsgCont>
-    // // }
+    else {
+        return foodList.map((o, i) => {
+            return (<MsgCont onClick={
+                () => r.push({
+                    pathname: "/messaging",
+                    query: {
+                        food: [o.index]
+                    }
+                })
+            }>
+                <ProfileCont backgroundColor={o.hex}>
+                    <Profile >{o.initials}</Profile>
+                </ProfileCont>
+                <MsgPrevCont>
+                    <Name>{o.name}</Name>
+                    <Msg>{o.message}</Msg>
+                </MsgPrevCont>
+                <TimeCont>
+                    <Time>{o.confirm_date}</Time>
+                </TimeCont>
+            </MsgCont>
+            )
+        })
+    }
 }
-
 

@@ -8,7 +8,7 @@ import { useState } from 'react';
 import { CamConfirm, Cancel2 } from './Button';
 import styles from '../styles/Home.module.css';
 import { Flip1, Flip2 } from '../data/animation';
-
+import { SendData, EmptyData } from '../data/order_content';
 
 
 const BtnCont = styled.div`
@@ -73,6 +73,26 @@ height: 100%;
 -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
 `
+const PreviewImg = styled.img`
+width:250px;
+height:400px;
+`
+const BButtonCont = styled.button`
+font-size:1.1rem;
+text-align: center;
+background:#FAEAB3;
+border:none;
+border-radius:15px;
+padding:10px 35px 10px 35px;
+// animation: ${DownUp} 1s;
+`
+function changeBackground2(e) {
+    e.target.style.background = "#DFCB87";
+}
+
+function removeBackground2(e) {
+    e.target.style.background = "#FAEAB3";
+}
 
 export default function CameraBtn({
     img = "/icons/camerabtn.svg",
@@ -83,13 +103,17 @@ export default function CameraBtn({
 
     return <BtnCont>
         <CameraCont onClick={
-            () => r.push({
-                pathname: "/details"
-            })}>
+            () => {
+                r.push({
+                    pathname: "/details"
+                })
+                EmptyData();
+            }}>
             <Btn src={img}></Btn>
         </CameraCont>
     </BtnCont>
 }
+
 
 export function GalleryBtn({
     img = "/icons/photos_icon.svg"
@@ -108,6 +132,8 @@ export function GalleryBtn({
         reader.addEventListener("load", function () {
             // convert image file to base64 string
             preview.src = reader.result;
+            let read = reader.result
+            SendData(read)
         }, false);
 
         if (file) {
@@ -123,14 +149,14 @@ export function GalleryBtn({
             >
                 <Box sx={style}>
                     <input id="browse" type="file" onChange={previewFile} multiple></input>
-                    <div id="preview"> <img src="#" /> </div>
+                    <div id="preview"> <PreviewImg src="#" /> </div>
                     <div className={styles.padding}>
-                        <Cancel2 />
+                        <BButtonCont onMouseEnter={changeBackground2} onMouseLeave={removeBackground2} onClick={
+                            () => { handleClose() }}>
+                            Cancel
+                        </BButtonCont>
                         <CamConfirm />
                     </div>
-                    {/* <input id="upload" type="file" src={img} accept="image/*" multiple />
-                    <img class="uploadimg" src="/" />
-                    <input type="file" className="filetype" id="group_image" /> */}
                 </Box>
             </Modal>
             <Btn src={img} onClick={handleOpen}></Btn>
@@ -158,7 +184,8 @@ export function FlipCamBtn({
             <Btn src={img} style={{ transform: flip ? "rotateY(180deg)" : "rotate(0deg)" }}></Btn> */}
             <Btn src={img} onClick={() => {
                 r.push({
-                    query: { camera: Number(camera) + 1 }
+                    query: { camera: Number(camera) + 1 },
+
                     // camera: Number(camera) + 1 > cam.length - 1? 0 : Number(camera) + 1
                     // }
                 })
@@ -185,7 +212,6 @@ export function FakeCamera({
             <Div3 className={styles.flip_card_front}>
                 <img src={img}
                     height="600px"
-
                 ></img>
             </Div3>
             {/* <Div4 className={styles.flip_card_back}>

@@ -15,13 +15,19 @@ export default function Home() {
         <div className={styles.container}>
             <BackAPage />
             <PrevImg />
-            {/* <SmallIcon /> */}
             <Details />
             <CameraNavbar />
             <div className={styles.buttongrid}>
                 <Cancel2 />
                 <Confirm2 />
             </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
         </div>
+        
     )
 }

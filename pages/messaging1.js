@@ -11,40 +11,21 @@ import { HistoryHeading, MessagesHeading } from'../comps/Text.js';
 //the page with all your messages
 export default function Home() {
     const r = useRouter();
-    var { food } = r.query;
-    var foo = GetFood();
-
-    
-    if(foo.length >= 1) {
         return (
             <div className={styles.container}>
                 <MessagesHeading />
                 <div className={styles.chatbox}>
                 <ChatBox/>
                 </div>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
                 <ChatNavbar />
     
             </div>
         )
-    }
-    else if (food === undefined) {
-        return <div className={styles.container}>
-        <MessagesHeading />
-        <div className={styles.chatbox}>
-            
-        </div>
-        <ChatNavbar />
-
-    </div>
-    }
-    else {
-        return <div className={styles.container}>
-        <MessagesHeading />
-        <div className={styles.chatbox}>
-        </div>
-        <ChatNavbar />
-
-    </div>
-    }
     
 }

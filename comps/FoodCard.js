@@ -14,6 +14,8 @@ const DispImg = styled.img`
 display:block;
 margin-left: auto;
 margin-right: auto;
+width:356px;
+height:552px;
 `
 
 
