@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
 import { chat, msg } from '../data/chat_content';
-import { DownUp } from '../data/animation';
+import n from '../data/animation';
 import foody from '../data/food_content.json';
 import { ChangeFood, GetFood } from '../data/order_content';
 import styles from '../styles/Home.module.css';
-import { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import states from '../data/chat_content';
 
 
@@ -23,7 +23,7 @@ margin-right: auto;
 const ProfileCont = styled.div`
 `
 const Profile = styled.div`
-background-color: ${props =>props.backgroundColor || "FE859C"};
+background-color: ${props => props.backgroundColor || "FE859C"};
 display: flex;
 width: 80px;
 height: 80px;
@@ -50,9 +50,9 @@ border-radius: 15px;
 height: 130px;
 width: 100%;
 align-items: center;
-// display: ${props => props.displays || "none"};
-display: flex;
-// visibility: hidden
+display: ${props => props.display || "none"};
+// display: flex;
+visibility: ${props => props.visibility || "hidden"};
 `
 const MsgCont2 = styled.div`
 display: flex;
@@ -135,43 +135,45 @@ export function MessageSend(
         text = "Message",
         img = "/send.svg",
     }
-) {
-    const [click, sendMsg] = useState(false);
-
-    const sendYes = () => sendMsg(true);
-    const sendNo = () => sendMsg(false);
+    ) {
+    // const [click, sendMsg] = useState(false);
+    // const sendYes = () => sendMsg(true);
+    // const sendNo = () => sendMsg(false);
 
     const r = useRouter();
     var { food } = r.query;
     var array = [];
-    
 
-    return <MBox onClick={() => { states = 'visible'; console.log(states) }}>
+
+    return <MBox>
         <MsgPlaceholder>{text}</MsgPlaceholder>
-        <Send src={img} onClick={click? sendYes : sendNo} />
-        {/* <Send src={img} onClick={sendNo} />no */}
-        {/* {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food])}>{o}</Send>)} */}
+        <Send src={img} onClick={() =>
+        Visible()
+        // document.querySelector(".notSent").styles.display = "none"
+        }
+        />
+        {/* {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food].response)}>{o}</Send>)} */}
     </MBox>
-    
+
+}
+function Visible() {
+    document.querySelector(".notSent").style.display = "flex"
 }
 
 export function MyMsg(
 ) {
-    const [click, sendMsg] = useState(false);
-
-    const sendYes = () => sendMsg(true);
-    const sendNo = () => sendMsg(false);
 
     const r = useRouter();
     var { food } = r.query;
     const foo = GetFood();
     if (food === undefined) {
         food = 0;
-    }
-    // if (sendMsg === true) {
-        return <MyMsgCont 
-        visibility="visible"
-         className={styles.MsgCont}>
+    } {
+        return <MyMsgCont
+            className = "notSent"
+            display = "none"
+            visibility = "visible"
+        >
             <MsgCont2>
                 <Message2>{foody[food].response}</Message2>
             </MsgCont2>
@@ -179,8 +181,7 @@ export function MyMsg(
                 <Profile2>ME</Profile2>
             </ProfileCont2>
         </MyMsgCont>
-    // }
 
-
+    }
 
 } 
