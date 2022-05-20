@@ -29,6 +29,13 @@ export default function Home() {
       {/* <img src="/Placeholder.png" width="400px"/> */}
       </div>
       <HistoryBox> </HistoryBox>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <HistoryNavbar/>  
       </div>
     )

@@ -18,6 +18,13 @@ export default function Home() {
                 <CameraBtn />
                 <FlipCamBtn />
             </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <CameraNavbar />
         </div>
     )

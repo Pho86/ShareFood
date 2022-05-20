@@ -28,6 +28,9 @@ export default function Home() {
             <NewMsg />
             <MyMsg />
             <MessageSend />
+            <br></br>
+            <br></br>
+            <br></br>
             <ChatNavbar></ChatNavbar>
 
         </div>

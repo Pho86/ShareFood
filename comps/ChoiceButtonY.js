@@ -69,7 +69,7 @@ var undoArray = [];
 function getRandomizedNum(min, max) {
     var x = Math.floor(Math.random() * (max - min + 1) + min);
     undoArray.unshift(x)
-    console.log(undoArray)
+    // console.log(undoArray)
     return x
 }
 

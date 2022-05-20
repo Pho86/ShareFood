@@ -37,6 +37,9 @@ export default function Home() {
                 <ChoiceButtonY />
                 <ChoiceButtonR />
             </div>
+            <br></br>
+            <br></br>
+            <br></br>
             <Navbar></Navbar>
 
 

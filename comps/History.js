@@ -183,7 +183,7 @@ export function HistoryBox() {
 export function TotalWeight() {
     const r = useRouter();
     var totalweight = 0;
-    console.log(historia)
+    // console.log(historia)
     for (var i = 0; i < historia.length; i++) {
         totalweight += historia[i].weight;
     }
