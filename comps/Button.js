@@ -32,6 +32,7 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     padding: 8,
+    borderRadius:5
 };
 const BButtonCont = styled.button`
 font-size:1.1rem;
@@ -185,7 +186,7 @@ export function Confirm({
                 open={open}
                 onClose={handleClose}>
                 <Box sx={style}>
-                    <p>This is your food. Why would you want it.</p>
+                    <p>This is your food. Please find another food. 😟</p>
                 </Box>
             </Modal>
         </div>
