@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { chat, msg } from '../data/chat_content';
 import { DownUp } from '../data/animation';
 import foody from '../data/food_content.json';
 import { ChangeFood, GetFood } from '../data/order_content';
 import styles from '../styles/Home.module.css';
 import  { useEffect, useState } from 'react';
-import states from '../data/chat_content';
 
 
 
@@ -135,25 +133,15 @@ export function MessageSend(
         img = "/send.svg",
     }
     ) {
-    // const [click, sendMsg] = useState(false);
-    // const sendYes = () => sendMsg(true);
-    // const sendNo = () => sendMsg(false);
-
     const r = useRouter();
     var { food } = r.query;
-    var array = [];
-
 
     return <MBox>
         <MsgPlaceholder>{text}</MsgPlaceholder>
         <Send src={img} onClick={() =>
-        Visible()
-        // document.querySelector(".notSent").styles.display = "none"
-        }
+        Visible()}
         />
-        {/* {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food].response)}>{o}</Send>)} */}
     </MBox>
-
 }
 function Visible() {
     document.querySelector(".notSent").style.display = "flex"
@@ -161,7 +149,6 @@ function Visible() {
 
 export function MyMsg(
 ) {
-
     const r = useRouter();
     var { food } = r.query;
     const foo = GetFood();
@@ -180,7 +167,5 @@ export function MyMsg(
                 <Profile2>ME</Profile2>
             </ProfileCont2>
         </MyMsgCont>
-
     }
-
 } 

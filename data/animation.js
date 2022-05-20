@@ -22,15 +22,3 @@ to {
   transform: rotateY(0deg);
 }
 `
-
-// export const Scale = keyframes`
-// from {
-//   transform: scale(1.0)
-// }
-// to {
-//   transform: scale(1.2)
-// }
-// `
-// function Scale() {
-//   target.style.transform ="scale(1.2)";
-// }

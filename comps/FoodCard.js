@@ -4,8 +4,6 @@ import { foodImg } from '../data/img_content'
 import foody from '../data/food_content.json';
 import { DownUp, Scale } from '../data/animation';
 
-
-
 const Cont = styled.div`
 animation: ${DownUp} .4s;
 `;
@@ -29,9 +27,6 @@ export default function FoodCard({
     if (food === undefined) {
         food = 0;
     }
-
-
-
 
     return <Cont>
         <DispImg src={foody[food].foodimg} />

@@ -62,23 +62,10 @@ function removeHoverY(e) {
     e.target.style.background = "#7EC980";
 }
 
-var x = 0
 var undoArray = [];
-var choices = []
-
-function getAllFood() {
-    for (let i = 0; i < foody.length; i++) {
-        choices.push(i)
-    }
-}
-getAllFood()
-console.log(choices)
-function getChoices() {
-    var remove = choices.length
-    return remove
-}
 
 
+// chooses a random number between 0 and the food content's length 
 function getRandomizedNum(min, max) {
 
     var x = Math.floor(Math.random() * (max - min + 1) + min);
@@ -88,17 +75,16 @@ function getRandomizedNum(min, max) {
             var x = Math.floor(Math.random() * (max - min + 1) + min);
         }
     }
-
     if (undoArray.length === 39) {
         for (let i = 0; i < 5; i++) {
             undoArray.pop()
         }
     }
-    // console.log(undoArray)
     undoArray.unshift(x)
-    return x
+    return x;
 }
 
+// gets the latest one and moves backwards. removes the latest food.
 function undoButton() {
     var latest = undoArray[0]
     undoArray.shift()
@@ -140,7 +126,6 @@ export function ChoiceButtonL({
             r.replace({
                 query: {
                     food: getRandomizedNum(0, foody.length - 1)
-                    // food: Number(food) + 1 > foody.length - 1 ? 0 : Number(food) + 1
                 }
             })
         }

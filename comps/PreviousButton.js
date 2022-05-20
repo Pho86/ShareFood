@@ -47,6 +47,8 @@ export function BackAPage({
         <Icon src={img}></Icon>
     </ChoiceCont>
 }
+
+// back to message page
 export function BacktoMessage({
     img = "/button_choices/back_button.svg",
 }) {

@@ -6,7 +6,6 @@ import CameraBtn, { GalleryBtn, FlipCamBtn, FakeCamera} from '../comps/CameraIco
 
 export default function Home() {
     const r = useRouter();
-    const { route } = r.query
 
     return (
         <div>

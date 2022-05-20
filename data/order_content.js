@@ -1,26 +1,19 @@
+import foody from '../data/food_content.json'
+import historia from '../data/history_content.json'
+
 var selectedfood = [];
 var messages = [];
 var reader = [];
 
-import foody from '../data/food_content.json'
-import historia from '../data/history_content.json'
-/*
-import GetFood
-const ___ = GetFood();
-___[0] for name
-___[1] for food
-*/
-
-export function ChangeFood(food
-    //, type
-    ) {
+// get the confirm date and convert the day to XX:XX and get the entire object of a certain food
+export function ChangeFood(food) {
     food.confirm_date = `${(new Date(Date.now())).getHours()}` + `:${(new Date(Date.now())).getMinutes()}`;
-
     selectedfood.unshift(food) 
-
 }
 
 var selectedHist;
+
+// get the time in MM/DD/YYYY format and data for the history content.
 export function ChangeHistory(food, weight, img) {
     var month = `${(new Date(Date.now())).getMonth()}`.toLocaleString()
     month = Number(month)
@@ -37,9 +30,10 @@ export function ChangeMessage(name, text){
         name:name,
         msg:text
     })
-    // console.log(messages)
 }
 
+
+// get the data sent
 export function GetFood() {
     return selectedfood;
 }
@@ -49,7 +43,7 @@ export function GetMessages() {
 }
 
 
-
+// reset the file reader data and send new data
 export function SendData(data) {
     reader.length = 0;
     reader.unshift(data)
@@ -57,15 +51,18 @@ export function SendData(data) {
 }
 
 export function GetData() {
-    // console.log(reader)
     return reader
 }
+
+
 export function EmptyData() {
     reader.length = 0;
     return reader;
 }
 
 var fooddetails;
+
+// get all the details filled out in detail sections
 export function GetAllDetails() {
     var name = document.querySelector('#name').value
     var weight = document.querySelector("#weight").value
@@ -78,5 +75,4 @@ export function GetAllDetails() {
     fooddetails = {food:name, weight:weight, date_purchase:datepur, date_bbd:datebbd, meeting_location:pickup, location:pickup, description:description, foodimg, name:"YOU", details:description}
     
     foody.push(fooddetails)
-    // console.log(foody)
 }

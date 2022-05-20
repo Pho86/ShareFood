@@ -12,7 +12,6 @@ display: flex;
 margin-left: auto;
 margin-right: auto;
 animation: ${DownUp} .4s;
-
 `
 
 export default function Landing({

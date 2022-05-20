@@ -11,22 +11,12 @@ export default function Home() {
     const r = useRouter();
     const { route } = r.query
 
-    var totalweight = 0;
-    // const history = GetFood();
-
-    // for(var i = 0; i<history.length; i++)
-    // {
-    //   totalweight += history[i].weightunit;
-    // }
     return (<div className={styles.container}>
       <HistoryHeading/>
       <History/> 
       
       <div className={styles.buttongrid}>
       <TotalWeight/>
-      {/* You have saved a total of {totalweight}lbs of food from going to waste. */}
-      
-      {/* <img src="/Placeholder.png" width="400px"/> */}
       </div>
       <HistoryBox> </HistoryBox>
       <br></br>

@@ -44,7 +44,7 @@ const style = {
     border: '2px solid #000',
     boxShadow: 24,
     padding: 8,
-    borderRadius:5
+    borderRadius: 5
 };
 
 const Div1 = styled.div`
@@ -173,22 +173,11 @@ export function FlipCamBtn({
     if (camera === undefined) {
         camera = 0;
     }
-    // const [flip, setFlip] = useState(false);
-
-    // const flipOn = () => setFlip(true);
-    // const flipOff = () => setFlip(false);
-    // i gave up on this
-
     return <BtnCont>
         <FlipCont>
-            {/* <Btn src={img} onClick={(o) => { setFlip(!flip) }}></Btn>
-            <Btn src={img} style={{ transform: flip ? "rotateY(180deg)" : "rotate(0deg)" }}></Btn> */}
             <Btn src={img} onClick={() => {
                 r.push({
                     query: { camera: Number(camera) + 1 },
-
-                    // camera: Number(camera) + 1 > cam.length - 1? 0 : Number(camera) + 1
-                    // }
                 })
             }} />
         </FlipCont>
@@ -200,8 +189,6 @@ export function FakeCamera({
 }) {
     const r = useRouter();
     var { camera } = r.query;
-    // if (camera === undefined){
-    //     camera = 0;
     if (camera % 2 === 0) {
         img = "/fakecamera.png"
     }
@@ -215,12 +202,6 @@ export function FakeCamera({
                     height="600px"
                 ></img>
             </Div3>
-            {/* <Div4 className={styles.flip_card_back}>
-                <img src={cam[camera].back}
-                    height="600px"
-
-                ></img>
-            </Div4> */}
         </Div2>
     </Div1>
 }
