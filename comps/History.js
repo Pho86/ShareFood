@@ -71,7 +71,7 @@ text-align: left;
 `
 
 const FoodCont = styled.div
-`
+    `
 display: flex;
 // margin-top: 5px;
 // margin-left: -135px;
@@ -92,7 +92,7 @@ overflow-wrap: break-word;
 `
 
 const WeightCont = styled.div
-`
+    `
 display: flex;
 // margin-top: 35px;
 // margin-left: -76px;
@@ -113,7 +113,23 @@ const ContentCont = styled.div`
 display:flex;
 flex-direction:column;
 `
-
+const TotalLBS = styled.div`
+font-weight: 400;
+font-size: 20px;
+line-height: 20 px;
+text-align: center;
+position: block;
+left :8%;
+right: 8%;
+padding-bottom: 3em;
+animation: ${DownUp} 1.5s;
+`
+const Highlight = styled.div`
+display: inline-block;
+font-weight: 500;
+color: #F08A4B;
+// animation: ${DownUp} 1.5s;
+`
 
 export default function Graph({
     img = "/graph.svg"
@@ -135,32 +151,43 @@ export function History({
 
 export function HistoryBox() {
     const r = useRouter();
-    var {history} = r.query
-    if (history === undefined){
+    var { history } = r.query
+    if (history === undefined) {
         history = 0;
     }
 
 
- 
-    return historia.map((o,i) => {
 
-        return(
+    return (
         <HisCon key={i}>
-                <ImageCircle>
-                <Picture src={o.foodimg} alt="Avatar"/>
-                </ImageCircle>
-                <ContentCont>
-            <DateCont>
-                <Date>{o.date}</Date>
-            </DateCont>
-            <FoodCont>
-                <FoodName>{o.food}</FoodName>
-            </FoodCont>
-            <WeightCont>
-                <FoodWeight>{o.weight} lbs saved</FoodWeight>    
-            </WeightCont>    
-                </ContentCont>
-        </HisCon>)})
-    }    
-    
-    
+            <ImageCircle>
+                <Picture src={o.foodimg} alt="Avatar" />
+            </ImageCircle>
+            <ContentCont>
+                <DateCont>
+                    <Date>{o.date}</Date>
+                </DateCont>
+                <FoodCont>
+                    <FoodName>{o.food}</FoodName>
+                </FoodCont>
+                <WeightCont>
+                    <FoodWeight>{o.weight} lbs saved</FoodWeight>
+                </WeightCont>
+            </ContentCont>
+        </HisCon>)
+}
+
+export function TotalWeight() {
+    const r = useRouter();
+    // const historia = GetFood();
+    var totalweight = 0;
+    console.log(historia)
+    for (var i = 0; i < historia.length; i++) {
+        totalweight += historia[i].weight;
+    }
+    return <TotalLBS>
+        You have saved a total of
+        <Highlight> &nbsp;{totalweight} lbs&nbsp;</Highlight>
+        of food from going to waste.
+    </TotalLBS>
+}
