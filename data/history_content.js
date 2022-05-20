@@ -1,28 +1,11 @@
-export const chat = [
-    {
-        date: "March 28, 2022",
-        food: "Peanut Butter",
-        foodimg:"/peanuthist.png",
-        lbs: "0.5lbs saved",
-        state: "/receive.svg"
+var historyfood = [];
+var historybox = [];
 
-    },
-    {
-        date: "March 25, 2022",
-        food: "Peanut Butter",
-        foodimg:"/peanuthist.png",
-        lbs: "0.5lbs saved",
-        state: "/gave.svg"
+export function ChangeHistory(history){
+    historyfood.unshift(history)
+    console.log(historyfood)
+} 
 
-    },
-    {
-        date: "March 25, 2022",
-        food: "Peanut Butter",
-        foodimg:"/peanuthist.png",
-        lbs: "0.5lbs saved",
-        state: "/gave.svg"
-
-    },
-
-
-]
+export function GetFood() {
+    return historyfood;
+}

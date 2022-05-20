@@ -4,6 +4,8 @@ import { SavedDetails } from '../comps/Confirmed';
 import NavBar, { HistoryNavbar } from '../comps/NavBar';
 import {History} from '../comps/History';
 import { HistoryHeading, MessagesHeading } from'../comps/Text.js';
+import { HistoryBox } from '../comps/History';
+
 import { GetFood } from '../data/order_content';
 
 export default function Home() {
@@ -25,11 +27,17 @@ export default function Home() {
       <div className={styles.buttongrid}>
 
       Total = {totalweight}
-      <img src="/Placeholder.png" width="400px"/>
+      {/* <img src="/Placeholder.png" width="400px"/> */}
       </div>
       {/* temporarily ^ used for testing lol */}
       <HistoryNavbar/>  
+
+      <HistoryBox>
+        
+      </HistoryBox>
       </div>
+
+      
     )
   }
   
