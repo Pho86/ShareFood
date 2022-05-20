@@ -9,7 +9,6 @@ import NButton, { Confirm2, Cancel2 } from '../comps/Button';
 
 export default function Home() {
     const r = useRouter();
-    const { route } = r.query
 
     return (
         <div className={styles.container}>

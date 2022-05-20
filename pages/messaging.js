@@ -2,8 +2,6 @@ import styles from '../styles/Home.module.css';
 import { useRouter } from 'next/router';
 import NavBar, { ChatNavbar } from '../comps/NavBar';
 import Text, { Heading } from '../comps/Text';
-import { chat } from '../data/chat_content';
-import { PersonChat, PersonBubble, MeBubble, MeChat } from '../comps/Chat';
 import TutorialText, { Messager } from '../comps/TutorialText';
 import BackButton, { BacktoMessage } from '../comps/PreviousButton';
 import foody from '../data/food_content.json';
@@ -20,7 +18,6 @@ export default function Home() {
         food = 0
     }
 
-
     return (
         <div className={styles.container}>
             <BacktoMessage />
@@ -28,6 +25,7 @@ export default function Home() {
             <NewMsg />
             <MyMsg />
             <MessageSend />
+            <br></br>
             <br></br>
             <br></br>
             <br></br>

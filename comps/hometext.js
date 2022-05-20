@@ -62,7 +62,7 @@ export function ImageText({
 }) {
     const r = useRouter();
     var { food } = r.query
-    if (food === undefined ) {
+    if (food === undefined) {
         food = 0
     }
 
@@ -75,7 +75,7 @@ export function ImageTextInfo({
 }) {
     const r = useRouter();
     var { food } = r.query
-    if (food === undefined ) {
+    if (food === undefined) {
         food = 0
     }
 
@@ -88,7 +88,7 @@ export function ImageTextComment({
 }) {
     const r = useRouter();
     var { food } = r.query
-    if (food === undefined ) {
+    if (food === undefined) {
         food = 0
     }
 

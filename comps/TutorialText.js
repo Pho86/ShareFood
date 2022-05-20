@@ -165,7 +165,6 @@ export function TutorialSubTitle({
         return
     }
 
-    const { route } = r.query
     return (
         <TutorialSubTitle2>{text}</TutorialSubTitle2>
     )
@@ -204,7 +203,6 @@ export function TutorialSecondLine({
 
 //title of the messager's name
 export function Messager({
-
 }) {
     const r = useRouter();
     var { food } = r.query

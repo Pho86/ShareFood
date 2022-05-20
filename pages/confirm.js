@@ -10,8 +10,6 @@ import { categories1, categories2 } from '../data/confirm_content.js';
 
 export default function Home() {
   const r = useRouter();
-  const { route } = r.query
-
   return (
     <div className={styles.container}>
       <ConfirmText  />

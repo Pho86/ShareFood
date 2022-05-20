@@ -21,8 +21,6 @@ export default function Home() {
     const r = useRouter();
     var { food } = r.query
     
-
-
     return (
         <div className={styles.container}>
             <BackButton></BackButton>
@@ -44,10 +42,6 @@ export default function Home() {
             <br></br>
             <br></br>
             <Navbar></Navbar>
-
-
-
-
         </div>
 
     )

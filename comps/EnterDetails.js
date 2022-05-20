@@ -85,8 +85,6 @@ const SIcon1 = styled.img`
 display:flex;
 position: relative;
 padding-right: 20px;
-// margin-left: 40px;
-// margin-bottom: 50px;
 margin-top: 25px;
 animation: ${DownUp} .4s;
 `
@@ -94,8 +92,6 @@ const SIcon2 = styled.img`
 display:flex;
 position: relative;
 padding-right: 20px;
-// margin-left: 40px;
-// margin-bottom: 50px;
 margin-top: 25px;
 animation: ${DownUp} .6s;
 `
@@ -103,8 +99,6 @@ const SIcon3 = styled.img`
 display:flex;
 position: relative;
 padding-right: 20px;
-// margin-left: 40px;
-// margin-bottom: 50px;
 margin-top: 25px;
 animation: ${DownUp} .8s;
 `
@@ -112,8 +106,6 @@ const SIcon4 = styled.img`
 display:flex;
 position: relative;
 padding-right: 20px;
-// margin-left: 40px;
-// margin-bottom: 50px;
 margin-top: 25px;
 animation: ${DownUp} 1s;
 `
@@ -121,8 +113,6 @@ const SIcon5 = styled.img`
 display:flex;
 position: relative;
 padding-right: 20px;
-// margin-left: 40px;
-// margin-bottom: 50px;
 margin-top: 25px;
 animation: ${DownUp} 1.2s;
 `
@@ -130,8 +120,6 @@ const SIcon6 = styled.img`
 display:flex;
 position: relative;
 padding-right: 20px;
-// margin-left: 40px;
-// margin-bottom: 50px;
 margin-top: 25px;
 animation: ${DownUp} 1.4s;
 `

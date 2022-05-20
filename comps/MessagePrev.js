@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-import { chat, msg } from '../data/chat_content';
 import { DownUp } from '../data/animation';
 import foody from '../data/food_content.json';
 import { ChangeFood, GetFood } from '../data/order_content';
@@ -78,7 +77,6 @@ animation: ${DownUp} .2s;
 export function ChatBox() {
     const r = useRouter();
     const foodList = GetFood();
-    var { food } = r.query;
 
     if (foodList.length === 0) {
         return <Message>Please select a food to see messages.</Message>

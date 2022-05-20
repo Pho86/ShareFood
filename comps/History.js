@@ -156,8 +156,6 @@ export function HistoryBox() {
         history = 0;
     }
 
-
-
     return historia.map((o,i)=> {
         return <HisCon key={i}>
             <ImageCircle>
@@ -179,12 +177,10 @@ export function HistoryBox() {
 }
 
 
-
 export function TotalWeight() {
     const r = useRouter();
     var totalweight = 0;
     
-    // console.log(historia)
     for (var i = 0; i < historia.length; i++) {
         totalweight += historia[i].weight;
     }

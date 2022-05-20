@@ -33,31 +33,4 @@ export const tutImg = [
     },
 ];
 
-// images on the home screen
-export const foodImg = [
-    {
-        img: "/peanutbutter.png",
-        imag: "img1",
-    },
-    {
-        img: "/cereal.png",
-        imag: "img2",
-    },
-    {
-        img: "/eggs.png",
-        imag: "img3",
-    },
-    {
-        img: "/ramen.png",
-        imag: "img4",
-    },
-    {
-        img: "/soysauce.png",
-        imag: "img5",
-    }
-];
 
-
-export function GetFood() {
-    return food;
-}

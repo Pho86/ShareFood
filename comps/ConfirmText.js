@@ -148,21 +148,3 @@ export default function ConfirmText() {
         )
     }
 
-
-// o o.food, o.name, o.
-
-    export function SavedDetails(
-        ) {
-            const r = useRouter();
-            const { route } = r.query
-        
-            return (
-                <Text>
-                    <Saved>You have saved
-                        <Highlight>&nbsp;5.2 lbs&nbsp;</Highlight>
-                        of food waste from going to waste this month.
-                    </Saved>
-                </Text>
-            )
-        
-        }
