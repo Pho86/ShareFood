@@ -141,11 +141,6 @@ export default function Graph({
 }
 
 export function History({
-    date = "March 28, 2022",
-    food = "Peanut Butter",
-    foodimg = "/peanuthist.png",
-    lbs = "0.5lbs saved",
-    state = "/receive.svg",
     img = "/graph.svg"
 }) {
     const r = useRouter();
@@ -163,26 +158,23 @@ export function HistoryBox() {
 
 
 
-    return historia.map((o, i) => {
-
-        return (
-            <HisCon>
-                <ImageCircle>
-                    <Picture src={o.foodimg} alt="Avatar" />
-                </ImageCircle>
-                <ContentCont>
-                    <DateCont>
-                        <Date>{o.date}</Date>
-                    </DateCont>
-                    <FoodCont>
-                        <FoodName>{o.food}</FoodName>
-                    </FoodCont>
-                    <WeightCont>
-                        <FoodWeight>{o.weight} lbs saved</FoodWeight>
-                    </WeightCont>
-                </ContentCont>
-            </HisCon>)
-    })
+    return (
+        <HisCon key={i}>
+            <ImageCircle>
+                <Picture src={o.foodimg} alt="Avatar" />
+            </ImageCircle>
+            <ContentCont>
+                <DateCont>
+                    <Date>{o.date}</Date>
+                </DateCont>
+                <FoodCont>
+                    <FoodName>{o.food}</FoodName>
+                </FoodCont>
+                <WeightCont>
+                    <FoodWeight>{o.weight} lbs saved</FoodWeight>
+                </WeightCont>
+            </ContentCont>
+        </HisCon>)
 }
 
 export function TotalWeight() {
@@ -194,7 +186,7 @@ export function TotalWeight() {
         totalweight += historia[i].weight;
     }
     return <TotalLBS>
-        You have saved a total of 
+        You have saved a total of
         <Highlight> &nbsp;{totalweight} lbs&nbsp;</Highlight>
         of food from going to waste.
     </TotalLBS>

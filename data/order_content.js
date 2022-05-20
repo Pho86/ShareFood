@@ -22,7 +22,7 @@ export function ChangeFood(food
 
 var selectedHist;
 export function ChangeHistory(food, weight, img) {
-    selectedHist = {food:food, date:"today", foodimg:img, weight:weight}
+    selectedHist = {food:food, date:"Today.", foodimg:img, weight:weight}
     historia.unshift(selectedHist)
 }
 export function ChangeMessage(name, text){
@@ -73,6 +73,3 @@ export function GetAllDetails() {
     foody.push(fooddetails)
     console.log(foody)
 }
-
-//  {array.map((o, i) => <Send src={img} onClick={() => ChangeMessage(o, [food])}>{o.name}</Send>)} 
-// 
