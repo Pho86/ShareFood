@@ -125,11 +125,6 @@ export default function Graph({
 }
 
 export function History({
-    date = "March 28, 2022",
-    food = "Peanut Butter",
-    foodimg = "/peanuthist.png",
-    lbs = "0.5lbs saved",
-    state = "/receive.svg",
     img = "/graph.svg"
 }) {
     const r = useRouter();
@@ -150,7 +145,7 @@ export function HistoryBox() {
     return historia.map((o,i) => {
 
         return(
-        <HisCon>
+        <HisCon key={i}>
                 <ImageCircle>
                 <Picture src={o.foodimg} alt="Avatar"/>
                 </ImageCircle>

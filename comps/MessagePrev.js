@@ -86,7 +86,7 @@ export function ChatBox() {
 
     else {
         return foodList.map((o, i) => {
-            return (<MsgCont onClick={
+            return (<MsgCont key={i} onClick={
                 () => r.push({
                     pathname: "/messaging",
                     query: {
