@@ -3,7 +3,7 @@ var historybox = [];
 
 export function ChangeHistory(history){
     historyfood.unshift(history)
-    console.log(historyfood)
+    // console.log(historyfood)
 } 
 
 export function GetFood() {
