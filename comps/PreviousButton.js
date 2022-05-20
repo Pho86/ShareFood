@@ -45,3 +45,16 @@ export function BackAPage({
         <Icon src={img}></Icon>
     </ChoiceCont>
 }
+export function BacktoMessage({
+    img = "/button_choices/back_button.svg",
+}) {
+    const r = useRouter()
+
+    return <ChoiceCont onClick={
+        () => r.push({
+            pathname: "/messaging1"
+        })
+    }>
+        <Icon src={img}></Icon>
+    </ChoiceCont>
+}
