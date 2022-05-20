@@ -59,13 +59,14 @@ export function EmptyData() {
 
 var fooddetails;
 export function GetAllDetails() {
-    name = document.querySelector('#name').value
-    weight = document.querySelector('#weight').value
-    datepur = document.querySelector('#datepur').value
-    datebbd = document.querySelector('#datebbd').value
-    pickup = document.querySelector('#pickup').value
-    description = document.querySelector('#description').value
-    foodimg = document.querySelector("#foodimg").src
+    var name = document.querySelector('#name').value
+    var weight = document.querySelector("#weight").value
+    var datepur = document.querySelector('#datepur').value
+    var datebbd = document.querySelector('#datebbd').value
+    var pickup = document.querySelector('#pickup').value
+    var description = document.querySelector('#description').value
+    var foodimg = document.querySelector("#foodimg").src
+
     fooddetails = {food:name, weight:weight, date_purchase:datepur, date_bbd:datebbd, meeting_location:pickup, location:pickup, description:description, foodimg, name:"YOU", details:description}
     
     foody.push(fooddetails)
