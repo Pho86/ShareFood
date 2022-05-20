@@ -22,7 +22,12 @@ export function ChangeFood(food
 
 var selectedHist;
 export function ChangeHistory(food, weight, img) {
-    selectedHist = {food:food, date:"Today.", foodimg:img, weight:weight}
+    var month = `${(new Date(Date.now())).getMonth()}`.toLocaleString()
+    var day = `${(new Date(Date.now())).getDate()}`
+    var year = `${(new Date(Date.now())).getFullYear()}`
+    var date = month + '/' + day + '/' + year
+
+    selectedHist = {food:food, date:date, foodimg:img, weight:weight}
     historia.unshift(selectedHist)
 }
 export function ChangeMessage(name, text){
